@@ -8,8 +8,8 @@
 
 $theme_uri = get_template_directory_uri();
 ?>
-<!-- wp:group {"align":"full","style":{"color":{"background":"#16324F","text":"#ffffff"},"spacing":{"padding":{"top":"60px","bottom":"60px","left":"24px","right":"24px"}}},"layout":{"type":"constrained","contentSize":"1350px"}} -->
-<div class="wp-block-group alignfull has-text-color has-background" style="background-color:#16324F;color:#ffffff;padding-top:60px;padding-right:24px;padding-bottom:60px;padding-left:24px">
+<!-- wp:group {"align":"full","className":"vhs-homepage-hero","style":{"color":{"background":"#16324F","text":"#ffffff"},"spacing":{"padding":{"top":"60px","bottom":"60px","left":"24px","right":"24px"}}},"layout":{"type":"constrained","contentSize":"1350px"}} -->
+<div class="wp-block-group alignfull vhs-homepage-hero has-text-color has-background" style="background-color:#16324F;color:#ffffff;padding-top:60px;padding-right:24px;padding-bottom:60px;padding-left:24px">
 	<!-- wp:columns {"align":"wide","verticalAlignment":"center","style":{"spacing":{"margin":{"bottom":"40px"}}}} -->
 	<div class="wp-block-columns alignwide are-vertically-aligned-center" style="margin-bottom:40px">
 		<!-- wp:column {"width":"55%","verticalAlignment":"center"} -->

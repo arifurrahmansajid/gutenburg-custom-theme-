@@ -28,18 +28,22 @@ Tags: one-column, custom-colors, editor-style, custom-logo, custom-menu, feature
 	object-fit: contain !important;
 }
 
-/* Master Section Full-Bleed & Red-Line Alignment Engine */
+/* ============================================================
+   Master Section Architecture Engine (Site-Wide Full-Bleed & Section Spacing)
+   ============================================================ */
+
+/* 1. Full-Bleed 100vw Outer Shell for All Page & Pattern Sections */
+.vhs-homepage-hero,
 .vhs-white-glove-section,
 .vhs-comparison-section,
 .vhs-format-pills-bar,
 .vhs-services-hero-box,
-.entry-content>.wp-block-group,
-.entry-content>div,
-.vhs-compare-hero-box,
-.vhs-reel-revival-hero-box,
-.vhs-format-pills-bar,
-.vhs-pills-bar-container,
-.vhs-services-breadcrumb-bar,
+.vhs-hero-dark,
+.vhs-hero-section,
+[class*="-section"],
+[class*="-hero-box"],
+[class*="-banner-box"],
+[class*="-callout-wrapper"],
 .entry-content > .wp-block-group,
 .entry-content > div,
 .entry-content > section,
@@ -58,18 +62,17 @@ main > section,
 }
 
 /* 2. Red-Line Alignment Inner Container (Max-Width: 1350px + Horizontal Padding: 24px) */
+.vhs-homepage-hero > div,
+.vhs-white-glove-section > div,
+.vhs-comparison-section > div,
+.vhs-format-pills-bar > div,
+.vhs-services-hero-box > div,
+.vhs-hero-dark > div,
+.vhs-hero-section > div,
 [class*="-section"] > div,
 [class*="-hero-box"] > div,
 [class*="-banner-box"] > div,
 [class*="-callout-wrapper"] > div,
-.vhs-hero-dark > div,
-.vhs-hero-section > div,
-.vhs-services-hero-box > div,
-.vhs-compare-hero-box > div,
-.vhs-reel-revival-hero-box > div,
-.vhs-format-pills-bar > div,
-.vhs-pills-bar-container > div,
-.vhs-services-breadcrumb-bar > div,
 .entry-content > .wp-block-group > div,
 .entry-content > div > div,
 .entry-content > section > div,
@@ -89,7 +92,19 @@ main > section > div,
 	box-sizing: border-box !important;
 }
 
-/* 3. Universal Section-Based Vertical Padding Engine (Desktop: 80px Top & Bottom) */
+/* 3. Homepage Hero Section Specific Padding Fix (60px Top & Bottom) */
+.vhs-homepage-hero,
+.wp-block-group.vhs-homepage-hero,
+div[style*="background-color:#16324F"],
+div[style*="background-color: #16324F"],
+div[style*="background-color:#16324f"],
+div[style*="background-color: #16324f"] {
+	padding-top: 60px !important;
+	padding-bottom: 60px !important;
+	box-sizing: border-box !important;
+}
+
+/* 4. Universal Section-Based Vertical Padding Engine (Desktop: 80px Top & Bottom) */
 [class*="-section"],
 .vhs-hero-section,
 .entry-content > .wp-block-group,
@@ -106,6 +121,17 @@ main > section,
 	padding-top: 80px !important;
 	padding-bottom: 80px !important;
 	box-sizing: border-box !important;
+}
+
+/* Re-enforce Homepage Hero 60px Padding over universal 80px rule */
+.vhs-homepage-hero,
+.wp-block-group.vhs-homepage-hero,
+div[style*="background-color:#16324F"],
+div[style*="background-color: #16324F"],
+div[style*="background-color:#16324f"],
+div[style*="background-color: #16324f"] {
+	padding-top: 60px !important;
+	padding-bottom: 60px !important;
 }
 
 /* Specific Compact Bars / Navigation / Ribbons Exceptions */
@@ -134,6 +160,12 @@ footer.wp-block-group,
 
 /* Mobile Responsive Section Padding Engine (< 782px) */
 @media (max-width: 782px) {
+	.vhs-homepage-hero,
+	.wp-block-group.vhs-homepage-hero,
+	div[style*="background-color:#16324F"],
+	div[style*="background-color: #16324F"],
+	div[style*="background-color:#16324f"],
+	div[style*="background-color: #16324f"],
 	[class*="-section"],
 	.vhs-hero-section,
 	.entry-content > .wp-block-group,
@@ -147,8 +179,8 @@ footer.wp-block-group,
 	main > section,
 	.wp-block-group.alignfull,
 	.wp-block-group.has-background {
-		padding-top: 50px !important;
-		padding-bottom: 50px !important;
+		padding-top: 44px !important;
+		padding-bottom: 44px !important;
 	}
 
 	[class*="-section"] > div,
@@ -160,33 +192,33 @@ footer.wp-block-group,
 	}
 }
 
-/* Eliminate All Spacing Gaps Between Header and Main Content */
-.wp-site-blocks>header,
-.wp-site-blocks>main,
-.wp-site-blocks>footer,
-.wp-site-blocks>*+*,
-.wp-block-post-content>*,
-.wp-block-post-content>*+*,
-.entry-content>*,
-.entry-content>*+*,
-.is-layout-constrained>*+*,
-header+*,
-header.wp-block-group+* {
+/* Eliminate All Inter-Section Margin Collapses */
+.wp-site-blocks > header,
+.wp-site-blocks > main,
+.wp-site-blocks > footer,
+.wp-site-blocks > * + *,
+.wp-block-post-content > *,
+.wp-block-post-content > * + *,
+.entry-content > *,
+.entry-content > * + *,
+.is-layout-constrained > * + *,
+header + *,
+header.wp-block-group + * {
 	margin-top: 0 !important;
 	margin-bottom: 0 !important;
 }
 
-body .is-layout-constrained> :first-child,
-body .is-layout-flow> :first-child,
-body .wp-block-post-content> :first-child,
-body .wp-site-blocks> :first-child {
+body .is-layout-constrained > :first-child,
+body .is-layout-flow > :first-child,
+body .wp-block-post-content > :first-child,
+body .wp-site-blocks > :first-child {
 	margin-top: 0 !important;
 }
 
-body .is-layout-constrained> :last-child,
-body .is-layout-flow> :last-child,
-body .wp-block-post-content> :last-child,
-body .wp-site-blocks> :last-child {
+body .is-layout-constrained > :last-child,
+body .is-layout-flow > :last-child,
+body .wp-block-post-content > :last-child,
+body .wp-site-blocks > :last-child {
 	margin-bottom: 0 !important;
 }
 
