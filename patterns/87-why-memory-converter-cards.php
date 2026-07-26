@@ -1,15 +1,11 @@
 <?php
 /**
- * Why Memory Converter — Feature Cards Grid Pattern
- *
- * @package Realome
- * @since Realome 1.0
+ * Title: Why Memory Converter — Feature Cards Grid
+ * Slug: realome/why-memory-converter-cards
+ * Categories: vhs-sections, featured, realome, pages
+ * Keywords: Why memory converter, photo restoration trust, real retouch artists, fragile originals in house, insured handling, 40000 photos digitized
  */
-
-return array(
-	'title'      => __( 'Why Memory Converter — Feature Cards Grid', 'realome' ),
-	'categories' => array( 'vhs-sections', 'featured', 'realome', 'pages' ),
-	'content'    => '
+?>
 <!-- wp:group {"align":"full","className":"vhs-why-mc-section","style":{"color":{"background":"#ffffff"},"spacing":{"padding":{"top":"80px","bottom":"80px","left":"24px","right":"24px"}}},"layout":{"type":"constrained","contentSize":"1350px"}} -->
 <div class="wp-block-group alignfull vhs-why-mc-section has-background" style="background-color:#ffffff;padding-top:80px;padding-right:24px;padding-bottom:80px;padding-left:24px">
 	<!-- wp:group {"layout":{"type":"constrained","contentSize":"1350px","justifyContent":"left"}} -->
@@ -144,5 +140,3 @@ return array(
 	<!-- /wp:group -->
 </div>
 <!-- /wp:group -->
-',
-);
