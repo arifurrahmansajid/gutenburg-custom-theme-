@@ -28,32 +28,15 @@ Tags: one-column, custom-colors, editor-style, custom-logo, custom-menu, feature
 	object-fit: contain !important;
 }
 
-/* ============================================================
-   Master Section Architecture Engine (Site-Wide Full-Bleed & Section Spacing)
-   ============================================================ */
-
-/* 1. Full-Bleed 100vw Outer Shell for All Page & Pattern Sections */
-.vhs-homepage-hero,
+/* Master Section Full-Bleed & Red-Line Alignment Engine */
 .vhs-white-glove-section,
 .vhs-comparison-section,
 .vhs-format-pills-bar,
 .vhs-services-hero-box,
-.vhs-hero-dark,
-.vhs-hero-section,
-[class*="-section"],
-[class*="-hero-box"],
-[class*="-banner-box"],
-[class*="-callout-wrapper"],
-.entry-content > .wp-block-group,
-.entry-content > div,
-.entry-content > section,
-.wp-block-post-content > .wp-block-group,
-.wp-block-post-content > div,
-.wp-block-post-content > section,
-main > .wp-block-group,
-main > div,
-main > section,
-.wp-block-group.alignfull {
+.entry-content>.wp-block-group,
+.entry-content>div,
+.wp-block-post-content>.wp-block-group,
+.wp-block-post-content>div {
 	width: 100vw !important;
 	max-width: 100vw !important;
 	margin-left: calc(50% - 50vw) !important;
@@ -61,28 +44,14 @@ main > section,
 	box-sizing: border-box !important;
 }
 
-/* 2. Red-Line Alignment Inner Container (Max-Width: 1350px + Horizontal Padding: 24px) */
-.vhs-homepage-hero > div,
-.vhs-white-glove-section > div,
-.vhs-comparison-section > div,
-.vhs-format-pills-bar > div,
-.vhs-services-hero-box > div,
-.vhs-hero-dark > div,
-.vhs-hero-section > div,
-[class*="-section"] > div,
-[class*="-hero-box"] > div,
-[class*="-banner-box"] > div,
-[class*="-callout-wrapper"] > div,
-.entry-content > .wp-block-group > div,
-.entry-content > div > div,
-.entry-content > section > div,
-.wp-block-post-content > .wp-block-group > div,
-.wp-block-post-content > div > div,
-.wp-block-post-content > section > div,
-main > .wp-block-group > div,
-main > div > div,
-main > section > div,
-.wp-block-group.alignfull > div {
+.vhs-white-glove-section>div,
+.vhs-comparison-section>div,
+.vhs-format-pills-bar>div,
+.vhs-services-hero-box>div,
+.entry-content>.wp-block-group>div,
+.entry-content>div>div,
+.wp-block-post-content>.wp-block-group>div,
+.wp-block-post-content>div>div {
 	max-width: 1350px !important;
 	margin-left: auto !important;
 	margin-right: auto !important;
@@ -92,133 +61,34 @@ main > section > div,
 	box-sizing: border-box !important;
 }
 
-/* 3. Homepage Hero Section Specific Padding Fix (60px Top & Bottom) */
-.vhs-homepage-hero,
-.wp-block-group.vhs-homepage-hero,
-div[style*="background-color:#16324F"],
-div[style*="background-color: #16324F"],
-div[style*="background-color:#16324f"],
-div[style*="background-color: #16324f"] {
-	padding-top: 60px !important;
-	padding-bottom: 60px !important;
-	box-sizing: border-box !important;
-}
 
-/* 4. Universal Section-Based Vertical Padding Engine (Desktop: 80px Top & Bottom) */
-[class*="-section"],
-.vhs-hero-section,
-.entry-content > .wp-block-group,
-.entry-content > div,
-.entry-content > section,
-.wp-block-post-content > .wp-block-group,
-.wp-block-post-content > div,
-.wp-block-post-content > section,
-main > .wp-block-group,
-main > div,
-main > section,
-.wp-block-group.alignfull,
-.wp-block-group.has-background {
-	padding-top: 80px !important;
-	padding-bottom: 80px !important;
-	box-sizing: border-box !important;
-}
-
-/* Re-enforce Homepage Hero 60px Padding over universal 80px rule */
-.vhs-homepage-hero,
-.wp-block-group.vhs-homepage-hero,
-div[style*="background-color:#16324F"],
-div[style*="background-color: #16324F"],
-div[style*="background-color:#16324f"],
-div[style*="background-color: #16324f"] {
-	padding-top: 60px !important;
-	padding-bottom: 60px !important;
-}
-
-/* Specific Compact Bars / Navigation / Ribbons Exceptions */
-.vhs-pills-bar-container,
-.vhs-services-breadcrumb-bar,
-.vhs-trust-ribbon,
-.vhs-newsletter-bar-section,
-.vhs-service-pills-section,
-.vhs-format-pills-bar,
-.vhs-hero-format-pills {
-	padding-top: 20px !important;
-	padding-bottom: 20px !important;
-}
-
-header.wp-block-group,
-.wp-site-blocks > header {
-	padding-top: 16px !important;
-	padding-bottom: 16px !important;
-}
-
-footer.wp-block-group,
-.wp-site-blocks > footer {
-	padding-top: 60px !important;
-	padding-bottom: 40px !important;
-}
-
-/* Mobile Responsive Section Padding Engine (< 782px) */
-@media (max-width: 782px) {
-	.vhs-homepage-hero,
-	.wp-block-group.vhs-homepage-hero,
-	div[style*="background-color:#16324F"],
-	div[style*="background-color: #16324F"],
-	div[style*="background-color:#16324f"],
-	div[style*="background-color: #16324f"],
-	[class*="-section"],
-	.vhs-hero-section,
-	.entry-content > .wp-block-group,
-	.entry-content > div,
-	.entry-content > section,
-	.wp-block-post-content > .wp-block-group,
-	.wp-block-post-content > div,
-	.wp-block-post-content > section,
-	main > .wp-block-group,
-	main > div,
-	main > section,
-	.wp-block-group.alignfull,
-	.wp-block-group.has-background {
-		padding-top: 44px !important;
-		padding-bottom: 44px !important;
-	}
-
-	[class*="-section"] > div,
-	.entry-content > .wp-block-group > div,
-	.wp-block-post-content > .wp-block-group > div,
-	.wp-block-group.alignfull > div {
-		padding-left: 16px !important;
-		padding-right: 16px !important;
-	}
-}
-
-/* Eliminate All Inter-Section Margin Collapses */
-.wp-site-blocks > header,
-.wp-site-blocks > main,
-.wp-site-blocks > footer,
-.wp-site-blocks > * + *,
-.wp-block-post-content > *,
-.wp-block-post-content > * + *,
-.entry-content > *,
-.entry-content > * + *,
-.is-layout-constrained > * + *,
-header + *,
-header.wp-block-group + * {
+/* Eliminate All Spacing Gaps Between Header and Main Content */
+.wp-site-blocks>header,
+.wp-site-blocks>main,
+.wp-site-blocks>footer,
+.wp-site-blocks>*+*,
+.wp-block-post-content>*,
+.wp-block-post-content>*+*,
+.entry-content>*,
+.entry-content>*+*,
+.is-layout-constrained>*+*,
+header+*,
+header.wp-block-group+* {
 	margin-top: 0 !important;
 	margin-bottom: 0 !important;
 }
 
-body .is-layout-constrained > :first-child,
-body .is-layout-flow > :first-child,
-body .wp-block-post-content > :first-child,
-body .wp-site-blocks > :first-child {
+body .is-layout-constrained> :first-child,
+body .is-layout-flow> :first-child,
+body .wp-block-post-content> :first-child,
+body .wp-site-blocks> :first-child {
 	margin-top: 0 !important;
 }
 
-body .is-layout-constrained > :last-child,
-body .is-layout-flow > :last-child,
-body .wp-block-post-content > :last-child,
-body .wp-site-blocks > :last-child {
+body .is-layout-constrained> :last-child,
+body .is-layout-flow> :last-child,
+body .wp-block-post-content> :last-child,
+body .wp-site-blocks> :last-child {
 	margin-bottom: 0 !important;
 }
 
@@ -607,262 +477,22 @@ body .wp-site-blocks > :last-child {
 	display: none !important;
 }
 
-/* ============================================================
-   Desktop Navigation & Header Styling (min-width: 783px)
-   ============================================================ */
-@media (min-width: 783px) {
-
-	header.wp-block-group,
-	.wp-block-group.alignfull.has-background {
-		padding-top: 16px !important;
-		padding-bottom: 16px !important;
-	}
-
-	header .wp-block-group.alignwide,
-	.wp-block-group.alignwide {
-		display: flex !important;
-		flex-direction: row !important;
-		flex-wrap: nowrap !important;
-		justify-content: space-between !important;
-		align-items: center !important;
-	}
-
-	.wp-block-navigation .wp-block-navigation__container,
-	.wp-block-navigation__responsive-container-content .wp-block-navigation__container {
-		display: flex !important;
-		flex-direction: row !important;
-		align-items: center !important;
-		justify-content: center !important;
-		gap: 32px !important;
-		margin: 0 !important;
-		padding: 0 !important;
-		list-style: none !important;
-		width: auto !important;
-	}
-
-	.wp-block-navigation .wp-block-navigation-item,
-	.wp-block-navigation__responsive-container-content .wp-block-navigation-item {
-		width: auto !important;
-		border-bottom: none !important;
-		margin: 0 !important;
-		padding: 0 !important;
-	}
-
-	.wp-block-navigation .wp-block-navigation-item a,
-	.wp-block-navigation__responsive-container-content .wp-block-navigation-item a {
-		display: inline-block !important;
-		width: auto !important;
-		padding: 0 !important;
-		font-weight: 600 !important;
-		color: #1e293b !important;
-		font-size: 15px !important;
-		text-decoration: none !important;
-		transition: color 0.2s ease !important;
-	}
-
-	.wp-block-navigation .wp-block-navigation-item a:hover,
-	.wp-block-navigation__responsive-container-content .wp-block-navigation-item a:hover {
-		color: #39B7EC !important;
-		padding-left: 0 !important;
-	}
-
-	.wp-block-navigation .wp-block-navigation-item.current-menu-item a,
-	.wp-block-navigation__responsive-container-content .wp-block-navigation-item.current-menu-item a {
-		color: #16324F !important;
-		font-weight: 700 !important;
-		border-bottom: 2px solid #16324F !important;
-	}
+/* Navigation Styling Enhancements */
+.wp-block-navigation .wp-block-navigation-item a {
+	font-weight: 600 !important;
+	color: #1e293b !important;
+	font-size: 15px !important;
+	transition: color 0.2s ease !important;
 }
 
-/* ============================================================
-   Sleek & Clean Mobile Header Layout (< 782px)
-   ============================================================ */
-@media (max-width: 782px) {
+.wp-block-navigation .wp-block-navigation-item a:hover {
+	color: #39B7EC !important;
+}
 
-	header.wp-block-group,
-	.wp-block-group.alignfull.has-background {
-		padding-top: 10px !important;
-		padding-bottom: 10px !important;
-		padding-left: 16px !important;
-		padding-right: 16px !important;
-	}
-
-	header .wp-block-group.alignwide,
-	.wp-block-group.alignwide {
-		display: flex !important;
-		flex-wrap: wrap !important;
-		justify-content: space-between !important;
-		align-items: center !important;
-		row-gap: 8px !important;
-	}
-
-	header .wp-block-site-title a,
-	header .wp-block-site-title,
-	.wp-block-site-title {
-		font-size: 15px !important;
-		line-height: 1.2 !important;
-	}
-
-	header .wp-block-site-logo img,
-	.wp-block-site-logo img {
-		width: 36px !important;
-		height: 36px !important;
-	}
-
-	header .wp-block-navigation {
-		margin-left: auto !important;
-		order: 2 !important;
-	}
-
-	header .wp-block-navigation__responsive-container-open,
-	.wp-block-navigation__responsive-container-open {
-		padding: 5px 9px !important;
-		border-radius: 8px !important;
-		border: 1px solid #cbd5e1 !important;
-		background-color: #ffffff !important;
-	}
-
-	/* Force Phone & CTA Buttons into a clean 2nd row */
-	header .wp-block-group.alignwide>.wp-block-group:last-child {
-		width: 100% !important;
-		flex-basis: 100% !important;
-		order: 3 !important;
-		display: flex !important;
-		flex-direction: row !important;
-		align-items: center !important;
-		justify-content: space-between !important;
-		margin-top: 6px !important;
-		padding-top: 8px !important;
-		border-top: 1px solid #f1f5f9 !important;
-		gap: 8px !important;
-	}
-
-	header .vhs-header-phone-wrap {
-		display: flex !important;
-		flex-direction: row !important;
-		align-items: center !important;
-		gap: 6px !important;
-	}
-
-	header .vhs-header-phone-wrap p,
-	header .vhs-header-phone-wrap a {
-		font-size: 13px !important;
-		font-weight: 700 !important;
-		color: #39B7EC !important;
-		white-space: nowrap !important;
-		margin: 0 !important;
-	}
-
-	header .wp-block-buttons {
-		margin: 0 !important;
-		padding: 0 !important;
-	}
-
-	header .wp-block-button__link {
-		font-size: 12.5px !important;
-		font-weight: 700 !important;
-		padding: 8px 14px !important;
-		white-space: nowrap !important;
-		border-radius: 8px !important;
-		line-height: 1.2 !important;
-		display: inline-block !important;
-		text-align: center !important;
-	}
-
-	/* WordPress Mobile Navigation Drawer (Full-Screen & Left-Aligned) */
-	.wp-block-navigation__responsive-container.is-menu-open {
-		position: fixed !important;
-		top: 0 !important;
-		left: 0 !important;
-		right: 0 !important;
-		bottom: 0 !important;
-		width: 100vw !important;
-		height: 100vh !important;
-		background-color: #ffffff !important;
-		z-index: 999999 !important;
-		padding: 24px 28px 40px 28px !important;
-		box-sizing: border-box !important;
-		display: flex !important;
-		flex-direction: column !important;
-		justify-content: flex-start !important;
-		align-items: flex-start !important;
-		overflow-y: auto !important;
-	}
-
-	.wp-block-navigation__responsive-container-close {
-		position: absolute !important;
-		top: 20px !important;
-		right: 24px !important;
-		background-color: #ffffff !important;
-		border: 1px solid #cbd5e1 !important;
-		border-radius: 10px !important;
-		padding: 6px 12px !important;
-		cursor: pointer !important;
-		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
-	}
-
-	.wp-block-navigation__responsive-container-close svg {
-		width: 20px !important;
-		height: 20px !important;
-		stroke: #16324f !important;
-	}
-
-	.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content {
-		width: 100% !important;
-		max-width: 100% !important;
-		margin-top: 60px !important;
-		display: flex !important;
-		flex-direction: column !important;
-		align-items: flex-start !important;
-		justify-content: flex-start !important;
-		text-align: left !important;
-		gap: 0 !important;
-	}
-
-	.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container {
-		width: 100% !important;
-		display: flex !important;
-		flex-direction: column !important;
-		align-items: flex-start !important;
-		justify-content: flex-start !important;
-		text-align: left !important;
-		gap: 0 !important;
-		margin: 0 !important;
-		padding: 0 !important;
-		list-style: none !important;
-	}
-
-	.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item {
-		width: 100% !important;
-		text-align: left !important;
-		margin: 0 !important;
-		padding: 0 !important;
-		border-bottom: 1px solid #f1f5f9 !important;
-	}
-
-	.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item a {
-		display: block !important;
-		width: 100% !important;
-		padding: 16px 0 !important;
-		font-size: 18px !important;
-		font-weight: 700 !important;
-		color: #16324f !important;
-		text-decoration: none !important;
-		text-align: left !important;
-		transition: color 0.2s ease, padding-left 0.2s ease !important;
-		box-sizing: border-box !important;
-	}
-
-	.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item a:hover {
-		color: #39B7EC !important;
-		padding-left: 6px !important;
-	}
-
-	.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.current-menu-item a {
-		color: #39B7EC !important;
-		font-weight: 800 !important;
-		border-bottom: none !important;
-	}
+.wp-block-navigation .wp-block-navigation-item.current-menu-item a {
+	color: #16324F !important;
+	font-weight: 700 !important;
+	border-bottom: 2px solid #16324F !important;
 }
 
 /* Responsive Formats Grid Adjustments (< 992px & < 782px) */
@@ -4380,7 +4010,6 @@ figure.wp-block-table table {
 }
 
 @media (max-width: 768px) {
-
 	.vhs-pricing-table-wrapper,
 	.wp-block-table,
 	figure.wp-block-table {
@@ -4425,7 +4054,6 @@ figure.wp-block-table table {
 }
 
 @media (max-width: 480px) {
-
 	.vhs-pricing-table th,
 	.wp-block-table th {
 		padding: 8px 6px !important;
@@ -7834,648 +7462,66 @@ details.vhs-photo-faq-item summary {
 }
 
 /* ============================================================
-   What We Restore — 4-Column Grid & Card Styles
+   Microcassette Hero Section Styles
    ============================================================ */
-.vhs-restore-section {
-	background-color: #ffffff !important;
-	padding-top: 96px !important;
-	padding-bottom: 96px !important;
-}
-
-.vhs-restore-grid,
-.wp-block-columns.vhs-restore-grid {
-	display: flex !important;
-	flex-wrap: wrap !important;
-	gap: 16px !important;
-	width: 100% !important;
-}
-
-.vhs-restore-card,
-.wp-block-column.vhs-restore-card {
-	flex: 1 1 calc(25% - 12px) !important;
-	max-width: calc(25% - 12px) !important;
-	min-width: 240px !important;
-	background-color: #ffffff !important;
-	border: 1px solid #e3ebf4 !important;
-	border-radius: 14px !important;
-	padding: 16px 18px !important;
-	box-shadow: 0 2px 8px rgba(22, 50, 79, 0.02) !important;
-	transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease !important;
-	box-sizing: border-box !important;
-	display: flex !important;
-	flex-direction: row !important;
-	align-items: center !important;
-	justify-content: flex-start !important;
-	text-align: left !important;
-	gap: 16px !important;
-}
-
-.vhs-restore-card:hover,
-.wp-block-column.vhs-restore-card:hover {
-	border-color: #39B7EC !important;
-	transform: translateY(-2px) !important;
-	box-shadow: 0 8px 20px rgba(22, 50, 79, 0.05) !important;
-}
-
-.vhs-restore-icon {
-	width: 44px !important;
-	height: 44px !important;
-	border-radius: 11px !important;
-	background-color: rgba(57, 183, 236, 0.12) !important;
-	display: flex !important;
-	align-items: center !important;
-	justify-content: center !important;
-	flex-shrink: 0 !important;
-	margin-right: 16px !important;
-}
-
-.vhs-restore-icon svg {
-	width: 21px !important;
-	height: 21px !important;
-	stroke: #39B7EC !important;
-	display: block !important;
-	margin: auto !important;
-}
-
-.vhs-restore-info,
-.wp-block-group.vhs-restore-info {
-	display: flex !important;
-	flex-direction: column !important;
-	justify-content: center !important;
-	align-items: flex-start !important;
-	text-align: left !important;
-	margin: 0 !important;
-	padding: 0 !important;
-}
-
-.vhs-restore-title,
-.vhs-restore-info h3,
-.vhs-restore-info .wp-block-heading {
-	color: #16324f !important;
-	font-size: 15.5px !important;
-	font-weight: 800 !important;
-	line-height: 1.25 !important;
-	margin-top: 0 !important;
-	margin-bottom: 2px !important;
-	padding: 0 !important;
-	text-align: left !important;
-}
-
-.vhs-restore-sub,
-.vhs-restore-info p {
-	color: #64748b !important;
-	font-size: 12.5px !important;
-	font-weight: 600 !important;
-	line-height: 1.35 !important;
-	margin-top: 0 !important;
-	margin-bottom: 0 !important;
-	padding: 0 !important;
-	text-align: left !important;
-}
-
-@media (max-width: 1024px) {
-
-	.vhs-restore-grid,
-	.wp-block-columns.vhs-restore-grid {
-		gap: 16px !important;
-	}
-
-	.vhs-restore-card,
-	.wp-block-column.vhs-restore-card {
-		flex: 1 1 calc(50% - 8px) !important;
-		max-width: calc(50% - 8px) !important;
-	}
-}
-
-@media (max-width: 640px) {
-	.vhs-restore-section {
-		padding-top: 60px !important;
-		padding-bottom: 60px !important;
-	}
-
-	.vhs-restore-grid,
-	.wp-block-columns.vhs-restore-grid {
-		flex-direction: column !important;
-		gap: 12px !important;
-	}
-
-	.vhs-restore-card,
-	.wp-block-column.vhs-restore-card {
-		flex: 1 1 100% !important;
-		max-width: 100% !important;
-	}
-}
-
-/* ============================================================
-   The Restoration Gallery — Before/After Interactive Preview Grid
-   ============================================================ */
-.vhs-restoration-gallery-section {
-	background-color: #f3f7fc !important;
-	padding-top: 96px !important;
-	padding-bottom: 96px !important;
-}
-
-.vhs-restoration-gallery-badge {
-	display: flex !important;
-	align-items: center !important;
-	gap: 9px !important;
+.vhs-microcassette-hero-section {
 	background-color: #16324f !important;
-	border-radius: 99px !important;
-	padding: 11px 20px !important;
-	flex-shrink: 0 !important;
-}
-
-.vhs-restoration-gallery-badge span {
-	font-size: 13px !important;
-	font-weight: 800 !important;
-	color: #ffffff !important;
-}
-
-.vhs-restoration-gallery-grid,
-.wp-block-columns.vhs-restoration-gallery-grid {
-	display: flex !important;
-	flex-wrap: wrap !important;
-	gap: 24px !important;
-	width: 100% !important;
-}
-
-.vhs-gallery-card,
-.wp-block-column.vhs-gallery-card {
-	flex: 1 1 calc(50% - 12px) !important;
-	max-width: calc(50% - 12px) !important;
-	min-width: 280px !important;
-	display: flex !important;
-	flex-direction: column !important;
-	gap: 12px !important;
-	box-sizing: border-box !important;
-}
-
-.vhs-gallery-preview-box {
 	position: relative !important;
-	height: 320px !important;
-	border-radius: 16px !important;
 	overflow: hidden !important;
-	box-shadow: 0 20px 40px rgba(22, 50, 79, 0.12) !important;
-	width: 100% !important;
 }
 
-.vhs-gallery-split-container {
-	display: grid !important;
-	grid-template-columns: 1fr 1fr !important;
-	height: 100% !important;
-	width: 100% !important;
+.vhs-microcassette-hero-section::before {
+	content: '' !important;
+	position: absolute !important;
+	inset: 0 !important;
+	pointer-events: none !important;
+	background-image: radial-gradient(120% 90% at 70% 0%, rgba(57,183,236,.10), rgba(57,183,236,0) 55%),
+		repeating-linear-gradient(0deg, rgba(255,255,255,.028) 0px, rgba(255,255,255,.028) 1px, rgba(255,255,255,0) 1px, rgba(255,255,255,0) 3px) !important;
+	z-index: 1 !important;
 }
 
-.vhs-gallery-before-side {
+.vhs-microcassette-hero-grid {
 	position: relative !important;
-	display: flex !important;
-	align-items: center !important;
-	justify-content: center !important;
-	background: repeating-linear-gradient(0deg, rgba(255, 235, 190, .06) 0px, rgba(255, 235, 190, .06) 2px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0) 5px), repeating-linear-gradient(45deg, rgba(255, 235, 190, .07) 0px, rgba(255, 235, 190, .07) 9px, rgba(0, 0, 0, 0) 9px, rgba(0, 0, 0, 0) 18px), #39392F !important;
-	padding: 20px !important;
-	box-sizing: border-box !important;
+	z-index: 2 !important;
 }
 
-.vhs-gallery-after-side {
-	position: relative !important;
-	display: flex !important;
-	align-items: center !important;
-	justify-content: center !important;
-	background: repeating-linear-gradient(45deg, rgba(57, 183, 236, .10) 0px, rgba(57, 183, 236, .10) 9px, rgba(57, 183, 236, 0) 9px, rgba(57, 183, 236, 0) 18px), #DCE9F5 !important;
-	padding: 20px !important;
-	box-sizing: border-box !important;
-}
-
-.vhs-gallery-tag-text {
-	font-family: ui-monospace, monospace !important;
-	font-size: 12px !important;
-	letter-spacing: 0.06em !important;
-	text-align: center !important;
-}
-
-.vhs-gallery-before-side .vhs-gallery-tag-text {
-	color: rgba(255, 244, 214, .55) !important;
-}
-
-.vhs-gallery-after-side .vhs-gallery-tag-text {
-	color: #5B7188 !important;
-}
-
-.vhs-gallery-badge-before {
-	position: absolute !important;
-	top: 14px !important;
-	left: 14px !important;
-	background: rgba(0, 0, 0, .5) !important;
-	color: rgba(255, 255, 255, .85) !important;
-	font-size: 11px !important;
-	font-weight: 800 !important;
-	letter-spacing: 0.12em !important;
-	padding: 6px 12px !important;
-	border-radius: 99px !important;
-}
-
-.vhs-gallery-badge-after {
-	position: absolute !important;
-	top: 14px !important;
-	right: 14px !important;
-	background: #39B7EC !important;
-	color: #16324f !important;
-	font-size: 11px !important;
-	font-weight: 800 !important;
-	letter-spacing: 0.12em !important;
-	padding: 6px 12px !important;
-	border-radius: 99px !important;
-}
-
-.vhs-gallery-slider-bar {
-	position: absolute !important;
-	top: 0 !important;
-	bottom: 0 !important;
-	left: 50% !important;
-	width: 3px !important;
-	background: #39B7EC !important;
-	transform: translateX(-50%) !important;
-}
-
-.vhs-gallery-slider-handle {
-	position: absolute !important;
-	top: 50% !important;
-	left: 50% !important;
-	transform: translate(-50%, -50%) !important;
-	display: flex !important;
-	align-items: center !important;
-	justify-content: center !important;
-	gap: 3px !important;
-	width: 44px !important;
-	height: 44px !important;
-	border-radius: 50% !important;
-	background: #39B7EC !important;
-	box-shadow: 0 10px 25px rgba(0, 0, 0, .35) !important;
-	color: #16324f !important;
-	font-weight: 800 !important;
-	font-size: 15px !important;
-}
-
-@media (max-width: 768px) {
-	.vhs-restoration-gallery-section {
-		padding-top: 60px !important;
-		padding-bottom: 60px !important;
-	}
-
-	.vhs-restoration-gallery-grid,
-	.wp-block-columns.vhs-restoration-gallery-grid {
-		flex-direction: column !important;
-		gap: 20px !important;
-	}
-
-	.vhs-gallery-card,
-	.wp-block-column.vhs-gallery-card {
-		flex: 1 1 100% !important;
-		max-width: 100% !important;
-	}
-
-	.vhs-gallery-preview-box {
-		height: 260px !important;
-	}
-}
-
-/* ============================================================
-   What You Get — 2-Column Feature List & Workstation Preview
-   ============================================================ */
-.vhs-what-you-get-section {
-	background-color: #ffffff !important;
-	padding-top: 96px !important;
-	padding-bottom: 96px !important;
-}
-
-.vhs-what-you-get-grid,
-.wp-block-columns.vhs-what-you-get-grid {
-	display: flex !important;
-	flex-direction: row !important;
-	flex-wrap: nowrap !important;
-	align-items: center !important;
-	justify-content: space-between !important;
-	gap: 60px !important;
-	width: 100% !important;
-}
-
-.vhs-what-you-get-grid>.wp-block-column {
-	flex: 1 1 calc(50% - 30px) !important;
-	max-width: calc(50% - 30px) !important;
-	width: calc(50% - 30px) !important;
-}
-
-.vhs-get-feature-list,
-.wp-block-group.vhs-get-feature-list {
-	display: flex !important;
-	flex-direction: column !important;
-	gap: 20px !important;
-	margin: 0 !important;
-	padding: 0 !important;
-}
-
-.vhs-get-feature-item,
-.wp-block-group.vhs-get-feature-item {
-	display: flex !important;
-	flex-direction: row !important;
-	align-items: flex-start !important;
-	gap: 16px !important;
-	margin: 0 !important;
-	padding: 0 !important;
-}
-
-.vhs-get-icon-badge {
-	width: 44px !important;
-	height: 44px !important;
-	border-radius: 12px !important;
-	background-color: rgba(57, 183, 236, 0.12) !important;
-	display: flex !important;
-	align-items: center !important;
-	justify-content: center !important;
-	flex-shrink: 0 !important;
-	margin-right: 16px !important;
-}
-
-.vhs-get-icon-badge svg {
-	width: 21px !important;
-	height: 21px !important;
-	stroke: #39B7EC !important;
-	display: block !important;
-	margin: auto !important;
-}
-
-.vhs-get-feature-title,
-.vhs-get-feature-item h3,
-.vhs-get-feature-item .wp-block-heading {
-	color: #16324f !important;
-	font-size: 16.5px !important;
-	font-weight: 800 !important;
-	line-height: 1.3 !important;
-	margin-top: 0 !important;
-	margin-bottom: 4px !important;
-	padding: 0 !important;
-	text-align: left !important;
-}
-
-.vhs-get-feature-sub,
-.vhs-get-feature-item p {
-	color: #475569 !important;
-	font-size: 14px !important;
-	font-weight: 500 !important;
-	line-height: 1.55 !important;
-	margin-top: 0 !important;
-	margin-bottom: 0 !important;
-	padding: 0 !important;
-	text-align: left !important;
-}
-
-.vhs-get-preview-image-box {
+.vhs-microcassette-media-box {
 	display: flex !important;
 	align-items: center !important;
 	justify-content: center !important;
 	height: 440px !important;
-	width: 100% !important;
 	border-radius: 16px !important;
-	background: repeating-linear-gradient(45deg, rgba(57, 183, 236, .08) 0px, rgba(57, 183, 236, .08) 10px, rgba(57, 183, 236, 0) 10px, rgba(57, 183, 236, 0) 20px), #1E3A5C !important;
-	box-shadow: 0 20px 50px rgba(22, 50, 79, 0.15) !important;
-	box-sizing: border-box !important;
-	padding: 24px !important;
+	background: repeating-linear-gradient(45deg, rgba(57,183,236,.08) 0px, rgba(57,183,236,.08) 10px, rgba(57,183,236,0) 10px, rgba(57,183,236,0) 20px), #1E3A5C !important;
+	border: 1px solid rgba(255,255,255,0.1) !important;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
 }
 
-.vhs-get-preview-label {
+.vhs-microcassette-media-box span {
 	font-family: ui-monospace, monospace !important;
-	font-size: 12.5px !important;
+	font-size: 12px !important;
 	letter-spacing: 0.05em !important;
-	color: rgba(255, 255, 255, 0.65) !important;
-	text-align: center !important;
+	color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.vhs-microcassette-actions {
+	display: flex !important;
+	align-items: center !important;
+	gap: 16px !important;
 }
 
 @media (max-width: 900px) {
-	.vhs-what-you-get-section {
-		padding-top: 60px !important;
-		padding-bottom: 60px !important;
-	}
-
-	.vhs-what-you-get-grid,
-	.wp-block-columns.vhs-what-you-get-grid {
+	.vhs-microcassette-hero-grid,
+	.wp-block-columns.vhs-microcassette-hero-grid {
 		flex-direction: column !important;
-		flex-wrap: wrap !important;
-		gap: 36px !important;
+		gap: 32px !important;
 	}
 
-	.vhs-what-you-get-grid>.wp-block-column {
-		flex: 1 1 100% !important;
-		max-width: 100% !important;
+	.vhs-microcassette-title {
+		font-size: 36px !important;
+	}
+
+	.vhs-microcassette-media-box {
+		height: 280px !important;
 		width: 100% !important;
-	}
-
-	.vhs-get-preview-image-box {
-		height: 300px !important;
-	}
-}
-
-/* ============================================================
-   Why Memory Converter Photo — 3-Column Light Cyan Card Grid
-   ============================================================ */
-.vhs-why-photo-section {
-	background-color: #ffffff !important;
-	padding-top: 96px !important;
-	padding-bottom: 96px !important;
-}
-
-.vhs-why-photo-grid,
-.wp-block-columns.vhs-why-photo-grid {
-	display: flex !important;
-	flex-wrap: wrap !important;
-	gap: 20px !important;
-	width: 100% !important;
-}
-
-.vhs-why-photo-card,
-.wp-block-column.vhs-why-photo-card {
-	flex: 1 1 calc(33.333% - 14px) !important;
-	max-width: calc(33.333% - 14px) !important;
-	min-width: 260px !important;
-	background-color: #f3f7fc !important;
-	border: 1px solid #e3ebf4 !important;
-	border-radius: 16px !important;
-	padding: 26px !important;
-	box-shadow: 0 4px 16px rgba(22, 50, 79, 0.02) !important;
-	transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease !important;
-	box-sizing: border-box !important;
-	display: flex !important;
-	flex-direction: column !important;
-	align-items: flex-start !important;
-	justify-content: flex-start !important;
-	text-align: left !important;
-}
-
-.vhs-why-photo-card:hover,
-.wp-block-column.vhs-why-photo-card:hover {
-	border-color: #39B7EC !important;
-	transform: translateY(-2px) !important;
-	box-shadow: 0 8px 24px rgba(22, 50, 79, 0.06) !important;
-}
-
-.vhs-why-photo-icon {
-	width: 46px !important;
-	height: 46px !important;
-	border-radius: 50% !important;
-	border: 1.5px solid #39B7EC !important;
-	background-color: #ffffff !important;
-	display: flex !important;
-	align-items: center !important;
-	justify-content: center !important;
-	flex-shrink: 0 !important;
-	margin-bottom: 16px !important;
-}
-
-.vhs-why-photo-icon svg {
-	width: 22px !important;
-	height: 22px !important;
-	stroke: #39B7EC !important;
-	display: block !important;
-	margin: auto !important;
-}
-
-.vhs-why-card-title,
-.vhs-why-photo-card h3,
-.vhs-why-photo-card .wp-block-heading {
-	color: #16324f !important;
-	font-size: 16.5px !important;
-	font-weight: 800 !important;
-	line-height: 1.3 !important;
-	margin-top: 0 !important;
-	margin-bottom: 7px !important;
-	padding: 0 !important;
-	text-align: left !important;
-}
-
-.vhs-why-card-sub,
-.vhs-why-photo-card p {
-	color: #475569 !important;
-	font-size: 14px !important;
-	font-weight: 500 !important;
-	line-height: 1.6 !important;
-	margin-top: 0 !important;
-	margin-bottom: 0 !important;
-	padding: 0 !important;
-	text-align: left !important;
-}
-
-@media (max-width: 992px) {
-	.vhs-why-photo-section {
-		padding-top: 60px !important;
-		padding-bottom: 60px !important;
-	}
-
-	.vhs-why-photo-grid,
-	.wp-block-columns.vhs-why-photo-grid {
-		gap: 16px !important;
-	}
-
-	.vhs-why-photo-card,
-	.wp-block-column.vhs-why-photo-card {
-		flex: 1 1 calc(50% - 8px) !important;
-		max-width: calc(50% - 8px) !important;
-	}
-}
-
-@media (max-width: 640px) {
-
-	.vhs-why-photo-grid,
-	.wp-block-columns.vhs-why-photo-grid {
-		flex-direction: column !important;
-		gap: 14px !important;
-	}
-
-	.vhs-why-photo-card,
-	.wp-block-column.vhs-why-photo-card {
-		flex: 1 1 100% !important;
-		max-width: 100% !important;
-	}
-}
-
-/* ============================================================
-   South Florida Nationwide Mail — City Pill Buttons Section
-   ============================================================ */
-.vhs-fl-nationwide-section {
-	background-color: #f3f7fc !important;
-	border-top: 1px solid #e3ebf4 !important;
-	padding-top: 72px !important;
-	padding-bottom: 72px !important;
-}
-
-.vhs-fl-nationwide-grid,
-.wp-block-columns.vhs-fl-nationwide-grid {
-	display: flex !important;
-	flex-direction: row !important;
-	flex-wrap: nowrap !important;
-	align-items: center !important;
-	justify-content: space-between !important;
-	gap: 40px !important;
-	width: 100% !important;
-}
-
-.vhs-fl-pills-wrap,
-.wp-block-group.vhs-fl-pills-wrap {
-	display: flex !important;
-	flex-direction: row !important;
-	flex-wrap: wrap !important;
-	align-items: center !important;
-	justify-content: flex-end !important;
-	gap: 9px !important;
-	margin: 0 !important;
-	padding: 0 !important;
-}
-
-.vhs-fl-pill,
-.vhs-fl-pill p {
-	margin: 0 !important;
-	padding: 0 !important;
-}
-
-.vhs-fl-pill a,
-.vhs-fl-pill span {
-	display: inline-block !important;
-	background-color: #ffffff !important;
-	border: 1px solid #d7e2ee !important;
-	color: #34495e !important;
-	font-size: 13.5px !important;
-	font-weight: 700 !important;
-	padding: 9px 16px !important;
-	border-radius: 99px !important;
-	text-decoration: none !important;
-	line-height: 1 !important;
-	transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease !important;
-	box-shadow: 0 2px 6px rgba(22, 50, 79, 0.02) !important;
-}
-
-.vhs-fl-pill a:hover {
-	border-color: #39B7EC !important;
-	color: #436DA5 !important;
-	transform: translateY(-1px) !important;
-	box-shadow: 0 4px 12px rgba(57, 183, 236, 0.15) !important;
-}
-
-@media (max-width: 900px) {
-
-	.vhs-fl-nationwide-grid,
-	.wp-block-columns.vhs-fl-nationwide-grid {
-		flex-direction: column !important;
-		flex-wrap: wrap !important;
-		align-items: flex-start !important;
-		gap: 24px !important;
-	}
-
-	.vhs-fl-nationwide-grid>.wp-block-column {
-		flex: 1 1 100% !important;
-		max-width: 100% !important;
-		width: 100% !important;
-	}
-
-	.vhs-fl-pills-wrap,
-	.wp-block-group.vhs-fl-pills-wrap {
-		justify-content: flex-start !important;
 	}
 }
