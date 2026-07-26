@@ -7525,3 +7525,351 @@ details.vhs-photo-faq-item summary {
 		width: 100% !important;
 	}
 }
+
+/* ============================================================
+   What We Restore — Photo Restoration Section & Card Styles
+   ============================================================ */
+.vhs-what-we-restore-section {
+	background-color: #ffffff !important;
+}
+
+.vhs-restore-grid,
+.wp-block-columns.vhs-restore-grid {
+	display: flex !important;
+	flex-wrap: wrap !important;
+	gap: 20px !important;
+	width: 100% !important;
+}
+
+.vhs-restore-card,
+.wp-block-column.vhs-restore-card {
+	flex: 1 1 calc(25% - 15px) !important;
+	max-width: calc(25% - 15px) !important;
+	min-width: 240px !important;
+	background-color: #ffffff !important;
+	border: 1px solid #e3ebf4 !important;
+	border-radius: 14px !important;
+	padding: 16px 18px !important;
+	box-shadow: 0 2px 8px rgba(22, 50, 79, 0.02) !important;
+	transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease !important;
+	box-sizing: border-box !important;
+	display: flex !important;
+	flex-direction: row !important;
+	align-items: center !important;
+	justify-content: flex-start !important;
+	text-align: left !important;
+	gap: 16px !important;
+}
+
+.vhs-restore-card:hover,
+.wp-block-column.vhs-restore-card:hover {
+	border-color: #39B7EC !important;
+	transform: translateY(-2px) !important;
+	box-shadow: 0 8px 20px rgba(22, 50, 79, 0.05) !important;
+}
+
+.vhs-restore-icon {
+	width: 44px !important;
+	height: 44px !important;
+	border-radius: 11px !important;
+	background-color: rgba(57, 183, 236, 0.12) !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	flex-shrink: 0 !important;
+	margin-right: 16px !important;
+}
+
+.vhs-restore-icon svg {
+	width: 21px !important;
+	height: 21px !important;
+	stroke: #39B7EC !important;
+	display: block !important;
+	margin: auto !important;
+}
+
+.vhs-restore-info,
+.wp-block-group.vhs-restore-info {
+	display: flex !important;
+	flex-direction: column !important;
+	justify-content: center !important;
+	align-items: flex-start !important;
+	text-align: left !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.vhs-restore-title,
+.vhs-restore-info h3,
+.vhs-restore-info .wp-block-heading {
+	color: #16324f !important;
+	font-size: 15.5px !important;
+	font-weight: 800 !important;
+	line-height: 1.25 !important;
+	margin-top: 0 !important;
+	margin-bottom: 2px !important;
+	padding: 0 !important;
+	text-align: left !important;
+}
+
+.vhs-restore-sub,
+.vhs-restore-info p {
+	color: #64748b !important;
+	font-size: 12.5px !important;
+	font-weight: 600 !important;
+	line-height: 1.35 !important;
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+	padding: 0 !important;
+	text-align: left !important;
+}
+
+@media (max-width: 1024px) {
+	.vhs-restore-card,
+	.wp-block-column.vhs-restore-card {
+		flex: 1 1 calc(50% - 10px) !important;
+		max-width: calc(50% - 10px) !important;
+	}
+}
+
+@media (max-width: 640px) {
+	.vhs-restore-grid,
+	.wp-block-columns.vhs-restore-grid {
+		flex-direction: column !important;
+		gap: 16px !important;
+	}
+
+	.vhs-restore-card,
+	.wp-block-column.vhs-restore-card {
+		flex: 1 1 100% !important;
+		max-width: 100% !important;
+	}
+}
+
+/* ============================================================
+   The Restoration Gallery — Section & Card Styles
+   ============================================================ */
+.vhs-restoration-gallery-section {
+	background-color: #f3f7fc !important;
+}
+
+.vhs-gallery-badge {
+	display: flex !important;
+	align-items: center !important;
+	gap: 9px !important;
+	background-color: #16324F !important;
+	border-radius: 99px !important;
+	padding: 11px 20px !important;
+	flex-shrink: 0 !important;
+}
+
+.vhs-gallery-badge span {
+	font-size: 13px !important;
+	font-weight: 800 !important;
+	color: #FFFFFF !important;
+}
+
+.vhs-gallery-grid,
+.wp-block-columns.vhs-gallery-grid {
+	display: flex !important;
+	flex-wrap: wrap !important;
+	gap: 24px !important;
+	width: 100% !important;
+}
+
+.vhs-gallery-item,
+.wp-block-column.vhs-gallery-item {
+	flex: 1 1 calc(50% - 12px) !important;
+	max-width: calc(50% - 12px) !important;
+	box-sizing: border-box !important;
+}
+
+.vhs-comparison-box {
+	position: relative !important;
+	height: 340px !important;
+	border-radius: 16px !important;
+	overflow: hidden !important;
+	box-shadow: 0 20px 45px rgba(22, 50, 79, 0.15) !important;
+	width: 100% !important;
+}
+
+.vhs-comp-split {
+	display: grid !important;
+	grid-template-columns: 1fr 1fr !important;
+	height: 100% !important;
+	width: 100% !important;
+}
+
+.vhs-comp-before {
+	position: relative !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	background: repeating-linear-gradient(0deg, rgba(255,235,190,.06) 0px, rgba(255,235,190,.06) 2px, rgba(0,0,0,0) 2px, rgba(0,0,0,0) 5px), repeating-linear-gradient(45deg, rgba(255,235,190,.07) 0px, rgba(255,235,190,.07) 9px, rgba(0,0,0,0) 9px, rgba(0,0,0,0) 18px), #39392F !important;
+}
+
+.vhs-comp-text {
+	font-family: ui-monospace, monospace !important;
+	font-size: 12px !important;
+	letter-spacing: 0.06em !important;
+	color: rgba(255, 244, 214, 0.55) !important;
+	padding: 0 16px !important;
+	text-align: center !important;
+}
+
+.vhs-comp-tag-before {
+	position: absolute !important;
+	top: 14px !important;
+	left: 14px !important;
+	background: rgba(0,0,0,.5) !important;
+	color: rgba(255,255,255,.85) !important;
+	font-size: 11px !important;
+	font-weight: 800 !important;
+	letter-spacing: 0.12em !important;
+	padding: 6px 12px !important;
+	border-radius: 99px !important;
+}
+
+.vhs-comp-after {
+	position: relative !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	background: repeating-linear-gradient(45deg, rgba(57,183,236,.10) 0px, rgba(57,183,236,.10) 9px, rgba(57,183,236,0) 9px, rgba(57,183,236,0) 18px), #DCE9F5 !important;
+}
+
+.vhs-comp-text-after {
+	font-family: ui-monospace, monospace !important;
+	font-size: 12px !important;
+	letter-spacing: 0.06em !important;
+	color: #5B7188 !important;
+	padding: 0 16px !important;
+	text-align: center !important;
+}
+
+.vhs-comp-tag-after {
+	position: absolute !important;
+	top: 14px !important;
+	right: 14px !important;
+	background: #39B7EC !important;
+	color: #16324F !important;
+	font-size: 11px !important;
+	font-weight: 800 !important;
+	letter-spacing: 0.12em !important;
+	padding: 6px 12px !important;
+	border-radius: 99px !important;
+}
+
+.vhs-comp-line {
+	position: absolute !important;
+	top: 0 !important;
+	bottom: 0 !important;
+	left: 50% !important;
+	width: 3px !important;
+	background: #39B7EC !important;
+	transform: translateX(-50%) !important;
+}
+
+.vhs-comp-handle {
+	position: absolute !important;
+	top: 50% !important;
+	left: 50% !important;
+	transform: translate(-50%, -50%) !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	gap: 3px !important;
+	width: 46px !important;
+	height: 46px !important;
+	border-radius: 50% !important;
+	background: #39B7EC !important;
+	box-shadow: 0 10px 30px rgba(0,0,0,.4) !important;
+	color: #16324F !important;
+	font-weight: 800 !important;
+	font-size: 15px !important;
+}
+
+@media (max-width: 900px) {
+	.vhs-gallery-grid,
+	.wp-block-columns.vhs-gallery-grid {
+		flex-direction: column !important;
+		gap: 24px !important;
+	}
+
+	.vhs-gallery-item,
+	.wp-block-column.vhs-gallery-item {
+		flex: 1 1 100% !important;
+		max-width: 100% !important;
+	}
+
+	.vhs-comparison-box {
+		height: 260px !important;
+	}
+}
+
+/* ============================================================
+   What You Get — Photo Restoration Section & Feature Styles
+   ============================================================ */
+.vhs-what-you-get-section {
+	background-color: #ffffff !important;
+}
+
+.vhs-photo-feature-item {
+	display: flex !important;
+	align-items: flex-start !important;
+	gap: 16px !important;
+	margin-bottom: 24px !important;
+}
+
+.vhs-photo-feature-item:last-child {
+	margin-bottom: 0 !important;
+}
+
+.vhs-photo-feature-icon {
+	width: 44px !important;
+	height: 44px !important;
+	border-radius: 12px !important;
+	background-color: rgba(57, 183, 236, 0.12) !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	flex-shrink: 0 !important;
+}
+
+.vhs-photo-feature-icon svg {
+	width: 21px !important;
+	height: 21px !important;
+	stroke: #39B7EC !important;
+	display: block !important;
+}
+
+.vhs-photo-media-box {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	height: 440px !important;
+	border-radius: 16px !important;
+	background: repeating-linear-gradient(45deg, rgba(57,183,236,.08) 0px, rgba(57,183,236,.08) 10px, rgba(57,183,236,0) 10px, rgba(57,183,236,0) 20px), #1E3A5C !important;
+	border: 1px solid rgba(255,255,255,0.1) !important;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+	width: 100% !important;
+}
+
+.vhs-photo-media-box span {
+	font-family: ui-monospace, monospace !important;
+	font-size: 12px !important;
+	letter-spacing: 0.05em !important;
+	color: rgba(255, 255, 255, 0.6) !important;
+}
+
+@media (max-width: 900px) {
+	.vhs-photo-get-grid,
+	.wp-block-columns.vhs-photo-get-grid {
+		flex-direction: column !important;
+		gap: 36px !important;
+	}
+
+	.vhs-photo-media-box {
+		height: 280px !important;
+	}
+}

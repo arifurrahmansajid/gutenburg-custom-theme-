@@ -114,6 +114,9 @@ if ( ! function_exists( 'realome_register_block_patterns' ) ) :
 			'video-8mm-formats-convert',
 			'pick-camcorder-format',
 			'microcassette-hero',
+			'what-we-restore',
+			'restoration-gallery',
+			'what-you-get-photo',
 		);
 
 		foreach ( $block_patterns as $block_pattern ) {
