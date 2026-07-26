@@ -28,15 +28,31 @@ Tags: one-column, custom-colors, editor-style, custom-logo, custom-menu, feature
 	object-fit: contain !important;
 }
 
-/* Master Section Full-Bleed & Red-Line Alignment Engine */
-.vhs-white-glove-section,
-.vhs-comparison-section,
-.vhs-format-pills-bar,
+/* ============================================================
+   Master Section Architecture Engine (Site-Wide Full-Bleed & Section Spacing)
+   ============================================================ */
+
+/* 1. Full-Bleed 100vw Outer Shell for All Page & Pattern Sections */
+[class*="-section"],
+[class*="-hero-box"],
+[class*="-banner-box"],
+[class*="-callout-wrapper"],
+.vhs-hero-dark,
 .vhs-services-hero-box,
-.entry-content>.wp-block-group,
-.entry-content>div,
-.wp-block-post-content>.wp-block-group,
-.wp-block-post-content>div {
+.vhs-compare-hero-box,
+.vhs-reel-revival-hero-box,
+.vhs-format-pills-bar,
+.vhs-pills-bar-container,
+.vhs-services-breadcrumb-bar,
+.entry-content > .wp-block-group,
+.entry-content > div,
+.entry-content > section,
+.wp-block-post-content > .wp-block-group,
+.wp-block-post-content > div,
+.wp-block-post-content > section,
+main > .wp-block-group,
+main > div,
+main > section {
 	width: 100vw !important;
 	max-width: 100vw !important;
 	margin-left: calc(50% - 50vw) !important;
@@ -44,14 +60,27 @@ Tags: one-column, custom-colors, editor-style, custom-logo, custom-menu, feature
 	box-sizing: border-box !important;
 }
 
-.vhs-white-glove-section>div,
-.vhs-comparison-section>div,
-.vhs-format-pills-bar>div,
-.vhs-services-hero-box>div,
-.entry-content>.wp-block-group>div,
-.entry-content>div>div,
-.wp-block-post-content>.wp-block-group>div,
-.wp-block-post-content>div>div {
+/* 2. Red-Line Alignment Inner Container (Max-Width: 1350px + Horizontal Padding: 24px) */
+[class*="-section"] > div,
+[class*="-hero-box"] > div,
+[class*="-banner-box"] > div,
+[class*="-callout-wrapper"] > div,
+.vhs-hero-dark > div,
+.vhs-services-hero-box > div,
+.vhs-compare-hero-box > div,
+.vhs-reel-revival-hero-box > div,
+.vhs-format-pills-bar > div,
+.vhs-pills-bar-container > div,
+.vhs-services-breadcrumb-bar > div,
+.entry-content > .wp-block-group > div,
+.entry-content > div > div,
+.entry-content > section > div,
+.wp-block-post-content > .wp-block-group > div,
+.wp-block-post-content > div > div,
+.wp-block-post-content > section > div,
+main > .wp-block-group > div,
+main > div > div,
+main > section > div {
 	max-width: 1350px !important;
 	margin-left: auto !important;
 	margin-right: auto !important;
@@ -61,34 +90,121 @@ Tags: one-column, custom-colors, editor-style, custom-logo, custom-menu, feature
 	box-sizing: border-box !important;
 }
 
+/* 3. Universal Section-Based Vertical Padding Engine (Desktop: 80px Top & Bottom) */
+[class*="-section"],
+.entry-content > .wp-block-group,
+.entry-content > div,
+.entry-content > section,
+.wp-block-post-content > .wp-block-group,
+.wp-block-post-content > div,
+.wp-block-post-content > section,
+main > .wp-block-group,
+main > div,
+main > section {
+	padding-top: 80px !important;
+	padding-bottom: 80px !important;
+	box-sizing: border-box !important;
+}
 
-/* Eliminate All Spacing Gaps Between Header and Main Content */
-.wp-site-blocks>header,
-.wp-site-blocks>main,
-.wp-site-blocks>footer,
-.wp-site-blocks>*+*,
-.wp-block-post-content>*,
-.wp-block-post-content>*+*,
-.entry-content>*,
-.entry-content>*+*,
-.is-layout-constrained>*+*,
-header+*,
-header.wp-block-group+* {
+/* Hero Section Standardized Vertical Padding */
+.vhs-hero-dark,
+.vhs-services-hero-box,
+.vhs-compare-hero-box,
+.vhs-reel-revival-hero-box,
+.vhs-lm-hero-section,
+.vhs-dvd-hero-section,
+.vhs-service-detail-hero,
+[class*="-hero-section"] {
+	padding-top: 70px !important;
+	padding-bottom: 70px !important;
+	box-sizing: border-box !important;
+}
+
+/* Specific Compact Bars / Navigation / Ribbons Exceptions */
+.vhs-pills-bar-container,
+.vhs-services-breadcrumb-bar,
+.vhs-trust-ribbon,
+.vhs-newsletter-bar-section,
+.vhs-service-pills-section {
+	padding-top: 18px !important;
+	padding-bottom: 18px !important;
+}
+
+header.wp-block-group,
+.wp-site-blocks > header {
+	padding-top: 16px !important;
+	padding-bottom: 16px !important;
+}
+
+footer.wp-block-group,
+.wp-site-blocks > footer {
+	padding-top: 60px !important;
+	padding-bottom: 40px !important;
+}
+
+/* Mobile Responsive Section Padding Engine (< 782px) */
+@media (max-width: 782px) {
+	[class*="-section"],
+	.entry-content > .wp-block-group,
+	.entry-content > div,
+	.entry-content > section,
+	.wp-block-post-content > .wp-block-group,
+	.wp-block-post-content > div,
+	.wp-block-post-content > section,
+	main > .wp-block-group,
+	main > div,
+	main > section {
+		padding-top: 48px !important;
+		padding-bottom: 48px !important;
+	}
+
+	.vhs-hero-dark,
+	.vhs-services-hero-box,
+	.vhs-compare-hero-box,
+	.vhs-reel-revival-hero-box,
+	.vhs-lm-hero-section,
+	.vhs-dvd-hero-section,
+	.vhs-service-detail-hero,
+	[class*="-hero-section"] {
+		padding-top: 44px !important;
+		padding-bottom: 44px !important;
+	}
+
+	[class*="-section"] > div,
+	.entry-content > .wp-block-group > div,
+	.wp-block-post-content > .wp-block-group > div {
+		padding-left: 16px !important;
+		padding-right: 16px !important;
+	}
+}
+
+/* 4. Eliminate Inter-Section Margin Collapses & Ensure Clean Block Flow */
+.wp-site-blocks > header,
+.wp-site-blocks > main,
+.wp-site-blocks > footer,
+.wp-site-blocks > * + *,
+.wp-block-post-content > *,
+.wp-block-post-content > * + *,
+.entry-content > *,
+.entry-content > * + *,
+.is-layout-constrained > * + *,
+header + *,
+header.wp-block-group + * {
 	margin-top: 0 !important;
 	margin-bottom: 0 !important;
 }
 
-body .is-layout-constrained> :first-child,
-body .is-layout-flow> :first-child,
-body .wp-block-post-content> :first-child,
-body .wp-site-blocks> :first-child {
+body .is-layout-constrained > :first-child,
+body .is-layout-flow > :first-child,
+body .wp-block-post-content > :first-child,
+body .wp-site-blocks > :first-child {
 	margin-top: 0 !important;
 }
 
-body .is-layout-constrained> :last-child,
-body .is-layout-flow> :last-child,
-body .wp-block-post-content> :last-child,
-body .wp-site-blocks> :last-child {
+body .is-layout-constrained > :last-child,
+body .is-layout-flow > :last-child,
+body .wp-block-post-content > :last-child,
+body .wp-site-blocks > :last-child {
 	margin-bottom: 0 !important;
 }
 
