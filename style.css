@@ -12022,3 +12022,86 @@ p.vhs-reel-eyebrow {
 .vhs-featured-exclusive-badge {
 	background-color: rgba(57, 183, 236, 0.16) !important;
 }
+
+/* ============================================================
+   Hollywood FL Home Base Hero Pattern Styles
+   ============================================================ */
+.vhs-hollywood-homebase-hero {
+	position: relative !important;
+	background-color: #16324F !important;
+	background: #16324F !important;
+	background-image: none !important;
+	overflow: hidden !important;
+}
+
+.vhs-homebase-phone-btn {
+	display: inline-flex !important;
+	align-items: center !important;
+	gap: 9px !important;
+	border: 1.5px solid #39B7EC !important;
+	color: #39B7EC !important;
+	font-weight: 700 !important;
+	font-size: 16px !important;
+	padding: 15px 26px !important;
+	border-radius: 12px !important;
+	text-decoration: none !important;
+	transition: all 0.2s ease-in-out !important;
+}
+
+.vhs-homebase-phone-btn:hover {
+	background-color: rgba(57, 183, 236, 0.12) !important;
+	color: #39B7EC !important;
+	text-decoration: none !important;
+}
+
+.vhs-homebase-photo-card {
+	background-color: #1E3A5C !important;
+	border-radius: 16px !important;
+	box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35) !important;
+}
+
+@media (max-width: 991px) {
+	.vhs-homebase-columns {
+		flex-direction: column !important;
+	}
+	.vhs-homebase-photo-card {
+		padding-top: 100px !important;
+		padding-bottom: 100px !important;
+	}
+}
+
+/* ============================================================
+   Hollywood FL City Studio Section Pattern Styles
+   ============================================================ */
+.vhs-hollywood-city-studio-section {
+	background-color: #ffffff !important;
+}
+
+.vhs-city-sidebar-card {
+	background-color: #F3F7FC !important;
+	border: 1px solid #E3EBF4 !important;
+	border-radius: 16px !important;
+}
+
+.vhs-pill-item {
+	border: 1px solid #D7E2EE !important;
+	background-color: #FFFFFF !important;
+	color: #34495E !important;
+	font-size: 13px !important;
+	font-weight: 700 !important;
+	padding: 8px 14px !important;
+	border-radius: 99px !important;
+	display: inline-block !important;
+	transition: all 0.2s ease !important;
+}
+
+.vhs-pill-item:hover {
+	border-color: #39B7EC !important;
+	color: #16324F !important;
+}
+
+@media (max-width: 991px) {
+	.vhs-hollywood-city-studio-grid {
+		flex-direction: column !important;
+	}
+}
