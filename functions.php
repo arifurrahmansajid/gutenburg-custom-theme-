@@ -289,6 +289,78 @@ if ( ! function_exists( 'realome_editor_styles' ) ) :
 			box-sizing: border-box !important;
 		}
 
+		.editor-styles-wrapper .vhs-reel-pricing-header-row,
+		.editor-styles-wrapper .vhs-reel-pricing-row {
+			display: flex !important;
+			flex-direction: row !important;
+			align-items: center !important;
+			justify-content: space-between !important;
+			width: 100% !important;
+			box-sizing: border-box !important;
+		}
+
+		.editor-styles-wrapper .vhs-reel-pricing-header-row > .wp-block-column,
+		.editor-styles-wrapper .vhs-reel-pricing-row > .wp-block-column {
+			margin: 0 !important;
+			padding: 0 !important;
+			text-align: left !important;
+		}
+
+		.editor-styles-wrapper .vhs-reel-card-inner {
+			display: flex !important;
+			flex-direction: row !important;
+			align-items: center !important;
+			justify-content: flex-start !important;
+			gap: 14px !important;
+			width: 100% !important;
+		}
+
+		.editor-styles-wrapper .vhs-reel-card-text {
+			display: flex !important;
+			flex-direction: column !important;
+			align-items: flex-start !important;
+			justify-content: center !important;
+			text-align: left !important;
+			flex: 1 1 auto !important;
+			width: auto !important;
+		}
+
+		.editor-styles-wrapper .vhs-reel-card-text p {
+			display: block !important;
+			text-align: left !important;
+			margin-top: 0 !important;
+			width: 100% !important;
+		}
+
+		.editor-styles-wrapper .vhs-reel-trust-grid {
+			display: flex !important;
+			flex-direction: row !important;
+			gap: 48px !important;
+			width: 100% !important;
+		}
+
+		.editor-styles-wrapper .vhs-reel-trust-item {
+			display: flex !important;
+			flex-direction: row !important;
+			align-items: flex-start !important;
+			gap: 16px !important;
+			width: 100% !important;
+		}
+
+		.editor-styles-wrapper .vhs-reel-trust-text {
+			display: flex !important;
+			flex-direction: column !important;
+			align-items: flex-start !important;
+			text-align: left !important;
+			flex: 1 1 auto !important;
+		}
+
+		.editor-styles-wrapper .vhs-reel-trust-text p {
+			display: block !important;
+			text-align: left !important;
+			width: 100% !important;
+		}
+
 		.editor-styles-wrapper .block-editor-block-list__layout.is-root-container > p + h1,
 		.editor-styles-wrapper .block-editor-block-list__layout.is-root-container > p + h2,
 		.editor-styles-wrapper .block-editor-block-list__layout.is-root-container > p + h3,

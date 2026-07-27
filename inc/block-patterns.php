@@ -122,8 +122,15 @@ if ( ! function_exists( 'realome_register_block_patterns' ) ) :
 			'microcassette-flat-pricing',
 			'why-trust-microcassettes',
 			'photo-restoration-location',
+			'living-memories-cta-banner',
+			'cd-to-digital-banner',
+			'every-disc-we-rip-cd',
+			'why-digitize-cds-now',
+			'a-wall-of-stories-cd',
 			'reel-to-reel-hero',
 			'every-reel-we-digitize',
+			'reel-flat-pricing',
+			'why-trust-reels',
 		);
 
 		foreach ( $block_patterns as $block_pattern ) {
