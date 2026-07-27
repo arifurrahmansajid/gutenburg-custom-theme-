@@ -9781,3 +9781,192 @@ p.vhs-costco-item-text-muted {
 		max-width: 100% !important;
 	}
 }
+
+/* ============================================================
+   Legacybox vs. Memory Converter Hero Styles
+   ============================================================ */
+.vhs-legacybox-hero {
+	background: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.028) 0px, rgba(255, 255, 255, 0.028) 1px, transparent 1px, transparent 3px), radial-gradient(120% 90% at 70% 0%, rgba(57, 183, 236, 0.10), rgba(57, 183, 236, 0) 55%), #16324f !important;
+}
+
+.vhs-legacybox-pill,
+.wp-block-group.vhs-legacybox-pill {
+	display: inline-flex !important;
+	align-items: center !important;
+	gap: 9px !important;
+	background-color: rgba(57, 183, 236, 0.12) !important;
+	border: 1px solid rgba(57, 183, 236, 0.4) !important;
+	border-radius: 99px !important;
+	padding: 8px 16px !important;
+	margin-bottom: 20px !important;
+}
+
+.vhs-legacybox-pill svg {
+	width: 14px !important;
+	height: 14px !important;
+	stroke: #39B7EC !important;
+	display: block !important;
+}
+
+.vhs-legacybox-pill-text,
+p.vhs-legacybox-pill-text {
+	font-size: 12.5px !important;
+	font-weight: 800 !important;
+	letter-spacing: 0.06em !important;
+	color: #39B7EC !important;
+	margin: 0 !important;
+	text-transform: uppercase !important;
+}
+
+.vhs-legacybox-link,
+a.vhs-legacybox-link {
+	font-size: 15px !important;
+	font-weight: 800 !important;
+	color: #39B7EC !important;
+	text-decoration: none !important;
+	transition: opacity 0.2s ease !important;
+}
+
+.vhs-legacybox-link:hover,
+a.vhs-legacybox-link:hover {
+	opacity: 0.85 !important;
+	text-decoration: underline !important;
+}
+
+/* ============================================================
+   The 30-Second Verdict Section & Cards Styles
+   ============================================================ */
+.vhs-verdict-section {
+	background-color: #ffffff !important;
+}
+
+.vhs-verdict-grid,
+.wp-block-columns.vhs-verdict-grid {
+	display: flex !important;
+	flex-wrap: wrap !important;
+	gap: 24px !important;
+	width: 100% !important;
+	margin-bottom: 24px !important;
+}
+
+.vhs-verdict-card-gray,
+.wp-block-column.vhs-verdict-card-gray {
+	flex: 1 1 calc(50% - 12px) !important;
+	max-width: calc(50% - 12px) !important;
+	min-width: 280px !important;
+	background-color: #ffffff !important;
+	border: 1px solid #e3ebf4 !important;
+	border-radius: 16px !important;
+	padding: 32px !important;
+	box-shadow: 0 4px 16px rgba(22, 50, 79, 0.02) !important;
+	box-sizing: border-box !important;
+}
+
+.vhs-verdict-card-cyan,
+.wp-block-column.vhs-verdict-card-cyan {
+	flex: 1 1 calc(50% - 12px) !important;
+	max-width: calc(50% - 12px) !important;
+	min-width: 280px !important;
+	background-color: rgba(57, 183, 236, 0.04) !important;
+	border: 2px solid #39B7EC !important;
+	border-radius: 16px !important;
+	padding: 32px !important;
+	box-shadow: 0 6px 20px rgba(57, 183, 236, 0.1) !important;
+	box-sizing: border-box !important;
+}
+
+.vhs-verdict-card-gray .vhs-verdict-card-title {
+	font-size: 16px !important;
+	font-weight: 800 !important;
+	color: #64748b !important;
+	margin-top: 0 !important;
+	margin-bottom: 18px !important;
+}
+
+.vhs-verdict-card-cyan .vhs-verdict-card-title {
+	font-size: 16px !important;
+	font-weight: 800 !important;
+	color: #436da5 !important;
+	margin-top: 0 !important;
+	margin-bottom: 18px !important;
+}
+
+.vhs-verdict-list-item,
+.wp-block-group.vhs-verdict-list-item {
+	display: flex !important;
+	align-items: flex-start !important;
+	gap: 10px !important;
+	margin-bottom: 12px !important;
+}
+
+.vhs-verdict-list-item:last-child {
+	margin-bottom: 0 !important;
+}
+
+.vhs-verdict-bullet {
+	color: #64748b !important;
+	font-weight: 800 !important;
+	font-size: 16px !important;
+	line-height: 1.3 !important;
+}
+
+.vhs-verdict-item-text,
+p.vhs-verdict-item-text {
+	font-size: 14.5px !important;
+	font-weight: 600 !important;
+	color: #4a5d73 !important;
+	line-height: 1.55 !important;
+	margin: 0 !important;
+}
+
+.vhs-verdict-item-text-dark,
+p.vhs-verdict-item-text-dark {
+	font-size: 14.5px !important;
+	font-weight: 600 !important;
+	color: #34495e !important;
+	line-height: 1.55 !important;
+	margin: 0 !important;
+}
+
+.vhs-verdict-overall-banner,
+.wp-block-group.vhs-verdict-overall-banner {
+	display: flex !important;
+	align-items: center !important;
+	gap: 12px !important;
+	background-color: #f3f7fc !important;
+	border: 1px solid #e3ebf4 !important;
+	border-radius: 12px !important;
+	padding: 18px 22px !important;
+}
+
+.vhs-verdict-overall-banner svg {
+	width: 16px !important;
+	height: 16px !important;
+	stroke: #39B7EC !important;
+	flex-shrink: 0 !important;
+}
+
+.vhs-verdict-overall-text,
+p.vhs-verdict-overall-text {
+	font-size: 15px !important;
+	font-weight: 700 !important;
+	color: #16324f !important;
+	line-height: 1.55 !important;
+	margin: 0 !important;
+}
+
+@media (max-width: 900px) {
+	.vhs-verdict-grid,
+	.wp-block-columns.vhs-verdict-grid {
+		flex-direction: column !important;
+		gap: 20px !important;
+	}
+
+	.vhs-verdict-card-gray,
+	.wp-block-column.vhs-verdict-card-gray,
+	.vhs-verdict-card-cyan,
+	.wp-block-column.vhs-verdict-card-cyan {
+		flex: 1 1 100% !important;
+		max-width: 100% !important;
+	}
+}

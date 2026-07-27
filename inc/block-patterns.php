@@ -132,6 +132,8 @@ if ( ! function_exists( 'realome_register_block_patterns' ) ) :
 			'costco-guide-tldr',
 			'costco-offered-vs-tradeoffs',
 			'better-option-costco-cards',
+			'legacybox-comparison-hero',
+			'the-30-second-verdict-legacybox',
 			'reel-to-reel-hero',
 			'every-reel-we-digitize',
 			'reel-flat-pricing',
