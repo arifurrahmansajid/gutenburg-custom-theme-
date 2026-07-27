@@ -27,7 +27,7 @@
 				<!-- /wp:html -->
 
 				<!-- Text Block -->
-				<!-- wp:group {"layout":{"type":"constrained"}} -->
+				<!-- wp:group {"className":"vhs-lm-text-block","layout":{"type":"flex","orientation":"vertical","justifyContent":"left"}} -->
 				<div class="wp-block-group vhs-lm-text-block">
 					<!-- Eyebrow -->
 					<!-- wp:paragraph {"style":{"color":{"text":"#436da5"},"typography":{"fontSize":"12px","fontWeight":"700","letterSpacing":"0.08em","textTransform":"uppercase"},"spacing":{"margin":{"top":"0px","bottom":"4px"}}}} -->

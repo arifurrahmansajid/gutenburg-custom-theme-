@@ -8248,3 +8248,108 @@ p.vhs-location-pill:hover {
 		justify-content: flex-start !important;
 	}
 }
+
+/* ============================================================
+   Living Memories Callout Bar Section & Flex Alignment Styles
+   ============================================================ */
+.vhs-living-memories-callout-section {
+	background-color: #f0f4f8 !important;
+}
+
+.vhs-lm-callout-wrapper,
+.wp-block-group.vhs-lm-callout-wrapper {
+	display: flex !important;
+	flex-direction: row !important;
+	align-items: center !important;
+	justify-content: space-between !important;
+	gap: 24px !important;
+	width: 100% !important;
+}
+
+.vhs-lm-left-content,
+.wp-block-group.vhs-lm-left-content {
+	display: flex !important;
+	flex-direction: row !important;
+	align-items: center !important;
+	gap: 20px !important;
+	flex: 1 1 auto !important;
+}
+
+.vhs-lm-icon-circle {
+	width: 52px !important;
+	height: 52px !important;
+	min-width: 52px !important;
+	border-radius: 50% !important;
+	background-color: #16324f !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	flex-shrink: 0 !important;
+}
+
+.vhs-lm-icon-circle svg {
+	width: 24px !important;
+	height: 24px !important;
+	stroke: #39B7EC !important;
+	display: block !important;
+	margin: auto !important;
+}
+
+.vhs-lm-text-block,
+.wp-block-group.vhs-lm-text-block {
+	display: flex !important;
+	flex-direction: column !important;
+	align-items: flex-start !important;
+	justify-content: center !important;
+	text-align: left !important;
+	flex: 1 1 auto !important;
+	width: 100% !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.vhs-lm-text-block p,
+.wp-block-group.vhs-lm-text-block p {
+	display: block !important;
+	width: 100% !important;
+	text-align: left !important;
+	margin-top: 0 !important;
+}
+
+.vhs-lm-btn-wrapper {
+	flex-shrink: 0 !important;
+}
+
+.vhs-btn-lm {
+	display: inline-block !important;
+	border: 1.5px solid #39B7EC !important;
+	color: #436da5 !important;
+	font-weight: 700 !important;
+	font-size: 15.5px !important;
+	padding: 12px 24px !important;
+	border-radius: 12px !important;
+	background: transparent !important;
+	text-decoration: none !important;
+	transition: background-color 0.2s ease, border-color 0.2s ease !important;
+}
+
+.vhs-btn-lm:hover {
+	background-color: rgba(57, 183, 236, 0.1) !important;
+}
+
+@media (max-width: 900px) {
+	.vhs-lm-callout-wrapper,
+	.wp-block-group.vhs-lm-callout-wrapper {
+		flex-direction: column !important;
+		align-items: flex-start !important;
+		gap: 16px !important;
+	}
+
+	.vhs-lm-left-content,
+	.wp-block-group.vhs-lm-left-content {
+		flex-direction: row !important;
+		align-items: flex-start !important;
+		gap: 16px !important;
+		width: 100% !important;
+	}
+}

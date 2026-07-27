@@ -27,7 +27,7 @@
 				<!-- /wp:html -->
 
 				<!-- Text Block -->
-				<!-- wp:group {"layout":{"type":"constrained"}} -->
+				<!-- wp:group {"className":"vhs-lm-text-block","layout":{"type":"flex","orientation":"vertical","justifyContent":"left"}} -->
 				<div class="wp-block-group vhs-lm-text-block">
 					<!-- Eyebrow -->
 					<!-- wp:paragraph {"style":{"color":{"text":"#436da5"},"typography":{"fontSize":"12px","fontWeight":"700","letterSpacing":"0.08em","textTransform":"uppercase"},"spacing":{"margin":{"top":"0px","bottom":"4px"}}}} -->
@@ -36,7 +36,7 @@
 
 					<!-- Main Paragraph -->
 					<!-- wp:paragraph {"style":{"color":{"text":"#334155"},"typography":{"fontSize":"15px","lineHeight":"1.5"}},"spacing":{"margin":{"top":"0px","bottom":"0px"}}} -->
-					<p class="has-text-color" style="color:#334155;font-size:15px;line-height:1.5;margin:0">These home movies tell your family&rsquo;s story. <strong style="color:#16324f">Living Memories</strong> films you telling it &mdash; with this very footage woven in. From $1,800.</p>
+					<p class="has-text-color" style="color:#334155;font-size:15px;line-height:1.5;margin:0">Digitizing a lifetime of home videos? <strong style="color:#16324f">Living Memories</strong> turns them into a filmed documentary of your family&rsquo;s story &mdash; your voice on camera, your restored footage woven in. From $1,800.</p>
 					<!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:group -->

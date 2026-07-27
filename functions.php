@@ -352,3 +352,52 @@ require get_parent_theme_file_path( '/inc/plugins.php' );
 
 // Add block patterns.
 require get_template_directory() . '/inc/block-patterns.php';
+
+/**
+ * Fix REST API URL and CORS header issues (X-HTTP-Method-Override) for Site Editor / Gutenberg.
+ */
+add_filter( 'rest_url', function( $url ) {
+	if ( ! empty( $_SERVER['HTTP_HOST'] ) ) {
+		$scheme       = is_ssl() ? 'https' : 'http';
+		$current_host = $_SERVER['HTTP_HOST'];
+		$url          = preg_replace( '#^https?://[^/]+#i', $scheme . '://' . $current_host, $url );
+	}
+	return $url;
+} );
+
+add_action( 'init', function() {
+	if ( isset( $_SERVER['HTTP_ORIGIN'] ) ) {
+		$origin = $_SERVER['HTTP_ORIGIN'];
+		header( "Access-Control-Allow-Origin: {$origin}" );
+		header( 'Access-Control-Allow-Credentials: true' );
+		header( 'Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, OPTIONS' );
+		header( 'Access-Control-Allow-Headers: Authorization, X-WP-Nonce, Content-Type, X-HTTP-Method-Override, Origin, X-Requested-With, Accept' );
+
+		if ( isset( $_SERVER['REQUEST_METHOD'] ) && 'OPTIONS' === $_SERVER['REQUEST_METHOD'] ) {
+			status_header( 200 );
+			exit();
+		}
+	}
+} );
+
+add_filter( 'rest_allowed_cors_headers', function( $headers ) {
+	if ( ! is_array( $headers ) ) {
+		$headers = array();
+	}
+	$headers[] = 'X-HTTP-Method-Override';
+	$headers[] = 'X-WP-Nonce';
+	$headers[] = 'Authorization';
+	$headers[] = 'Content-Type';
+	return array_unique( $headers );
+} );
+
+add_filter( 'allowed_http_origins', function( $origins ) {
+	if ( ! is_array( $origins ) ) {
+		$origins = array();
+	}
+	if ( isset( $_SERVER['HTTP_ORIGIN'] ) && ! in_array( $_SERVER['HTTP_ORIGIN'], $origins, true ) ) {
+		$origins[] = $_SERVER['HTTP_ORIGIN'];
+	}
+	return $origins;
+} );
+
