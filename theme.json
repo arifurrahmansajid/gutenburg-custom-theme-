@@ -261,13 +261,13 @@
 			"lineHeight": true,
 			"fontFamilies": [
 				{
-					"fontFamily": "\"Inter\", sans-serif",
-					"name": "Inter",
+					"fontFamily": "\"Manrope\", sans-serif",
+					"name": "Manrope",
 					"slug": "heading"
 				},
 				{
-					"fontFamily": "\"Inter\", sans-serif",
-					"name": "Inter",
+					"fontFamily": "\"Manrope\", sans-serif",
+					"name": "Manrope",
 					"slug": "body"
 				}
 			],

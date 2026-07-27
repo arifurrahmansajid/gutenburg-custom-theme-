@@ -111,6 +111,15 @@ if ( ! function_exists( 'realome_scripts' ) ) :
 		// Enqueue theme stylesheet.
 		wp_enqueue_style( 'realome-theme-style' );
 
+		// Register Google Font Manrope (weights 400-800)
+		wp_register_style(
+			'realome-manrope-font',
+			'https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap',
+			array(),
+			'1.0.0'
+		);
+		wp_enqueue_style( 'realome-manrope-font' );
+
 		// Register material icons stylesheet.
 		wp_register_style(
 			'material-icons',
@@ -168,37 +177,19 @@ if ( ! function_exists( 'realome_get_font_face_styles' ) ) :
 	function realome_get_font_face_styles() {
 
 		return "
-		@font-face{
-			font-family: 'Inter';
-			src: url('" . get_theme_file_uri( 'assets/fonts/inter-roman.woff2' ) . "') format('woff2');
-			font-style: 400;
-			font-weight: normal;
-			font-display: swap;
+		@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
 
-		}
-
-		@font-face{
-			font-family: 'Inter';
-			src: url('" . get_theme_file_uri( 'assets/fonts/Inter-medium.woff2' ) . "') format('woff2');
-			font-style: normal;
-			font-weight: 500;
-			font-display: swap;
-		}
-
-		@font-face{
-			font-family: 'Inter';
-			src: url('" . get_theme_file_uri( 'assets/fonts/inter-semibold.woff2' ) . "') format('woff2');
-			font-style: normal;
-			font-weight: 600;
-			font-display: swap;
-		}
-
-		@font-face{
-			font-family: 'Inter';
-			src: url('" . get_theme_file_uri( 'assets/fonts/inter-italic.woff2' ) . "') format('woff2');
-			font-style: italic;
-			font-weight: normal;
-			font-display: swap;
+		body,
+		h1, h2, h3, h4, h5, h6,
+		p, span, div, a, li, label, input, button, select, textarea,
+		.editor-styles-wrapper,
+		.editor-styles-wrapper *,
+		.wp-block-heading,
+		.wp-block-paragraph,
+		.wp-block-button,
+		.wp-block-navigation,
+		:root {
+			font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
 		}
 
 		/* fallback */
@@ -210,7 +201,7 @@ if ( ! function_exists( 'realome_get_font_face_styles' ) ) :
 		}
 		
 		.material-icons-outlined {
-		  font-family: 'Material Icons Outlined';
+		  font-family: 'Material Icons Outlined' !important;
 		  font-weight: normal;
 		  font-style: normal;
 		  font-size: 24px;
@@ -234,12 +225,7 @@ endif;
 if ( ! function_exists( 'realome_preload_webfonts' ) ) :
 
 	/**
-	 * Preloads the main web font to improve performance.
-	 *
-	 * Only the main web font (font-style: normal) is preloaded here since that font is always relevant (it is used
-	 * on every heading, for example). The other font is only needed if there is any applicable content in italic style,
-	 * and therefore preloading it would in most cases regress performance when that font would otherwise not be loaded
-	 * at all.
+	 * Preloads the main web font (Manrope) to improve performance.
 	 *
 	 * @since Realome 1.0
 	 *
@@ -247,7 +233,9 @@ if ( ! function_exists( 'realome_preload_webfonts' ) ) :
 	 */
 	function realome_preload_webfonts() {
 		?>
-		<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( 'assets/fonts/inter-roman.woff2' ) ); ?>" as="font" type="font/woff2" crossorigin>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
 		<?php
 	}
 

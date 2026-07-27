@@ -14,6 +14,24 @@ Text Domain: realome
 Tags: one-column, custom-colors, editor-style, custom-logo, custom-menu, featured-images, theme-options, translation-ready, blog, photography
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+html, body,
+h1, h2, h3, h4, h5, h6,
+p, span, div, a, li, label, input, button, select, textarea,
+.wp-block-heading,
+.wp-block-paragraph,
+.wp-block-button,
+.wp-block-navigation,
+.editor-styles-wrapper,
+.editor-styles-wrapper *,
+.entry-content,
+.entry-content *,
+.wp-block-post-content,
+.wp-block-post-content * {
+	font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+}
+
 /* Custom Icon Upload Helper */
 .vhs-custom-icon-block {
 	display: inline-flex !important;
