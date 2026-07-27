@@ -8451,3 +8451,111 @@ p.vhs-location-pill:hover {
 		width: 100% !important;
 	}
 }
+
+/* ============================================================
+   Reel-to-Reel Hero Section Styles
+   ============================================================ */
+.vhs-reel-hero-section {
+	background-color: #16324f !important;
+	position: relative !important;
+	overflow: hidden !important;
+}
+
+.vhs-reel-hero-grid,
+.wp-block-columns.vhs-reel-hero-grid {
+	display: flex !important;
+	flex-direction: row !important;
+	align-items: center !important;
+	justify-content: space-between !important;
+	gap: 64px !important;
+	width: 100% !important;
+}
+
+.vhs-reel-hero-eyebrow {
+	color: #39B7EC !important;
+	font-size: 13px !important;
+	font-weight: 800 !important;
+	letter-spacing: 0.16em !important;
+	text-transform: uppercase !important;
+	margin-top: 0 !important;
+	margin-bottom: 20px !important;
+}
+
+.vhs-reel-hero-title,
+.wp-block-heading.vhs-reel-hero-title {
+	color: #ffffff !important;
+	font-size: 54px !important;
+	font-weight: 800 !important;
+	line-height: 1.06 !important;
+	letter-spacing: -0.01em !important;
+	margin-top: 0 !important;
+	margin-bottom: 22px !important;
+}
+
+.vhs-reel-hero-desc {
+	color: rgba(255, 255, 255, 0.82) !important;
+	font-size: 17.5px !important;
+	font-weight: 500 !important;
+	line-height: 1.65 !important;
+	max-width: 540px !important;
+	margin-top: 0 !important;
+	margin-bottom: 30px !important;
+}
+
+.vhs-reel-hero-actions,
+.wp-block-group.vhs-reel-hero-actions {
+	display: flex !important;
+	flex-direction: row !important;
+	align-items: center !important;
+	gap: 16px !important;
+	margin-bottom: 24px !important;
+}
+
+.vhs-reel-hero-price-tag {
+	color: rgba(255, 255, 255, 0.85) !important;
+	font-size: 15px !important;
+	font-weight: 800 !important;
+	margin: 0 !important;
+}
+
+.vhs-reel-hero-bullets {
+	color: rgba(255, 255, 255, 0.66) !important;
+	font-size: 13.5px !important;
+	font-weight: 600 !important;
+	margin: 0 !important;
+}
+
+.vhs-reel-hero-media-box {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	height: 440px !important;
+	width: 100% !important;
+	border-radius: 16px !important;
+	background: repeating-linear-gradient(45deg, rgba(57, 183, 236, 0.08) 0px, rgba(57, 183, 236, 0.08) 10px, rgba(57, 183, 236, 0) 10px, rgba(57, 183, 236, 0) 20px), #1E3A5C !important;
+	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25) !important;
+}
+
+.vhs-reel-hero-media-box span {
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+	font-size: 12px !important;
+	letter-spacing: 0.05em !important;
+	color: rgba(255, 255, 255, 0.6) !important;
+}
+
+@media (max-width: 900px) {
+	.vhs-reel-hero-grid,
+	.wp-block-columns.vhs-reel-hero-grid {
+		flex-direction: column !important;
+		gap: 36px !important;
+	}
+
+	.vhs-reel-hero-title,
+	.wp-block-heading.vhs-reel-hero-title {
+		font-size: 38px !important;
+	}
+
+	.vhs-reel-hero-media-box {
+		height: 280px !important;
+	}
+}

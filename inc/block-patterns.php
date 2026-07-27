@@ -122,6 +122,7 @@ if ( ! function_exists( 'realome_register_block_patterns' ) ) :
 			'microcassette-flat-pricing',
 			'why-trust-microcassettes',
 			'photo-restoration-location',
+			'reel-to-reel-hero',
 		);
 
 		foreach ( $block_patterns as $block_pattern ) {
