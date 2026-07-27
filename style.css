@@ -2782,6 +2782,19 @@ body .wp-site-blocks> :last-child {
 	align-items: center;
 	transform: translateX(-50%);
 	z-index: 5;
+	text-decoration: none !important;
+	transition: all 0.2s ease-in-out;
+}
+
+.vhs-map-pin:hover {
+	z-index: 15 !important;
+	transform: translateX(-50%) scale(1.06);
+}
+
+.vhs-map-pin:hover .vhs-map-pin-label {
+	border-color: #39B7EC !important;
+	color: #436DA5 !important;
+	box-shadow: 0 4px 12px rgba(57, 183, 236, 0.25) !important;
 }
 
 .vhs-map-pin-label {
@@ -12410,4 +12423,42 @@ p.vhs-reel-eyebrow {
 	font-size: 12.5px !important;
 	font-weight: 700 !important;
 	color: #34495E !important;
+}
+
+/* Location Pills & Links */
+.vhs-loc-pill {
+	display: inline-block !important;
+	border: 1px solid #D7E2EE !important;
+	background-color: #FFFFFF !important;
+	color: #34495E !important;
+	font-size: 13.5px !important;
+	font-weight: 700 !important;
+	padding: 9px 16px !important;
+	border-radius: 99px !important;
+	text-decoration: none !important;
+	transition: all 0.2s ease-in-out !important;
+	cursor: pointer !important;
+}
+
+.vhs-loc-pill:hover {
+	border-color: #39B7EC !important;
+	color: #436DA5 !important;
+	transform: translateY(-1px);
+	box-shadow: 0 4px 12px rgba(57, 183, 236, 0.15) !important;
+}
+
+.vhs-loc-pill-white {
+	background-color: #FFFFFF !important;
+	color: #16324F !important;
+}
+
+/* Nationwide Mail-In Banner Outer Section Background */
+.vhs-mailin-banner-wrapper {
+	background-color: #ffffff !important;
+}
+
+.vhs-mailin-banner {
+	background-color: #16324f !important;
+	border-radius: 16px !important;
+	padding: 24px 32px !important;
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * Areas Served — City Map Section Pattern
+ * Areas Served — One Studio, Twelve Cities Map Pattern
  *
  * @package Realome
  * @since Realome 1.0
@@ -22,7 +22,7 @@ return array(
 			<h2 class="wp-block-heading has-text-color" style="color:#16324f;font-weight:800;line-height:1.15;margin-top:0;margin-bottom:12px;font-size:40px">One Studio. Twelve <span style="color:#39B7EC">Cities</span>.</h2>
 			<!-- /wp:heading -->
 			<!-- wp:paragraph {"style":{"color":{"text":"#64748b"},"typography":{"fontSize":"16px","lineHeight":"1.6"}}} -->
-			<p class="has-text-color" style="color:#64748b;font-size:16px;line-height:1.6;margin:0">Every pin is a page &mdash; and every order comes home to the same Hollywood studio.</p>
+			<p class="has-text-color" style="color:#64748b;font-size:16px;line-height:1.6;margin:0">Every pin connects to our service areas &mdash; and every order comes home to the same Hollywood studio.</p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:group -->
@@ -35,79 +35,77 @@ return array(
 			<span class="vhs-map-ocean-label">atlantic ocean</span>
 			<div class="vhs-map-ocean-divider"></div>
 
-			<!-- City Pins: positioned with left/top % relative to map -->
-
 			<!-- West Palm Beach -->
-			<div class="vhs-map-pin" style="left:36%;top:14%">
-				<div class="vhs-map-pin-label">West Palm Beach</div>
-				<div class="vhs-map-pin-dot"></div>
-			</div>
+			<a href="/areas-served/" class="vhs-map-pin" style="left:36%;top:14%">
+				<span class="vhs-map-pin-label">West Palm Beach</span>
+				<span class="vhs-map-pin-dot"></span>
+			</a>
 
 			<!-- Boca Raton -->
-			<div class="vhs-map-pin" style="left:58%;top:24%">
-				<div class="vhs-map-pin-label">Boca Raton</div>
-				<div class="vhs-map-pin-dot"></div>
-			</div>
+			<a href="/areas-served/" class="vhs-map-pin" style="left:58%;top:24%">
+				<span class="vhs-map-pin-label">Boca Raton</span>
+				<span class="vhs-map-pin-dot"></span>
+			</a>
 
 			<!-- Pompano Beach -->
-			<div class="vhs-map-pin" style="left:46%;top:32%">
-				<div class="vhs-map-pin-label">Pompano Beach</div>
-				<div class="vhs-map-pin-dot"></div>
-			</div>
+			<a href="/areas-served/" class="vhs-map-pin" style="left:46%;top:32%">
+				<span class="vhs-map-pin-label">Pompano Beach</span>
+				<span class="vhs-map-pin-dot"></span>
+			</a>
 
 			<!-- Fort Lauderdale -->
-			<div class="vhs-map-pin" style="left:58%;top:38%">
-				<div class="vhs-map-pin-label">Fort Lauderdale</div>
-				<div class="vhs-map-pin-dot"></div>
-			</div>
+			<a href="/areas-served/" class="vhs-map-pin" style="left:58%;top:38%">
+				<span class="vhs-map-pin-label">Fort Lauderdale</span>
+				<span class="vhs-map-pin-dot"></span>
+			</a>
 
 			<!-- Weston -->
-			<div class="vhs-map-pin" style="left:22%;top:40%">
-				<div class="vhs-map-pin-label">Weston</div>
-				<div class="vhs-map-pin-dot"></div>
-			</div>
+			<a href="/areas-served/" class="vhs-map-pin" style="left:22%;top:40%">
+				<span class="vhs-map-pin-label">Weston</span>
+				<span class="vhs-map-pin-dot"></span>
+			</a>
 
 			<!-- Plantation -->
-			<div class="vhs-map-pin" style="left:34%;top:43%">
-				<div class="vhs-map-pin-label">Plantation</div>
-				<div class="vhs-map-pin-dot"></div>
-			</div>
+			<a href="/areas-served/" class="vhs-map-pin" style="left:34%;top:43%">
+				<span class="vhs-map-pin-label">Plantation</span>
+				<span class="vhs-map-pin-dot"></span>
+			</a>
 
 			<!-- Davie -->
-			<div class="vhs-map-pin" style="left:29%;top:49%">
-				<div class="vhs-map-pin-label">Davie</div>
-				<div class="vhs-map-pin-dot"></div>
-			</div>
+			<a href="/areas-served/" class="vhs-map-pin" style="left:29%;top:49%">
+				<span class="vhs-map-pin-label">Davie</span>
+				<span class="vhs-map-pin-dot"></span>
+			</a>
 
 			<!-- HOLLYWOOD — OUR STUDIO (highlighted) -->
-			<div class="vhs-map-pin vhs-map-pin--studio" style="left:42%;top:51%">
-				<div class="vhs-map-pin-label vhs-map-pin-label--studio">HOLLYWOOD &mdash; OUR STUDIO</div>
-				<div class="vhs-map-pin-dot vhs-map-pin-dot--studio"></div>
-			</div>
+			<a href="/areas-served/" class="vhs-map-pin vhs-map-pin--studio" style="left:42%;top:51%">
+				<span class="vhs-map-pin-label vhs-map-pin-label--studio">HOLLYWOOD &mdash; OUR STUDIO</span>
+				<span class="vhs-map-pin-dot vhs-map-pin-dot--studio"></span>
+			</a>
 
 			<!-- Pembroke Pines -->
-			<div class="vhs-map-pin" style="left:21%;top:55%">
-				<div class="vhs-map-pin-label">Pembroke Pines</div>
-				<div class="vhs-map-pin-dot"></div>
-			</div>
+			<a href="/areas-served/" class="vhs-map-pin" style="left:21%;top:55%">
+				<span class="vhs-map-pin-label">Pembroke Pines</span>
+				<span class="vhs-map-pin-dot"></span>
+			</a>
 
 			<!-- Aventura -->
-			<div class="vhs-map-pin" style="left:59%;top:57%">
-				<div class="vhs-map-pin-label">Aventura</div>
-				<div class="vhs-map-pin-dot"></div>
-			</div>
+			<a href="/areas-served/" class="vhs-map-pin" style="left:59%;top:57%">
+				<span class="vhs-map-pin-label">Aventura</span>
+				<span class="vhs-map-pin-dot"></span>
+			</a>
 
 			<!-- Coral Gables -->
-			<div class="vhs-map-pin" style="left:33%;top:67%">
-				<div class="vhs-map-pin-label">Coral Gables</div>
-				<div class="vhs-map-pin-dot"></div>
-			</div>
+			<a href="/areas-served/" class="vhs-map-pin" style="left:33%;top:67%">
+				<span class="vhs-map-pin-label">Coral Gables</span>
+				<span class="vhs-map-pin-dot"></span>
+			</a>
 
 			<!-- Miami -->
-			<div class="vhs-map-pin" style="left:45%;top:68%">
-				<div class="vhs-map-pin-label">Miami</div>
-				<div class="vhs-map-pin-dot"></div>
-			</div>
+			<a href="/areas-served/" class="vhs-map-pin" style="left:45%;top:68%">
+				<span class="vhs-map-pin-label">Miami</span>
+				<span class="vhs-map-pin-dot"></span>
+			</a>
 
 			<!-- Studio Address Card (bottom-left) -->
 			<div class="vhs-map-studio-card">
@@ -122,5 +120,5 @@ return array(
 	<!-- /wp:group -->
 </div>
 <!-- /wp:group -->
-',
+	',
 );

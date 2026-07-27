@@ -6,8 +6,8 @@
  * Keywords: Nationwide mail-in banner, not in south florida, insured both ways, start a mail-in order
  */
 ?>
-<!-- wp:group {"align":"full","className":"vhs-mailin-banner-wrapper","style":{"spacing":{"padding":{"top":"40px","bottom":"40px","left":"24px","right":"24px"}}},"layout":{"type":"constrained","contentSize":"1350px"}} -->
-<div class="wp-block-group alignfull vhs-mailin-banner-wrapper" style="padding-top:40px;padding-right:24px;padding-bottom:40px;padding-left:24px">
+<!-- wp:group {"align":"full","className":"vhs-mailin-banner-wrapper","style":{"color":{"background":"#ffffff"},"spacing":{"padding":{"top":"40px","bottom":"40px","left":"24px","right":"24px"}}},"layout":{"type":"constrained","contentSize":"1350px"}} -->
+<div class="wp-block-group alignfull vhs-mailin-banner-wrapper has-background" style="background-color:#ffffff;padding-top:40px;padding-right:24px;padding-bottom:40px;padding-left:24px">
 
 	<!-- Dark Banner Box -->
 	<!-- wp:group {"className":"vhs-mailin-banner","style":{"color":{"background":"#16324f"},"border":{"radius":"16px"}},"layout":{"type":"flex","flexWrap":"wrap","verticalAlignment":"center","justifyContent":"space-between"}} -->

@@ -41,7 +41,7 @@ return array(
 			<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%">
 				<!-- wp:html -->
 				<div class="vhs-location-pills-row">
-					<span class="vhs-loc-pill vhs-loc-pill-white">Hollywood</span>
+					<a href="/hollywood-fl/" class="vhs-loc-pill vhs-loc-pill-white">Hollywood</a>
 					<span class="vhs-loc-pill vhs-loc-pill-white">Fort Lauderdale</span>
 					<span class="vhs-loc-pill vhs-loc-pill-white">Miami</span>
 					<span class="vhs-loc-pill vhs-loc-pill-white">Boca Raton</span>

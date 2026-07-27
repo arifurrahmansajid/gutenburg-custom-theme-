@@ -34,7 +34,7 @@ return array(
 			<!-- wp:group {"className":"vhs-location-tags","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"right"}} -->
 			<div class="wp-block-group vhs-location-tags">
 				<!-- wp:paragraph {"className":"vhs-location-pill"} -->
-				<p class="vhs-location-pill"><a href="#" style="color:inherit;text-decoration:none">Hollywood</a></p>
+				<p class="vhs-location-pill"><a href="/hollywood-fl/" style="color:inherit;text-decoration:none">Hollywood</a></p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:paragraph {"className":"vhs-location-pill"} -->
