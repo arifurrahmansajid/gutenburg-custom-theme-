@@ -10098,3 +10098,67 @@ p.vhs-worthit-bold {
 	margin: 0 !important;
 	text-align: left !important;
 }
+
+/* ============================================================
+   Other Comparisons Pills Bar Styles
+   ============================================================ */
+.vhs-other-comp-section {
+	background-color: #ffffff !important;
+	border-top: 1px solid #e3ebf4 !important;
+}
+
+.vhs-other-comp-row,
+.wp-block-group.vhs-other-comp-row {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: space-between !important;
+	gap: 20px !important;
+	flex-wrap: wrap !important;
+	width: 100% !important;
+}
+
+.vhs-other-comp-label,
+p.vhs-other-comp-label {
+	font-size: 15px !important;
+	font-weight: 700 !important;
+	color: #4a5d73 !important;
+	margin: 0 !important;
+}
+
+.vhs-other-comp-pills,
+.wp-block-group.vhs-other-comp-pills {
+	display: flex !important;
+	flex-wrap: wrap !important;
+	gap: 9px !important;
+	align-items: center !important;
+}
+
+.vhs-comp-pill-link,
+a.vhs-comp-pill-link {
+	display: inline-block !important;
+	border: 1px solid #d7e2ee !important;
+	background-color: #f3f7fc !important;
+	color: #34495e !important;
+	font-size: 13.5px !important;
+	font-weight: 700 !important;
+	padding: 9px 16px !important;
+	border-radius: 99px !important;
+	text-decoration: none !important;
+	transition: all 0.2s ease !important;
+}
+
+.vhs-comp-pill-link:hover,
+a.vhs-comp-pill-link:hover {
+	border-color: #39B7EC !important;
+	color: #436da5 !important;
+	background-color: #ffffff !important;
+}
+
+@media (max-width: 768px) {
+	.vhs-other-comp-row,
+	.wp-block-group.vhs-other-comp-row {
+		flex-direction: column !important;
+		align-items: flex-start !important;
+		gap: 16px !important;
+	}
+}
