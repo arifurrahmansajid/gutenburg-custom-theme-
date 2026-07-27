@@ -256,6 +256,31 @@ if ( ! function_exists( 'realome_editor_styles' ) ) :
 	function realome_editor_styles() {
 
 		return '
+		.editor-styles-wrapper h1,
+		.editor-styles-wrapper h2,
+		.editor-styles-wrapper h3,
+		.editor-styles-wrapper h4,
+		.editor-styles-wrapper h5,
+		.editor-styles-wrapper h6 {
+			font-weight: 800 !important;
+			letter-spacing: -0.01em !important;
+		}
+
+		.editor-styles-wrapper h1 { font-size: 54px !important; line-height: 1.06 !important; }
+		.editor-styles-wrapper h2 { font-size: 40px !important; line-height: 1.14 !important; }
+		.editor-styles-wrapper h3 { font-size: 28px !important; line-height: 1.2 !important; }
+		.editor-styles-wrapper h4 { font-size: 22px !important; line-height: 1.25 !important; }
+		.editor-styles-wrapper h5 { font-size: 18px !important; line-height: 1.3 !important; }
+		.editor-styles-wrapper h6 { font-size: 15px !important; line-height: 1.35 !important; }
+
+		.editor-styles-wrapper .wp-block-button__link,
+		.editor-styles-wrapper button,
+		.editor-styles-wrapper .button {
+			font-size: 16px !important;
+			font-weight: 700 !important;
+			border-radius: 12px !important;
+		}
+
 		.editor-styles-wrapper .block-editor-block-list__layout.is-root-container > p + h1,
 		.editor-styles-wrapper .block-editor-block-list__layout.is-root-container > p + h2,
 		.editor-styles-wrapper .block-editor-block-list__layout.is-root-container > p + h3,
