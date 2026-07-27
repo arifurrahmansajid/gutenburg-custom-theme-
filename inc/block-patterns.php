@@ -137,6 +137,8 @@ if ( ! function_exists( 'realome_register_block_patterns' ) ) :
 			'the-deep-dive-legacybox-cards',
 			'is-legacybox-worth-it',
 			'other-comparisons-pills-bar',
+			'hollywood-fl-google-map-section',
+			'south-florida-live-google-map',
 			'reel-to-reel-hero',
 			'every-reel-we-digitize',
 			'reel-flat-pricing',
