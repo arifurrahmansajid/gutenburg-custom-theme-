@@ -466,12 +466,12 @@
 					<div class="vhs-featured-exclusive-badge">&bull; EXCLUSIVE TO MEMORY CONVERTER &mdash; NO ONE ELSE OFFERS THIS</div>
 					<div class="vhs-featured-card-body">
 						<div class="vhs-card-icon-badge vhs-badge-dark">
-							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#39B7EC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg>
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#39B7EC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="10" width="18" height="9.5" rx="2"/><path d="M3.5 10l1.6-4.6 16 1.8-.9 2.8"/><line x1="9.2" y1="5.8" x2="8.2" y2="9.3"/><line x1="14.4" y1="6.4" x2="13.4" y2="9.7"/></svg>
 						</div>
-						<div class="vhs-featured-card-content">
-							<h3 style="color:#ffffff;font-size:16px;font-weight:800;margin-top:0;margin-bottom:6px">Living Memories <span class="vhs-price-tag" style="color:#94a3b8;font-size:14px;font-weight:600">&middot; from $1,800</span></h3>
-							<p style="color:#cbd5e1;font-size:13.5px;line-height:1.5;margin-top:0;margin-bottom:14px">An in-home documentary of your life, with your digitized memories woven in.</p>
-							<a href="#" class="vhs-card-link vhs-link-cyan" style="color:#39B7EC;font-weight:700;font-size:13.5px;text-decoration:none">Explore Living Memories &rarr;</a>
+						<div class="vhs-featured-card-text">
+							<h3 style="color:#ffffff;font-size:18px;font-weight:800;margin-top:0;margin-bottom:6px">Living Memories <span class="vhs-price-tag" style="color:rgba(255,255,255,0.6);font-size:15px;font-weight:600">&middot; from $1,800</span></h3>
+							<p style="color:rgba(255,255,255,0.8);font-size:14px;line-height:1.55;margin-top:0;margin-bottom:12px">An in-home documentary of your life, with your digitized memories woven in.</p>
+							<a href="#" class="vhs-card-link vhs-link-cyan" style="color:#39B7EC;font-weight:800;font-size:14px;text-decoration:none">Explore Living Memories &rarr;</a>
 						</div>
 					</div>
 					<!-- /wp:html -->

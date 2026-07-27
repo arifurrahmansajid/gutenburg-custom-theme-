@@ -11406,7 +11406,8 @@ figure.vhs-featured-card-image img,
 	flex-direction: column !important;
 	justify-content: center !important;
 	padding: 48px 52px !important;
-	background-color: #16324f !important;
+	background-color: transparent !important;
+	background: transparent !important;
 	box-sizing: border-box !important;
 }
 
@@ -11970,4 +11971,54 @@ a.vhs-filter-pill.active {
 	border-color: #39B7EC !important;
 	color: #16324f !important;
 	font-weight: 800 !important;
+}
+
+/* ============================================================
+   Reel Revival Hero Box Spacing Overrides
+   ============================================================ */
+.vhs-reel-revival-hero-box h1,
+.vhs-reel-revival-hero-box .wp-block-heading,
+h1.wp-block-heading {
+	margin-top: 0 !important;
+	padding-top: 0 !important;
+}
+
+.vhs-reel-eyebrow,
+p.vhs-reel-eyebrow {
+	margin-top: 0 !important;
+	margin-bottom: 12px !important;
+	padding-top: 0 !important;
+}
+
+/* ============================================================
+   Featured Dark Card Background & Double Color Fix
+   ============================================================ */
+.vhs-card-featured-dark,
+.wp-block-column.vhs-card-featured-dark,
+.vhs-featured-post-card,
+.wp-block-group.vhs-featured-post-card {
+	background-color: #16324f !important;
+	background: #16324f !important;
+	border: none !important;
+	border-radius: 16px !important;
+	box-shadow: 0 12px 32px rgba(22, 50, 79, 0.15) !important;
+	box-sizing: border-box !important;
+}
+
+.vhs-card-featured-dark *,
+.vhs-featured-post-card .vhs-featured-card-content,
+.vhs-featured-post-card .vhs-featured-card-content * {
+	background-color: transparent !important;
+	background: transparent !important;
+	box-shadow: none !important;
+}
+
+.vhs-card-featured-dark .vhs-card-icon-badge,
+.vhs-card-featured-dark .vhs-badge-dark {
+	background-color: rgba(57, 183, 236, 0.18) !important;
+	border-radius: 14px !important;
+}
+
+.vhs-featured-exclusive-badge {
+	background-color: rgba(57, 183, 236, 0.16) !important;
 }

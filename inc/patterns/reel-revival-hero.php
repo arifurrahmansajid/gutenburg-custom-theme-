@@ -27,24 +27,20 @@ return array(
 	<!-- wp:group {"layout":{"type":"constrained","contentSize":"1350px","justifyContent":"left"}} -->
 	<div class="wp-block-group">
 
-		<!-- Eyebrow Tag -->
-		<!-- wp:paragraph {"className":"vhs-reel-eyebrow","style":{"color":{"text":"#39B7EC"},"typography":{"fontSize":"13px","fontWeight":"800","letterSpacing":"0.08em","textTransform":"uppercase"},"spacing":{"margin":{"top":"0px","bottom":"16px"}}}} -->
+		<!-- wp:paragraph {"className":"vhs-reel-eyebrow","style":{"color":{"text":"#39B7EC"},"typography":{"fontSize":"13px","fontWeight":"800","letterSpacing":"0.08em","textTransform":"uppercase"}}} -->
 		<p class="vhs-reel-eyebrow has-text-color" style="color:#39B7EC;font-size:13px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;margin-top:0px;margin-bottom:16px">REEL REVIVAL</p>
 		<!-- /wp:paragraph -->
 
-		<!-- Main Heading -->
-		<!-- wp:heading {"level":1,"style":{"typography":{"fontWeight":"800","lineHeight":"1.15"},"spacing":{"margin":{"top":"0px","bottom":"16px"}}},"fontSize":"max-48"} -->
+		<!-- wp:heading {"level":1,"style":{"typography":{"fontWeight":"800","lineHeight":"1.15"}}} -->
 		<h1 class="wp-block-heading" style="color:#ffffff;font-size:52px;font-weight:800;line-height:1.15;margin-top:0px;margin-bottom:16px">Turning Your Memories Into Family <span style="color:#39B7EC">Legacies</span>.</h1>
 		<!-- /wp:heading -->
 
-		<!-- Subtitle Paragraph -->
-		<!-- wp:paragraph {"style":{"color":{"text":"rgba(255,255,255,0.80)"},"typography":{"fontSize":"17px","lineHeight":"1.6"},"spacing":{"margin":{"bottom":"36px"}}}} -->
+		<!-- wp:paragraph {"style":{"color":{"text":"rgba(255,255,255,0.80)"},"typography":{"fontSize":"17px","lineHeight":"1.6"}}} -->
 		<p class="has-text-color" style="color:rgba(255,255,255,0.80);font-size:17px;line-height:1.6;margin-bottom:36px;max-width:680px">Guides, tips, and stories on preserving your VHS tapes, film, photos, and family history &mdash; from the studio that digitizes them by hand.</p>
 		<!-- /wp:paragraph -->
 
-		<!-- Search Bar Form Box -->
 		<!-- wp:html -->
-		<form role="search" method="get" class="vhs-reel-search-form" action="#">
+		<form role="search" method="get" class="vhs-reel-search-form" action="/">
 			<div class="vhs-reel-search-inner">
 				<span class="vhs-reel-search-icon">
 					<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#39B7EC" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
