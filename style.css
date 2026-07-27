@@ -10369,3 +10369,129 @@ div.wp-block-group.vhs-live-map-section.alignfull {
 		margin: 16px auto !important;
 	}
 }
+
+/* ============================================================
+   The Comparisons Competitor Cards Grid Styles
+   ============================================================ */
+.vhs-comparisons-section {
+	background-color: #f4f7fb !important;
+}
+
+.vhs-comparisons-grid,
+.wp-block-columns.vhs-comparisons-grid {
+	display: flex !important;
+	flex-wrap: wrap !important;
+	align-items: stretch !important;
+	gap: 20px !important;
+	width: 100% !important;
+}
+
+.vhs-comparison-item-card,
+.wp-block-column.vhs-comparison-item-card {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+	align-self: stretch !important;
+	flex: 1 1 calc(33.333% - 14px) !important;
+	max-width: calc(33.333% - 14px) !important;
+	min-width: 280px !important;
+	min-height: 220px !important;
+	background-color: #ffffff !important;
+	border: 1px solid #e3ebf4 !important;
+	border-radius: 16px !important;
+	padding: 28px !important;
+	box-shadow: 0 4px 16px rgba(22, 50, 79, 0.03) !important;
+	box-sizing: border-box !important;
+	display: flex !important;
+	flex-direction: column !important;
+	justify-content: space-between !important;
+	transition: border-color 0.2s ease, transform 0.2s ease !important;
+}
+
+.vhs-comparison-item-card:hover,
+.wp-block-column.vhs-comparison-item-card:hover {
+	border-color: #39B7EC !important;
+	transform: translateY(-2px) !important;
+}
+
+.vhs-comparison-item-dashed,
+.wp-block-column.vhs-comparison-item-dashed {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+	align-self: stretch !important;
+	flex: 1 1 calc(33.333% - 14px) !important;
+	max-width: calc(33.333% - 14px) !important;
+	min-width: 280px !important;
+	min-height: 220px !important;
+	background-color: transparent !important;
+	border: 2px dashed #cbd5e1 !important;
+	border-radius: 16px !important;
+	padding: 28px !important;
+	box-sizing: border-box !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	text-align: center !important;
+}
+
+.vhs-comparison-item-card > *:first-child,
+.vhs-comparison-item-dashed > *:first-child {
+	margin-top: 0 !important;
+}
+
+.vhs-comp-card-title,
+.vhs-comparison-item-card h3,
+.vhs-comparison-item-card .wp-block-heading {
+	color: #16324f !important;
+	font-size: 17px !important;
+	font-weight: 800 !important;
+	line-height: 1.3 !important;
+	margin-top: 0 !important;
+	margin-bottom: 12px !important;
+}
+
+.vhs-card-link-wrapper,
+p.vhs-card-link-wrapper {
+	margin-top: 18px !important;
+	margin-bottom: 0 !important;
+}
+
+.vhs-card-link,
+a.vhs-card-link {
+	color: #39B7EC !important;
+	font-size: 13.5px !important;
+	font-weight: 700 !important;
+	text-decoration: none !important;
+	transition: color 0.2s ease !important;
+}
+
+.vhs-card-link:hover,
+a.vhs-card-link:hover {
+	color: #16324f !important;
+	text-decoration: underline !important;
+}
+
+@media (max-width: 992px) {
+	.vhs-comparison-item-card,
+	.wp-block-column.vhs-comparison-item-card,
+	.vhs-comparison-item-dashed,
+	.wp-block-column.vhs-comparison-item-dashed {
+		flex: 1 1 calc(50% - 10px) !important;
+		max-width: calc(50% - 10px) !important;
+	}
+}
+
+@media (max-width: 640px) {
+	.vhs-comparisons-grid,
+	.wp-block-columns.vhs-comparisons-grid {
+		flex-direction: column !important;
+		gap: 16px !important;
+	}
+
+	.vhs-comparison-item-card,
+	.wp-block-column.vhs-comparison-item-card,
+	.vhs-comparison-item-dashed,
+	.wp-block-column.vhs-comparison-item-dashed {
+		flex: 1 1 100% !important;
+		max-width: 100% !important;
+	}
+}
