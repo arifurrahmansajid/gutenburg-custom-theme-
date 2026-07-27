@@ -11,7 +11,7 @@ return array(
 	'content'    => '
 <!-- wp:group {"align":"full","className":"vhs-faq-section","style":{"spacing":{"padding":{"top":"88px","bottom":"88px","left":"24px","right":"24px"}}},"layout":{"type":"constrained","contentSize":"1350px"}} -->
 <div class="wp-block-group alignfull vhs-faq-section" style="padding-top:88px;padding-right:24px;padding-bottom:88px;padding-left:24px">
-	<!-- wp:columns {"align":"wide","verticalAlignment":"top","style":{"spacing":{"blockGap":"60px"}}} -->
+	<!-- wp:columns {"align":"wide","verticalAlignment":"top","style":{"spacing":{"blockGap":"72px"}}} -->
 	<div class="wp-block-columns alignwide are-vertically-aligned-top">
 		<!-- wp:column {"width":"40%","verticalAlignment":"top"} -->
 		<div class="wp-block-column is-vertically-aligned-top" style="flex-basis:40%">

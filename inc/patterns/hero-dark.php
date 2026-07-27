@@ -13,10 +13,10 @@ return array(
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"color":{"background":"#16324F","text":"#ffffff"},"spacing":{"padding":{"top":"60px","bottom":"60px","left":"24px","right":"24px"}}},"layout":{"type":"constrained","contentSize":"1350px"}} -->
 <div class="wp-block-group alignfull has-text-color has-background" style="background-color:#16324F;color:#ffffff;padding-top:60px;padding-right:24px;padding-bottom:60px;padding-left:24px">
-	<!-- wp:columns {"align":"wide","verticalAlignment":"center","style":{"spacing":{"margin":{"bottom":"40px"}}}} -->
-	<div class="wp-block-columns alignwide are-vertically-aligned-center" style="margin-bottom:40px">
-		<!-- wp:column {"width":"55%","verticalAlignment":"center"} -->
-		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:55%">
+	<!-- wp:columns {"align":"wide","verticalAlignment":"center","style":{"spacing":{"margin":{"bottom":"40px"},"blockGap":"64px"}},"className":"vhs-hero-grid"} -->
+	<div class="wp-block-columns alignwide are-vertically-aligned-center vhs-hero-grid" style="margin-bottom:40px">
+		<!-- wp:column {"width":"52.5%","verticalAlignment":"center"} -->
+		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:52.5%">
 			<!-- wp:paragraph {"style":{"color":{"text":"#39B7EC"},"typography":{"fontStyle":"normal","fontWeight":"800","letterSpacing":"0.16em"}},"fontSize":"extra-small"} -->
 			<p class="has-text-color has-extra-small-font-size" style="color:#39B7EC;font-style:normal;font-weight:800;letter-spacing:0.16em;margin:0">PREMIUM MEMORY DIGITIZATION &middot; HOLLYWOOD, FL</p>
 			<!-- /wp:paragraph -->
@@ -47,8 +47,8 @@ return array(
 		</div>
 		<!-- /wp:column -->
 
-		<!-- wp:column {"width":"45%","verticalAlignment":"center"} -->
-		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:45%">
+		<!-- wp:column {"width":"47.5%","verticalAlignment":"center"} -->
+		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:47.5%">
 			<!-- wp:group {"className":"vhs-hero-media-box","style":{"color":{"background":"#1E3A5C"},"spacing":{"padding":{"top":"120px","bottom":"90px","left":"20px","right":"20px"}}},"layout":{"type":"constrained"}} -->
 			<div class="wp-block-group vhs-hero-media-box has-background" style="background-color:#1E3A5C;padding-top:120px;padding-right:20px;padding-bottom:90px;padding-left:20px">
 				<!-- wp:paragraph {"align":"center","style":{"color":{"text":"rgba(255,255,255,0.6)"}},"fontSize":"small"} -->

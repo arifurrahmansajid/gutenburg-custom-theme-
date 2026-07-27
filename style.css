@@ -12205,3 +12205,209 @@ p.vhs-reel-eyebrow {
 		flex-direction: column !important;
 	}
 }
+
+/* ============================================================
+   GLOBAL THEME LAYOUT ENGINE SPECIFICATIONS (GLOBAL FOR ALL PAGES)
+   ============================================================ */
+
+/* 1. Global Hero Columns Block Gap: 64px */
+.wp-block-columns.is-style-hero,
+.wp-block-columns.vhs-hero-columns,
+.wp-block-columns.vhs-hero-grid,
+.vhs-hero-grid,
+.vhs-film-hero-grid,
+.vhs-vhsc-hero-grid,
+.vhs-dvd-hero-grid,
+.vhs-cassette-hero-grid,
+.vhs-reel-hero-grid,
+.vhs-microcassette-hero-grid,
+.vhs-homebase-columns,
+:is([class*="hero"]) .wp-block-columns {
+	gap: 64px !important;
+}
+
+/* 2. Global Hero Column Split: 52.5% / 47.5% (1.05fr / 0.95fr) */
+:is([class*="hero"], .vhs-hero-grid, .vhs-film-hero-grid, .vhs-vhsc-hero-grid, .vhs-dvd-hero-grid, .vhs-cassette-hero-grid, .vhs-reel-hero-grid, .vhs-microcassette-hero-grid, .vhs-homebase-columns) .wp-block-columns > .wp-block-column:first-child,
+.wp-block-columns.vhs-hero-grid > .wp-block-column:first-child,
+.wp-block-columns.vhs-homebase-columns > .wp-block-column:first-child {
+	flex-basis: 52.5% !important;
+	width: 52.5% !important;
+}
+
+:is([class*="hero"], .vhs-hero-grid, .vhs-film-hero-grid, .vhs-vhsc-hero-grid, .vhs-dvd-hero-grid, .vhs-cassette-hero-grid, .vhs-reel-hero-grid, .vhs-microcassette-hero-grid, .vhs-homebase-columns) .wp-block-columns > .wp-block-column:last-child,
+.wp-block-columns.vhs-hero-grid > .wp-block-column:last-child,
+.wp-block-columns.vhs-homebase-columns > .wp-block-column:last-child {
+	flex-basis: 47.5% !important;
+	width: 47.5% !important;
+}
+
+/* 3. Global Spotlight / How / Coverage / Reviews / FAQ Block Gap: 72px */
+:is(
+	[class*="spotlight"],
+	[class*="how-it-works"],
+	[class*="works-grid"],
+	[class*="coverage"],
+	[class*="reviews"],
+	[class*="wall-of-stories"],
+	[class*="faq-section"],
+	[class*="faq-accordion"],
+	.vhs-hollywood-city-studio-grid,
+	.vhs-hollywood-works-grid
+) .wp-block-columns,
+.vhs-spotlight-section .wp-block-columns,
+.vhs-how-it-works-section .wp-block-columns,
+.vhs-local-coverage-section .wp-block-columns,
+.vhs-reviews-section .wp-block-columns,
+.vhs-wall-of-stories-section .wp-block-columns,
+.vhs-faq-section .wp-block-columns {
+	gap: 72px !important;
+}
+
+/* 4. Global FAQ Column Split: 40% / 60% */
+:is([class*="faq-section"], [class*="faq-accordion"], .vhs-faq-section) .wp-block-columns > .wp-block-column:first-child {
+	flex-basis: 40% !important;
+	width: 40% !important;
+}
+
+:is([class*="faq-section"], [class*="faq-accordion"], .vhs-faq-section) .wp-block-columns > .wp-block-column:last-child {
+	flex-basis: 60% !important;
+	width: 60% !important;
+}
+
+/* Hollywood FAQ Details Accordion Items */
+.vhs-faq-details-item {
+	border-bottom: 1px solid #E3EBF4 !important;
+	padding: 22px 4px !important;
+	transition: all 0.2s ease !important;
+}
+
+.vhs-faq-details-item summary {
+	font-size: 17px !important;
+	font-weight: 800 !important;
+	color: #16324F !important;
+	cursor: pointer !important;
+	list-style: none !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: space-between !important;
+	outline: none !important;
+}
+
+.vhs-faq-details-item summary::-webkit-details-marker {
+	display: none !important;
+}
+
+.vhs-faq-details-item summary::after {
+	content: "+" !important;
+	color: #39B7EC !important;
+	font-size: 22px !important;
+	font-weight: 600 !important;
+	line-height: 1 !important;
+	margin-left: 16px !important;
+}
+
+.vhs-faq-details-item[open] summary::after {
+	content: "−" !important;
+}
+
+.vhs-faq-details-item p {
+	margin-top: 12px !important;
+	margin-bottom: 0 !important;
+	font-size: 15px !important;
+	line-height: 1.65 !important;
+	color: #4A5D73 !important;
+	font-weight: 500 !important;
+	max-width: 560px !important;
+}
+
+/* Hollywood FL Nearby Areas Bar Styles */
+.vhs-nearby-areas-section {
+	background-color: #F3F7FC !important;
+}
+
+.vhs-nearby-flex-container {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: space-between !important;
+	gap: 32px !important;
+}
+
+.vhs-nearby-pills-wrap {
+	display: flex !important;
+	flex-wrap: wrap !important;
+	gap: 10px !important;
+	align-items: center !important;
+	justify-content: flex-end !important;
+}
+
+.vhs-nearby-pill-item {
+	border: 1px solid #D7E2EE !important;
+	background-color: #FFFFFF !important;
+	color: #34495E !important;
+	font-size: 13.5px !important;
+	font-weight: 700 !important;
+	padding: 9px 16px !important;
+	border-radius: 99px !important;
+	text-decoration: none !important;
+	transition: all 0.2s ease-in-out !important;
+	display: inline-block !important;
+}
+
+.vhs-nearby-pill-item:hover {
+	border-color: #39B7EC !important;
+	color: #436DA5 !important;
+	transform: translateY(-1px);
+	box-shadow: 0 4px 12px rgba(57, 183, 236, 0.15) !important;
+}
+
+/* Hollywood FL Map Card Pin & Subtext Styles */
+.vhs-map-pin-marker {
+	position: absolute !important;
+	left: 50% !important;
+	top: 46% !important;
+	transform: translate(-50%, -50%) !important;
+	display: flex !important;
+	flex-direction: column !important;
+	align-items: center !important;
+	gap: 4px !important;
+}
+
+.vhs-map-pin-label {
+	background: #39B7EC !important;
+	color: #16324F !important;
+	font-size: 12px !important;
+	font-weight: 800 !important;
+	padding: 6px 12px !important;
+	border-radius: 8px !important;
+	box-shadow: 0 8px 20px rgba(57, 183, 236, 0.4) !important;
+}
+
+.vhs-map-pin-dot-outer {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	width: 26px !important;
+	height: 26px !important;
+	border-radius: 50% !important;
+	background: #39B7EC !important;
+}
+
+.vhs-map-pin-dot-inner {
+	width: 8px !important;
+	height: 8px !important;
+	border-radius: 50% !important;
+	background: #FFFFFF !important;
+}
+
+.vhs-map-location-subtext {
+	position: absolute !important;
+	left: 16px !important;
+	bottom: 14px !important;
+	background: #FFFFFF !important;
+	border: 1px solid #E3EBF4 !important;
+	border-radius: 12px !important;
+	padding: 12px 16px !important;
+	font-size: 12.5px !important;
+	font-weight: 700 !important;
+	color: #34495E !important;
+}

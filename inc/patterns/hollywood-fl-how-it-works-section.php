@@ -14,25 +14,19 @@ return array(
 	'content'    => '
 <!-- wp:group {"align":"full","className":"vhs-hollywood-how-it-works-section","style":{"color":{"background":"#ffffff","text":"#34495e"},"spacing":{"padding":{"top":"88px","bottom":"88px","left":"24px","right":"24px"}}},"layout":{"type":"constrained","contentSize":"1350px"}} -->
 <div class="wp-block-group alignfull vhs-hollywood-how-it-works-section has-text-color has-background" style="background-color:#ffffff;color:#34495e;padding-top:88px;padding-right:24px;padding-bottom:88px;padding-left:24px">
-
-	<!-- wp:columns {"align":"wide","verticalAlignment":"center","style":{"spacing":{"blockGap":"64px"}},"className":"vhs-hollywood-works-grid"} -->
-	<div class="wp-block-columns alignwide are-vertically-aligned-center vhs-hollywood-works-grid" style="gap:64px">
-
+	<!-- wp:columns {"align":"wide","verticalAlignment":"center","style":{"spacing":{"blockGap":"72px"}},"className":"vhs-hollywood-works-grid"} -->
+	<div class="wp-block-columns alignwide are-vertically-aligned-center vhs-hollywood-works-grid">
 		<!-- Left Column: Content & Checkmarks -->
 		<!-- wp:column {"width":"50%","verticalAlignment":"center"} -->
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%">
-
-			<!-- Heading H2 -->
 			<!-- wp:heading {"level":2,"style":{"color":{"text":"#16324F"},"typography":{"fontWeight":"800","lineHeight":"1.12","letterSpacing":"-0.01em"},"spacing":{"margin":{"top":"0px","bottom":"14px"}}},"fontSize":"max-40"} -->
 			<h2 class="wp-block-heading has-text-color" style="color:#16324F;font-size:40px;font-weight:800;line-height:1.12;letter-spacing:-0.01em;margin-top:0px;margin-bottom:14px">How It Works in <span style="color:#39B7EC">Hollywood</span>.</h2>
 			<!-- /wp:heading -->
 
-			<!-- Subtitle -->
 			<!-- wp:paragraph {"style":{"color":{"text":"#4A5D73"},"typography":{"fontSize":"16.5px","lineHeight":"1.6","fontWeight":"500"}},"spacing":{"margin":{"top":"0px","bottom":"36px"}}} -->
 			<p class="has-text-color" style="color:#4A5D73;font-size:16.5px;line-height:1.6;font-weight:500;margin-top:0px;margin-bottom:36px">You’re local &mdash; so this part is easy.</p>
 			<!-- /wp:paragraph -->
 
-			<!-- Feature Items List -->
 			<!-- wp:html -->
 			<div class="vhs-works-feature-list" style="display:flex;flex-direction:column;gap:18px">
 				<div style="display:flex;gap:14px;align-items:flex-start">
@@ -60,38 +54,27 @@ return array(
 				</div>
 			</div>
 			<!-- /wp:html -->
-
 		</div>
 		<!-- /wp:column -->
 
 		<!-- Right Column: Interactive Studio Map Card -->
 		<!-- wp:column {"width":"50%","verticalAlignment":"center"} -->
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%">
-
-			<!-- Map Box -->
-			<!-- wp:group {"className":"vhs-hollywood-map-card","style":{"border":{"color":"#E3EBF4","width":"1px","radius":"16px"}},"layout":{"type":"constrained"}} -->
-			<div class="wp-block-group vhs-hollywood-map-card" style="position:relative;height:340px;border-radius:16px;overflow:hidden;border:1px solid #E3EBF4;background-image:linear-gradient(rgba(67,109,165,0.07) 1px, transparent 1px),linear-gradient(90deg, rgba(67,109,165,0.07) 1px, transparent 1px);background-size:40px 40px;background-color:#E8EFF6">
-				
-				<!-- Pin Marker -->
-				<div class="vhs-map-pin-marker" style="position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:4px">
-					<span style="background:#39B7EC;color:#16324F;font-size:12px;font-weight:800;padding:6px 12px;border-radius:8px;box-shadow:0 8px 20px rgba(57,183,236,0.4)">OUR STUDIO</span>
-					<span style="display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#39B7EC"><span style="width:8px;height:8px;border-radius:50%;background:#FFFFFF"></span></span>
+			<!-- wp:html -->
+			<div class="vhs-hollywood-map-card">
+				<div class="vhs-map-pin-marker">
+					<span class="vhs-map-pin-label">OUR STUDIO</span>
+					<span class="vhs-map-pin-dot-outer"><span class="vhs-map-pin-dot-inner"></span></span>
 				</div>
-
-				<!-- Location Subtext Overlay Card -->
-				<div class="vhs-map-location-subtext" style="position:absolute;left:16px;bottom:14px;background:#FFFFFF;border:1px solid #E3EBF4;border-radius:12px;padding:12px 16px;font-size:12.5px;font-weight:700;color:#34495E">
+				<div class="vhs-map-location-subtext">
 					6630 Meade Street &middot; minutes from anywhere in Hollywood
 				</div>
-
 			</div>
-			<!-- /wp:group -->
-
+			<!-- /wp:html -->
 		</div>
 		<!-- /wp:column -->
-
 	</div>
 	<!-- /wp:columns -->
-
 </div>
 <!-- /wp:group -->
 	',

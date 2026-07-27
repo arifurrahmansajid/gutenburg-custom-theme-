@@ -15,8 +15,8 @@ $theme_uri = get_template_directory_uri();
 	<div class="wp-block-columns alignwide are-vertically-aligned-center vhs-homebase-columns">
 
 		<!-- Left Column: Text Content & CTAs -->
-		<!-- wp:column {"width":"54%","verticalAlignment":"center"} -->
-		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:54%">
+		<!-- wp:column {"width":"52.5%","verticalAlignment":"center"} -->
+		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:52.5%">
 
 			<!-- Subtitle / Eyebrow -->
 			<!-- wp:paragraph {"style":{"color":{"text":"#39B7EC"},"typography":{"fontSize":"13px","fontWeight":"800","letterSpacing":"0.16em"}},"spacing":{"margin":{"top":"0px","bottom":"18px"}}} -->
@@ -66,8 +66,8 @@ $theme_uri = get_template_directory_uri();
 		<!-- /wp:column -->
 
 		<!-- Right Column: Media Card -->
-		<!-- wp:column {"width":"46%","verticalAlignment":"center"} -->
-		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:46%">
+		<!-- wp:column {"width":"47.5%","verticalAlignment":"center"} -->
+		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:47.5%">
 			<!-- wp:group {"className":"vhs-homebase-photo-card","style":{"color":{"background":"#1E3A5C"},"border":{"radius":"16px"},"spacing":{"padding":{"top":"180px","bottom":"180px","left":"24px","right":"24px"}}},"layout":{"type":"constrained","contentSize":"100%"}} -->
 			<div class="wp-block-group vhs-homebase-photo-card has-background" style="background-color:#1E3A5C;border-radius:16px;box-shadow:0 30px 60px rgba(0,0,0,0.35);padding-top:180px;padding-right:24px;padding-bottom:180px;padding-left:24px">
 				<!-- wp:paragraph {"align":"center","style":{"color":{"text":"rgba(255,255,255,0.60)"},"typography":{"fontSize":"12px"}}} -->
