@@ -126,17 +126,37 @@ input[type="submit"],
 .vhs-comparison-section>div,
 .vhs-format-pills-bar>div,
 .vhs-services-hero-box>div,
+.vhs-living-memories-callout-section>div,
 .entry-content>.wp-block-group>div,
 .entry-content>div>div,
 .wp-block-post-content>.wp-block-group>div,
-.wp-block-post-content>div>div {
-	max-width: 1350px !important;
+.wp-block-post-content>div>div,
+.wp-site-blocks>main>.wp-block-group>div,
+.wp-block-group.alignfull>div {
+	max-width: 1320px !important;
 	margin-left: auto !important;
 	margin-right: auto !important;
 	width: 100% !important;
-	padding-left: 24px !important;
-	padding-right: 24px !important;
+	padding-left: 60px !important;
+	padding-right: 60px !important;
 	box-sizing: border-box !important;
+}
+
+@media (max-width: 768px) {
+	.vhs-white-glove-section>div,
+	.vhs-comparison-section>div,
+	.vhs-format-pills-bar>div,
+	.vhs-services-hero-box>div,
+	.vhs-living-memories-callout-section>div,
+	.entry-content>.wp-block-group>div,
+	.entry-content>div>div,
+	.wp-block-post-content>.wp-block-group>div,
+	.wp-block-post-content>div>div,
+	.wp-site-blocks>main>.wp-block-group>div,
+	.wp-block-group.alignfull>div {
+		padding-left: 24px !important;
+		padding-right: 24px !important;
+	}
 }
 
 

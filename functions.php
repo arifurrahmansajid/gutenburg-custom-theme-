@@ -281,6 +281,14 @@ if ( ! function_exists( 'realome_editor_styles' ) ) :
 			border-radius: 12px !important;
 		}
 
+		.editor-styles-wrapper .wp-block-group.alignfull > div,
+		.editor-styles-wrapper .is-root-container > div {
+			max-width: 1320px !important;
+			padding-left: 60px !important;
+			padding-right: 60px !important;
+			box-sizing: border-box !important;
+		}
+
 		.editor-styles-wrapper .block-editor-block-list__layout.is-root-container > p + h1,
 		.editor-styles-wrapper .block-editor-block-list__layout.is-root-container > p + h2,
 		.editor-styles-wrapper .block-editor-block-list__layout.is-root-container > p + h3,

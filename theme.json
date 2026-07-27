@@ -330,8 +330,8 @@
 			]
 		},
 		"layout": {
-			"contentSize": "800px",
-			"wideSize": "1400px"
+			"contentSize": "1200px",
+			"wideSize": "1320px"
 		},
 		"border": {
 			"color": true,
