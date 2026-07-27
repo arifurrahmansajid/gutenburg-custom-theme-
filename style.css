@@ -12105,3 +12105,63 @@ p.vhs-reel-eyebrow {
 		flex-direction: column !important;
 	}
 }
+
+/* ============================================================
+   Hollywood FL Services Grid Section Pattern Styles
+   ============================================================ */
+.vhs-hollywood-services-section {
+	background-color: #F3F7FC !important;
+}
+
+.vhs-hollywood-services-grid {
+	display: grid !important;
+	grid-template-columns: repeat(4, 1fr) !important;
+	gap: 16px !important;
+}
+
+.vhs-service-card-item {
+	display: flex !important;
+	align-items: center !important;
+	gap: 13px !important;
+	background-color: #FFFFFF !important;
+	border: 1px solid #E3EBF4 !important;
+	border-radius: 14px !important;
+	padding: 18px !important;
+	text-decoration: none !important;
+	transition: all 0.2s ease-in-out !important;
+}
+
+.vhs-service-card-item:hover {
+	border-color: #39B7EC !important;
+	transform: translateY(-2px);
+	box-shadow: 0 8px 24px rgba(57, 183, 236, 0.15) !important;
+}
+
+.vhs-service-card-icon {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	width: 42px !important;
+	height: 42px !important;
+	border-radius: 11px !important;
+	background-color: rgba(57, 183, 236, 0.12) !important;
+	flex-shrink: 0 !important;
+}
+
+.vhs-service-card-title {
+	font-size: 14.5px !important;
+	font-weight: 800 !important;
+	color: #16324F !important;
+}
+
+@media (max-width: 1024px) {
+	.vhs-hollywood-services-grid {
+		grid-template-columns: repeat(2, 1fr) !important;
+	}
+}
+
+@media (max-width: 600px) {
+	.vhs-hollywood-services-grid {
+		grid-template-columns: 1fr !important;
+	}
+}
