@@ -123,6 +123,7 @@ if ( ! function_exists( 'realome_register_block_patterns' ) ) :
 			'why-trust-microcassettes',
 			'photo-restoration-location',
 			'reel-to-reel-hero',
+			'every-reel-we-digitize',
 		);
 
 		foreach ( $block_patterns as $block_pattern ) {
