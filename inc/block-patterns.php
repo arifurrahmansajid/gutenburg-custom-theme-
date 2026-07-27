@@ -127,6 +127,7 @@ if ( ! function_exists( 'realome_register_block_patterns' ) ) :
 			'every-disc-we-rip-cd',
 			'why-digitize-cds-now',
 			'a-wall-of-stories-cd',
+			'nationwide-mail-in-banner',
 			'reel-to-reel-hero',
 			'every-reel-we-digitize',
 			'reel-flat-pricing',
