@@ -10495,3 +10495,840 @@ a.vhs-card-link:hover {
 		max-width: 100% !important;
 	}
 }
+
+/* ============================================================
+   Single Blog Post Template Section 1 - Hero & Featured Image
+   ============================================================ */
+.vhs-blog-single-main {
+	background-color: #ffffff !important;
+}
+
+.vhs-blog-single-header-wrapper {
+	background-color: #ffffff !important;
+	text-align: left !important;
+}
+
+.vhs-blog-single-header-wrapper,
+.wp-block-group.vhs-blog-single-header-wrapper {
+	max-width: 720px !important;
+	width: 100% !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	box-sizing: border-box !important;
+}
+
+.vhs-blog-category-pill,
+.wp-block-post-terms.vhs-blog-category-pill {
+	display: inline-block !important;
+	width: auto !important;
+	max-width: max-content !important;
+	background-color: transparent !important;
+	background: none !important;
+	border-radius: 0 !important;
+	padding: 0 !important;
+	margin: 0 0 18px 0 !important;
+	text-align: left !important;
+}
+
+.vhs-blog-category-pill a,
+.wp-block-post-terms.vhs-blog-category-pill a {
+	display: inline-block !important;
+	background-color: rgba(57, 183, 236, 0.12) !important;
+	color: #436da5 !important;
+	font-size: 11.5px !important;
+	font-weight: 800 !important;
+	letter-spacing: 0.07em !important;
+	padding: 6px 14px !important;
+	border-radius: 99px !important;
+	text-transform: uppercase !important;
+	text-decoration: none !important;
+	margin-bottom: 0 !important;
+	margin-left: -14px !important;
+}
+
+.vhs-blog-single-title,
+h1.vhs-blog-single-title,
+.wp-block-post-title.vhs-blog-single-title {
+	color: #16324f !important;
+	font-size: 42px !important;
+	font-weight: 800 !important;
+	line-height: 1.15 !important;
+	letter-spacing: normal !important;
+	margin-top: 0 !important;
+	margin-bottom: 22px !important;
+	margin-left: 0 !important;
+	padding-left: 0 !important;
+	text-align: left !important;
+	width: 100% !important;
+	box-sizing: border-box !important;
+}
+
+.vhs-blog-meta-row,
+.wp-block-group.vhs-blog-meta-row {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: space-between !important;
+	gap: 20px !important;
+	width: 100% !important;
+	margin-left: 0 !important;
+	padding-left: 0 !important;
+	border-bottom: 1px solid #e3ebf4 !important;
+	padding-bottom: 20px !important;
+}
+
+.vhs-blog-author-box {
+	display: flex !important;
+	align-items: center !important;
+	gap: 13px !important;
+}
+
+.vhs-blog-author-avatar img {
+	border-radius: 50% !important;
+	width: 48px !important;
+	height: 48px !important;
+	object-fit: cover !important;
+}
+
+.vhs-blog-author-name,
+.wp-block-post-author-name.vhs-blog-author-name {
+	font-size: 14.5px !important;
+	font-weight: 800 !important;
+	color: #16324f !important;
+	margin: 0 !important;
+}
+
+.vhs-blog-post-date,
+.wp-block-post-date.vhs-blog-post-date {
+	font-size: 12.5px !important;
+	color: #64748b !important;
+	font-weight: 600 !important;
+	margin: 0 !important;
+}
+
+.vhs-blog-share-btns {
+	display: flex !important;
+	align-items: center !important;
+	gap: 8px !important;
+}
+
+.vhs-blog-share-btn {
+	display: inline-block !important;
+	border: 1px solid #d7e2ee !important;
+	background-color: #ffffff !important;
+	color: #34495e !important;
+	font-size: 13px !important;
+	font-weight: 700 !important;
+	padding: 8px 16px !important;
+	border-radius: 99px !important;
+	text-decoration: none !important;
+	cursor: pointer !important;
+	transition: all 0.2s ease !important;
+}
+
+.vhs-blog-share-btn:hover {
+	border-color: #39B7EC !important;
+	color: #436da5 !important;
+}
+
+.vhs-blog-featured-hero-image img,
+.wp-block-post-featured-image.vhs-blog-featured-hero-image img {
+	width: 100% !important;
+	max-height: 480px !important;
+	object-fit: cover !important;
+	border-radius: 16px !important;
+	box-shadow: 0 16px 40px rgba(22, 50, 79, 0.08) !important;
+	display: block !important;
+}
+
+.vhs-blog-featured-hero-image figcaption,
+.wp-block-post-featured-image.vhs-blog-featured-hero-image figcaption {
+	text-align: center !important;
+	margin-top: 12px !important;
+	font-size: 13px !important;
+	font-weight: 600 !important;
+	color: #64748b !important;
+}
+
+.vhs-blog-content-body,
+.vhs-blog-body-container {
+	max-width: 720px !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	width: 100% !important;
+	box-sizing: border-box !important;
+}
+
+.vhs-blog-content-body p,
+.vhs-blog-body-container p {
+	color: #34495e !important;
+	font-size: 16.5px !important;
+	line-height: 1.8 !important;
+	font-weight: 500 !important;
+	margin-bottom: 24px !important;
+}
+
+.vhs-blog-content-body h2,
+.vhs-blog-body-container h2 {
+	color: #16324f !important;
+	font-size: 28px !important;
+	font-weight: 800 !important;
+	letter-spacing: -0.01em !important;
+	margin-top: 44px !important;
+	margin-bottom: 18px !important;
+}
+
+.vhs-blog-content-body blockquote {
+	border-left: 4px solid #39B7EC !important;
+	padding: 6px 0 6px 26px !important;
+	margin: 36px 0 !important;
+	color: #16324f !important;
+	font-size: 22px !important;
+	font-weight: 700 !important;
+	line-height: 1.5 !important;
+}
+
+/* ============================================================
+   Single Blog Post Template Section 2 - Key Takeaways & TOC
+   ============================================================ */
+.vhs-key-takeaways-box,
+.wp-block-group.vhs-key-takeaways-box {
+	max-width: 720px !important;
+	width: 100% !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	background-color: #f3f7fc !important;
+	border: 1px solid #e3ebf4 !important;
+	border-radius: 16px !important;
+	padding: 28px 30px !important;
+	margin-top: 0 !important;
+	margin-bottom: 36px !important;
+	box-sizing: border-box !important;
+}
+
+.vhs-key-takeaways-label {
+	color: #436da5 !important;
+	font-size: 12.5px !important;
+	font-weight: 800 !important;
+	letter-spacing: 0.12em !important;
+	text-transform: uppercase !important;
+	margin-bottom: 16px !important;
+}
+
+.vhs-takeaway-list,
+ul.vhs-takeaway-list {
+	list-style: none !important;
+	padding-left: 0 !important;
+	margin: 0 !important;
+	display: flex !important;
+	flex-direction: column !important;
+	gap: 12px !important;
+}
+
+.vhs-takeaway-list li,
+ul.vhs-takeaway-list li {
+	position: relative !important;
+	padding-left: 28px !important;
+	font-size: 14.5px !important;
+	font-weight: 600 !important;
+	color: #34495e !important;
+	line-height: 1.6 !important;
+	margin: 0 !important;
+}
+
+.vhs-takeaway-list li::before,
+ul.vhs-takeaway-list li::before {
+	content: "✓" !important;
+	position: absolute !important;
+	left: 0 !important;
+	top: 0 !important;
+	color: #39B7EC !important;
+	font-weight: 900 !important;
+	font-size: 15px !important;
+}
+
+.vhs-toc-pills-wrapper,
+.wp-block-group.vhs-toc-pills-wrapper {
+	margin-top: 0 !important;
+	margin-bottom: 40px !important;
+}
+
+.vhs-toc-pills {
+	display: flex !important;
+	flex-wrap: wrap !important;
+	gap: 8px !important;
+	margin: 0 !important;
+}
+
+.vhs-toc-pill,
+a.vhs-toc-pill {
+	display: inline-block !important;
+	border: 1px solid #d7e2ee !important;
+	background-color: #ffffff !important;
+	color: #436da5 !important;
+	font-size: 13px !important;
+	font-weight: 700 !important;
+	padding: 8px 15px !important;
+	border-radius: 99px !important;
+	text-decoration: none !important;
+	transition: all 0.2s ease !important;
+}
+
+.vhs-toc-pill:hover,
+a.vhs-toc-pill:hover {
+	border-color: #39B7EC !important;
+	color: #16324f !important;
+}
+
+/* ============================================================
+   Single Blog Post Template Section 3 - Related Service Callout Banner
+   ============================================================ */
+.vhs-related-service-banner,
+.wp-block-group.vhs-related-service-banner {
+	max-width: 720px !important;
+	width: 100% !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	background-color: #f3f7fc !important;
+	border: 1px solid #e3ebf4 !important;
+	border-left: 4px solid #39B7EC !important;
+	border-radius: 14px !important;
+	padding: 24px 28px !important;
+	margin-top: 36px !important;
+	margin-bottom: 36px !important;
+	box-sizing: border-box !important;
+}
+
+.vhs-service-banner-inner {
+	display: flex !important;
+	flex-direction: row !important;
+	align-items: center !important;
+	justify-content: space-between !important;
+	gap: 20px !important;
+	width: 100% !important;
+}
+
+.vhs-service-banner-icon-box {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	width: 52px !important;
+	min-width: 52px !important;
+	height: 52px !important;
+	border-radius: 12px !important;
+	background-color: #16324f !important;
+	flex-shrink: 0 !important;
+}
+
+.vhs-service-banner-info,
+.wp-block-group.vhs-service-banner-info {
+	flex: 1 !important;
+	display: flex !important;
+	flex-direction: column !important;
+	align-items: flex-start !important;
+	text-align: left !important;
+	gap: 4px !important;
+}
+
+.vhs-service-banner-label,
+p.vhs-service-banner-label,
+div.vhs-service-banner-label {
+	font-size: 11.5px !important;
+	font-weight: 800 !important;
+	letter-spacing: 0.11em !important;
+	color: #436da5 !important;
+	text-transform: uppercase !important;
+	margin: 0 !important;
+}
+
+.vhs-service-banner-title,
+h3.vhs-service-banner-title,
+div.vhs-service-banner-title,
+.vhs-service-banner-info .wp-block-heading {
+	font-size: 16.5px !important;
+	font-weight: 800 !important;
+	color: #16324f !important;
+	margin: 0 !important;
+	line-height: 1.3 !important;
+}
+
+.vhs-service-banner-desc,
+p.vhs-service-banner-desc,
+div.vhs-service-banner-desc {
+	font-size: 13.5px !important;
+	line-height: 1.55 !important;
+	color: #4a5d73 !important;
+	font-weight: 500 !important;
+	margin: 0 !important;
+}
+
+.vhs-service-banner-btn-wrapper,
+p.vhs-service-banner-btn-wrapper,
+div.vhs-service-banner-btn-wrapper {
+	flex-shrink: 0 !important;
+	margin: 0 !important;
+}
+
+.vhs-service-banner-btn,
+a.vhs-service-banner-btn {
+	display: inline-block !important;
+	background-color: #436da5 !important;
+	color: #ffffff !important;
+	font-weight: 700 !important;
+	font-size: 14px !important;
+	padding: 13px 22px !important;
+	border-radius: 11px !important;
+	text-decoration: none !important;
+	transition: background-color 0.2s ease !important;
+}
+
+.vhs-service-banner-btn:hover,
+a.vhs-service-banner-btn:hover {
+	background-color: #3a5f91 !important;
+	color: #ffffff !important;
+}
+
+@media (max-width: 640px) {
+	.vhs-related-service-banner,
+	.wp-block-group.vhs-related-service-banner {
+		flex-direction: column !important;
+		align-items: flex-start !important;
+		gap: 16px !important;
+	}
+
+	.vhs-service-banner-btn-wrapper,
+	p.vhs-service-banner-btn-wrapper {
+		width: 100% !important;
+	}
+
+	.vhs-service-banner-btn,
+	a.vhs-service-banner-btn {
+		width: 100% !important;
+		text-align: center !important;
+		box-sizing: border-box !important;
+	}
+}
+
+/* ============================================================
+   Single Blog Post Template Section 4 - Author Bio & FAQ Accordion
+   ============================================================ */
+.vhs-author-bio-card,
+.wp-block-group.vhs-author-bio-card {
+	display: flex !important;
+	align-items: center !important;
+	gap: 20px !important;
+	background-color: #f3f7fc !important;
+	border: 1px solid #e3ebf4 !important;
+	border-radius: 16px !important;
+	padding: 26px 30px !important;
+	margin-top: 48px !important;
+	margin-bottom: 48px !important;
+	box-sizing: border-box !important;
+}
+
+.vhs-author-bio-avatar img,
+.wp-block-avatar.vhs-author-bio-avatar img {
+	width: 64px !important;
+	height: 64px !important;
+	border-radius: 50% !important;
+	object-fit: cover !important;
+}
+
+.vhs-author-bio-info {
+	flex: 1 !important;
+}
+
+.vhs-author-bio-name,
+h3.vhs-author-bio-name {
+	font-size: 15.5px !important;
+	font-weight: 800 !important;
+	color: #16324f !important;
+	margin-top: 0 !important;
+	margin-bottom: 4px !important;
+}
+
+.vhs-author-bio-text,
+p.vhs-author-bio-text {
+	font-size: 13.5px !important;
+	line-height: 1.6 !important;
+	color: #4a5d73 !important;
+	font-weight: 500 !important;
+	margin: 0 !important;
+}
+
+.vhs-author-bio-link,
+a.vhs-author-bio-link {
+	font-weight: 800 !important;
+	color: #436da5 !important;
+	text-decoration: none !important;
+}
+
+.vhs-author-bio-link:hover,
+a.vhs-author-bio-link:hover {
+	color: #39B7EC !important;
+	text-decoration: underline !important;
+}
+
+/* Blog FAQ Accordion */
+.vhs-blog-faq-section,
+.wp-block-group.vhs-blog-faq-section {
+	max-width: 720px !important;
+	width: 100% !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	margin-top: 48px !important;
+	margin-bottom: 48px !important;
+	box-sizing: border-box !important;
+	text-align: left !important;
+	align-items: stretch !important;
+}
+
+.vhs-blog-faq-heading,
+h2.vhs-blog-faq-heading,
+.vhs-blog-faq-section h2 {
+	color: #16324f !important;
+	font-size: 28px !important;
+	font-weight: 800 !important;
+	margin-top: 0 !important;
+	margin-bottom: 28px !important;
+	text-align: left !important;
+	width: 100% !important;
+	padding-left: 0 !important;
+	margin-left: 0 !important;
+}
+
+.vhs-blog-faq-list,
+.vhs-blog-faq-section .vhs-blog-faq-list {
+	display: flex !important;
+	flex-direction: column !important;
+	border-top: 1px solid #e3ebf4 !important;
+	width: 100% !important;
+	padding-left: 0 !important;
+	margin-left: 0 !important;
+}
+
+.vhs-blog-faq-item,
+details.vhs-blog-faq-item {
+	border-bottom: 1px solid #e3ebf4 !important;
+	padding: 20px 0 !important;
+	width: 100% !important;
+	margin-left: 0 !important;
+	box-sizing: border-box !important;
+	transition: background 0.2s ease !important;
+}
+
+.vhs-blog-faq-summary {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: space-between !important;
+	gap: 16px !important;
+	cursor: pointer !important;
+	list-style: none !important;
+	font-size: 17px !important;
+	font-weight: 700 !important;
+	color: #16324f !important;
+	user-select: none !important;
+	text-align: left !important;
+	width: 100% !important;
+	padding-left: 0 !important;
+}
+
+.vhs-blog-faq-summary::-webkit-details-marker {
+	display: none !important;
+}
+
+.vhs-blog-faq-question {
+	flex: 1 !important;
+	text-align: left !important;
+}
+
+.vhs-blog-faq-icon {
+	position: relative !important;
+	width: 20px !important;
+	height: 20px !important;
+	flex-shrink: 0 !important;
+}
+
+.vhs-blog-faq-icon::before {
+	content: "+" !important;
+	font-size: 22px !important;
+	font-weight: 700 !important;
+	color: #39B7EC !important;
+	line-height: 1 !important;
+}
+
+.vhs-blog-faq-item[open] .vhs-blog-faq-icon::before {
+	content: "−" !important;
+}
+
+.vhs-blog-faq-answer {
+	padding-top: 14px !important;
+	text-align: left !important;
+	width: 100% !important;
+}
+
+.vhs-blog-faq-answer p {
+	font-size: 15px !important;
+	line-height: 1.7 !important;
+	color: #4a5d73 !important;
+	font-weight: 500 !important;
+	margin: 0 !important;
+	text-align: left !important;
+}
+
+@media (max-width: 768px) {
+	.vhs-blog-single-title,
+	h1.vhs-blog-single-title,
+	.wp-block-post-title.vhs-blog-single-title {
+		font-size: 30px !important;
+	}
+
+	.vhs-blog-meta-row {
+		flex-direction: column !important;
+		align-items: flex-start !important;
+		gap: 14px !important;
+	}
+
+	.vhs-author-bio-card,
+	.wp-block-group.vhs-author-bio-card {
+		flex-direction: column !important;
+		align-items: flex-start !important;
+	}
+}
+
+/* ============================================================
+   Single Blog Post Template Section 5 - More Articles Query Grid
+   ============================================================ */
+.vhs-blog-more-posts-section,
+.wp-block-group.vhs-blog-more-posts-section {
+	background-color: #f4f7fb !important;
+	width: 100% !important;
+}
+
+.vhs-blog-all-articles-link,
+a.vhs-blog-all-articles-link {
+	color: #436da5 !important;
+	font-size: 14px !important;
+	font-weight: 700 !important;
+	text-decoration: none !important;
+	transition: color 0.2s ease !important;
+}
+
+.vhs-blog-all-articles-link:hover,
+a.vhs-blog-all-articles-link:hover {
+	color: #39B7EC !important;
+	text-decoration: underline !important;
+}
+
+.vhs-blog-query-loop ul.wp-block-post-template,
+ul.vhs-blog-cards-grid {
+	display: flex !important;
+	flex-wrap: wrap !important;
+	gap: 20px !important;
+	list-style: none !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	width: 100% !important;
+}
+
+.vhs-blog-query-loop ul.wp-block-post-template > li {
+	background: transparent !important;
+	border: none !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	flex: 1 1 calc(33.333% - 14px) !important;
+	max-width: calc(33.333% - 14px) !important;
+	min-width: 280px !important;
+	box-sizing: border-box !important;
+	display: flex !important;
+}
+
+.vhs-blog-query-loop ul.wp-block-post-template > li > .vhs-blog-card-item,
+.vhs-blog-card-item,
+.wp-block-group.vhs-blog-card-item {
+	width: 100% !important;
+	max-width: 100% !important;
+	background-color: #ffffff !important;
+	border: 1px solid #e3ebf4 !important;
+	border-radius: 16px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	box-shadow: 0 4px 16px rgba(22, 50, 79, 0.04) !important;
+	box-sizing: border-box !important;
+	display: flex !important;
+	flex-direction: column !important;
+	justify-content: space-between !important;
+	transition: border-color 0.2s ease, transform 0.2s ease !important;
+}
+
+.vhs-blog-card-item:hover {
+	border-color: #39B7EC !important;
+	transform: translateY(-2px) !important;
+}
+
+.vhs-blog-card-image,
+figure.vhs-blog-card-image,
+.wp-block-post-featured-image.vhs-blog-card-image {
+	margin: 0 !important;
+	padding: 0 !important;
+	width: 100% !important;
+	height: 180px !important;
+	overflow: hidden !important;
+	border-radius: 0 !important;
+}
+
+.vhs-blog-card-image a,
+.vhs-blog-card-image img,
+figure.vhs-blog-card-image img,
+.wp-block-post-featured-image.vhs-blog-card-image img {
+	width: 100% !important;
+	height: 180px !important;
+	object-fit: cover !important;
+	display: block !important;
+	border-radius: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	border: none !important;
+}
+
+.vhs-blog-card-content,
+.wp-block-group.vhs-blog-card-content {
+	padding: 20px 24px 24px 24px !important;
+	display: flex !important;
+	flex-direction: column !important;
+	justify-content: space-between !important;
+	flex: 1 !important;
+	box-sizing: border-box !important;
+}
+
+.vhs-blog-card-title,
+.vhs-blog-card-title a,
+h3.vhs-blog-card-title,
+h3.vhs-blog-card-title a {
+	color: #16324f !important;
+	font-size: 16.5px !important;
+	font-weight: 800 !important;
+	line-height: 1.35 !important;
+	text-decoration: none !important;
+	margin-top: 0 !important;
+	margin-bottom: 12px !important;
+	transition: color 0.2s ease !important;
+}
+
+.vhs-blog-card-title a:hover {
+	color: #39B7EC !important;
+}
+
+.vhs-blog-card-meta,
+.wp-block-group.vhs-blog-card-meta {
+	font-size: 13.5px !important;
+	color: #64748b !important;
+	font-weight: 500 !important;
+	display: flex !important;
+	align-items: center !important;
+	gap: 6px !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.vhs-blog-card-meta *,
+.vhs-blog-card-meta a,
+.vhs-blog-card-meta time,
+.vhs-blog-card-meta div,
+.vhs-blog-card-meta span {
+	color: #64748b !important;
+	font-size: 13.5px !important;
+	font-weight: 500 !important;
+	text-decoration: none !important;
+}
+
+@media (max-width: 900px) {
+	.vhs-blog-query-loop ul.wp-block-post-template li,
+	.vhs-blog-card-item {
+		flex: 1 1 calc(50% - 10px) !important;
+		max-width: calc(50% - 10px) !important;
+	}
+}
+
+@media (max-width: 600px) {
+	.vhs-blog-query-loop ul.wp-block-post-template li,
+	.vhs-blog-card-item {
+		flex: 1 1 100% !important;
+		max-width: 100% !important;
+	}
+}
+
+/* ============================================================
+   Single Blog Post Template - Dark CTA Banner (Full Width Edge-to-Edge)
+   ============================================================ */
+.vhs-blog-cta-banner,
+.wp-block-group.vhs-blog-cta-banner,
+div.vhs-blog-cta-banner {
+	width: 100% !important;
+	max-width: 100% !important;
+	background-color: #16324f !important;
+	padding-top: 64px !important;
+	padding-bottom: 64px !important;
+	padding-left: 24px !important;
+	padding-right: 24px !important;
+	box-sizing: border-box !important;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+
+.vhs-blog-cta-buttons {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	gap: 14px !important;
+	flex-wrap: wrap !important;
+	margin-top: 28px !important;
+}
+
+.vhs-cta-btn-primary,
+a.vhs-cta-btn-primary {
+	display: inline-block !important;
+	background-color: #436da5 !important;
+	color: #ffffff !important;
+	font-weight: 700 !important;
+	font-size: 15px !important;
+	padding: 14px 26px !important;
+	border-radius: 12px !important;
+	text-decoration: none !important;
+	border: 1px solid #436da5 !important;
+	transition: background-color 0.2s ease !important;
+}
+
+.vhs-cta-btn-primary:hover,
+a.vhs-cta-btn-primary:hover {
+	background-color: #3a5f91 !important;
+	border-color: #3a5f91 !important;
+	color: #ffffff !important;
+}
+
+.vhs-cta-btn-outline,
+a.vhs-cta-btn-outline {
+	display: inline-block !important;
+	background-color: transparent !important;
+	color: #ffffff !important;
+	font-weight: 700 !important;
+	font-size: 15px !important;
+	padding: 14px 26px !important;
+	border-radius: 12px !important;
+	text-decoration: none !important;
+	border: 1px solid rgba(255, 255, 255, 0.25) !important;
+	transition: all 0.2s ease !important;
+}
+
+.vhs-cta-btn-outline:hover,
+a.vhs-cta-btn-outline:hover {
+	border-color: #ffffff !important;
+	background-color: rgba(255, 255, 255, 0.08) !important;
+	color: #ffffff !important;
+}
