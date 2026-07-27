@@ -134,6 +134,8 @@ if ( ! function_exists( 'realome_register_block_patterns' ) ) :
 			'better-option-costco-cards',
 			'legacybox-comparison-hero',
 			'the-30-second-verdict-legacybox',
+			'the-deep-dive-legacybox-cards',
+			'is-legacybox-worth-it',
 			'reel-to-reel-hero',
 			'every-reel-we-digitize',
 			'reel-flat-pricing',
