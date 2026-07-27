@@ -1,57 +1,56 @@
 <?php
 /**
- * 8mm & Super 8 Film to Digital Service Hero Pattern
+ * Film to Digital Hero Banner Pattern
  *
  * @package Realome
  * @since Realome 1.0
  */
 
+$theme_uri = get_template_directory_uri();
+
 return array(
-	'title'      => __( '8mm & Super 8 Film to Digital Hero', 'realome' ),
+	'title'      => __( 'Film to Digital Hero Banner', 'realome' ),
 	'categories' => array( 'vhs-sections', 'hero', 'featured', 'realome', 'pages' ),
 	'content'    => '
-<!-- wp:group {"align":"full","className":"vhs-service-detail-hero vhs-film-hero","style":{"color":{"background":"#16324F","text":"#ffffff"},"spacing":{"padding":{"top":"80px","bottom":"80px","left":"24px","right":"24px"}}},"layout":{"type":"constrained","contentSize":"1350px"}} -->
-<div class="wp-block-group alignfull vhs-service-detail-hero vhs-film-hero has-text-color has-background" style="background-color:#16324F;color:#ffffff;padding-top:80px;padding-right:24px;padding-bottom:80px;padding-left:24px">
+<!-- wp:group {"align":"full","className":"vhs-film-hero-box","style":{"color":{"background":"#16324f","text":"#ffffff"},"spacing":{"padding":{"top":"88px","bottom":"88px","left":"24px","right":"24px"}}},"layout":{"type":"constrained","contentSize":"1350px"}} -->
+<div class="wp-block-group alignfull vhs-film-hero-box has-text-color has-background" style="background-color:#16324f;color:#ffffff;padding-top:88px;padding-right:24px;padding-bottom:88px;padding-left:24px">
 	<!-- wp:group {"layout":{"type":"constrained","contentSize":"1350px","justifyContent":"left"}} -->
 	<div class="wp-block-group">
 
-		<!-- 2-Column Columns -->
-		<!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":"48px"}}} -->
-		<div class="wp-block-columns are-vertically-aligned-center">
+		<!-- wp:columns {"verticalAlignment":"center","className":"vhs-film-hero-grid","style":{"spacing":{"blockGap":"56px"}}} -->
+		<div class="wp-block-columns are-vertically-aligned-center vhs-film-hero-grid">
 
-			<!-- Left Column: Details & CTAs -->
+			<!-- Left Column: Content & CTAs -->
 			<!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
-			<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%">
+			<div class="wp-block-column are-vertically-aligned-center" style="flex-basis:50%">
 
-				<!-- Eyebrow -->
-				<!-- wp:paragraph {"className":"vhs-service-eyebrow","style":{"color":{"text":"#39B7EC"},"typography":{"fontSize":"12px","fontWeight":"800","letterSpacing":"0.08em","textTransform":"uppercase"},"spacing":{"margin":{"top":"0px","bottom":"14px"}}}} -->
-				<p class="vhs-service-eyebrow has-text-color" style="color:#39B7EC;font-size:12px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;margin-top:0px;margin-bottom:14px">SERVICE &middot; FRAME-BY-FRAME 5K</p>
+				<!-- Eyebrow Pill -->
+				<!-- wp:paragraph {"style":{"color":{"text":"#39B7EC"},"typography":{"fontSize":"13px","fontWeight":"800","letterSpacing":"0.16em"}},"spacing":{"margin":{"top":"0px","bottom":"16px"}}} -->
+				<p class="has-text-color" style="color:#39B7EC;font-size:13px;font-weight:800;letter-spacing:0.16em;margin-top:0px;margin-bottom:16px">FRAME-BY-FRAME 5K SCANNING &middot; HOLLYWOOD, FL</p>
 				<!-- /wp:paragraph -->
 
 				<!-- Main Heading -->
-				<!-- wp:heading {"level":1,"style":{"color":{"text":"#ffffff"},"typography":{"fontWeight":"800","lineHeight":"1.15"},"spacing":{"margin":{"top":"0px","bottom":"16px"}}},"fontSize":"max-48"} -->
-				<h1 class="wp-block-heading has-text-color" style="color:#ffffff;font-size:48px;font-weight:800;line-height:1.15;margin-top:0px;margin-bottom:16px">8mm &amp; Super 8<br>Film to <span style="color:#39B7EC">Digital</span>.</h1>
+				<!-- wp:heading {"level":1,"style":{"color":{"text":"#ffffff"},"typography":{"fontWeight":"800","lineHeight":"1.1"},"spacing":{"margin":{"top":"0px","bottom":"20px"}}},"fontSize":"max-48"} -->
+				<h1 class="wp-block-heading has-text-color" style="color:#ffffff;font-weight:800;line-height:1.1;margin-top:0px;margin-bottom:20px;font-size:48px">8mm, Super 8 &amp; 16mm Film to <span style="color:#39B7EC">5K Digital</span>.</h1>
 				<!-- /wp:heading -->
 
 				<!-- Subtitle -->
-				<!-- wp:paragraph {"style":{"color":{"text":"rgba(255,255,255,0.80)"},"typography":{"fontSize":"16px","lineHeight":"1.6"},"spacing":{"margin":{"bottom":"32px"}}}} -->
-				<p class="has-text-color" style="color:rgba(255,255,255,0.80);font-size:16px;line-height:1.6;margin-bottom:32px">Rediscover the home movies hiding in those old film reels. Memory Converter scans every frame by hand in our Hollywood, FL studio &mdash; in stunning 5K &mdash; so decades-old moments look better than ever.</p>
+				<!-- wp:paragraph {"style":{"color":{"text":"rgba(255,255,255,0.82)"},"typography":{"fontSize":"17.5px","lineHeight":"1.65","fontWeight":"500"}},"spacing":{"margin":{"top":"0px","bottom":"32px"}}} -->
+				<p class="has-text-color" style="color:rgba(255,255,255,0.82);font-size:17.5px;line-height:1.65;font-weight:500;max-width:560px;margin-top:0px;margin-bottom:32px">We scan every single reel frame-by-frame on broadcast 5K scanners &mdash; capturing detail, color, and grain you&rsquo;ve never seen before.</p>
 				<!-- /wp:paragraph -->
 
-				<!-- CTA Row: Primary Button + Outlined Button -->
-				<!-- wp:group {"style":{"spacing":{"blockGap":"16px"}},"layout":{"type":"flex","flexWrap":"wrap","verticalAlignment":"center"}} -->
-				<div class="wp-block-group vhs-hero-cta-row" style="margin-bottom:28px">
+				<!-- Dual CTA Buttons Row -->
+				<!-- wp:group {"style":{"spacing":{"blockGap":"16px","margin":{"top":"0px","bottom":"28px"}}},"layout":{"type":"flex","flexWrap":"wrap","verticalAlignment":"center"}} -->
+				<div class="wp-block-group" style="margin-top:0px;margin-bottom:28px">
 
-					<!-- Primary CTA -->
 					<!-- wp:buttons -->
 					<div class="wp-block-buttons">
-						<!-- wp:button {"style":{"color":{"background":"#436da5","text":"#ffffff"},"border":{"radius":"10px"},"typography":{"fontWeight":"700","fontSize":"14px"},"spacing":{"padding":{"top":"13px","bottom":"13px","left":"24px","right":"24px"}}}} -->
-						<div class="wp-block-button"><a class="wp-block-button__link has-text-color has-background" href="#" style="border-radius:10px;background-color:#436da5;color:#ffffff;font-size:14px;font-weight:700;padding:13px 24px;text-decoration:none">Get a Free Quote</a></div>
+						<!-- wp:button {"style":{"color":{"background":"#436da5","text":"#ffffff"},"border":{"radius":"12px"}},"fontSize":"medium"} -->
+						<div class="wp-block-button has-custom-font-size has-medium-font-size"><a class="wp-block-button__link has-text-color has-background" href="#" style="border-radius:12px;background-color:#436da5;color:#ffffff">Get a Free Quote</a></div>
 						<!-- /wp:button -->
 					</div>
 					<!-- /wp:buttons -->
 
-					<!-- Outlined Sample Footage CTA -->
 					<!-- wp:html -->
 					<a href="#sample-footage" class="vhs-btn-outline">See Sample Footage</a>
 					<!-- /wp:html -->
@@ -67,36 +66,60 @@ return array(
 			</div>
 			<!-- /wp:column -->
 
-			<!-- Right Column: Before/After 5K Scan Comparison Card -->
+			<!-- Right Column: Before/After 5K Scan Comparison Card with Image Upload Ability -->
 			<!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
 			<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%">
-				<!-- wp:html -->
-				<div class="vhs-ba-container">
+				
+				<!-- wp:group {"className":"vhs-ba-container","layout":{"type":"constrained"}} -->
+				<div class="wp-block-group vhs-ba-container">
 					
 					<!-- Before Layer (Left Half) -->
-					<div class="vhs-ba-before-layer">
-						<span class="vhs-ba-badge vhs-ba-badge-before">BEFORE</span>
-						<img src="" alt="Before - 8mm frame beach day 1967" class="vhs-ba-img vhs-ba-img-before" />
-						<span class="vhs-ba-caption vhs-ba-caption-before">8mm frame &mdash; beach day, 1967</span>
+					<!-- wp:group {"className":"vhs-ba-before-layer","layout":{"type":"constrained"}} -->
+					<div class="wp-block-group vhs-ba-before-layer">
+						<!-- wp:paragraph {"className":"vhs-ba-badge vhs-ba-badge-before"} -->
+						<p class="vhs-ba-badge vhs-ba-badge-before">BEFORE</p>
+						<!-- /wp:paragraph -->
+
+						<!-- wp:image {"className":"vhs-ba-img vhs-ba-img-before","sizeSlug":"full","linkDestination":"none"} -->
+						<figure class="wp-block-image size-full vhs-ba-img vhs-ba-img-before"><img src="" alt="Before - 8mm frame beach day 1967"/></figure>
+						<!-- /wp:image -->
+
+						<!-- wp:paragraph {"className":"vhs-ba-caption vhs-ba-caption-before"} -->
+						<p class="vhs-ba-caption vhs-ba-caption-before">8mm frame &mdash; beach day, 1967</p>
+						<!-- /wp:paragraph -->
 					</div>
+					<!-- /wp:group -->
 
 					<!-- After Layer (Right Half) -->
-					<div class="vhs-ba-after-layer">
-						<span class="vhs-ba-badge vhs-ba-badge-after">AFTER</span>
-						<img src="" alt="After - Same frame 5K scan" class="vhs-ba-img vhs-ba-img-after" />
-						<span class="vhs-ba-caption vhs-ba-caption-after">same frame &mdash; 5k scan</span>
+					<!-- wp:group {"className":"vhs-ba-after-layer","layout":{"type":"constrained"}} -->
+					<div class="wp-block-group vhs-ba-after-layer">
+						<!-- wp:paragraph {"className":"vhs-ba-badge vhs-ba-badge-after"} -->
+						<p class="vhs-ba-badge vhs-ba-badge-after">AFTER</p>
+						<!-- /wp:paragraph -->
+
+						<!-- wp:image {"className":"vhs-ba-img vhs-ba-img-after","sizeSlug":"full","linkDestination":"none"} -->
+						<figure class="wp-block-image size-full vhs-ba-img vhs-ba-img-after"><img src="" alt="After - Same frame 5K scan"/></figure>
+						<!-- /wp:image -->
+
+						<!-- wp:paragraph {"className":"vhs-ba-caption vhs-ba-caption-after"} -->
+						<p class="vhs-ba-caption vhs-ba-caption-after">same frame &mdash; 5k scan</p>
+						<!-- /wp:paragraph -->
 					</div>
+					<!-- /wp:group -->
 
 					<!-- Center Slider Divider Line & Handle -->
+					<!-- wp:html -->
 					<div class="vhs-ba-divider">
 						<div class="vhs-ba-handle-btn">
 							<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16324F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
 							<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16324F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
 						</div>
 					</div>
+					<!-- /wp:html -->
 
 				</div>
-				<!-- /wp:html -->
+				<!-- /wp:group -->
+
 			</div>
 			<!-- /wp:column -->
 
@@ -107,5 +130,5 @@ return array(
 	<!-- /wp:group -->
 </div>
 <!-- /wp:group -->
-',
+	',
 );

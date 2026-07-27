@@ -5,6 +5,8 @@
  * Categories: vhs-sections, featured, realome, pages
  * Keywords: From damaged to restored, before after, photo restoration, faded portrait, tears creases, water mold damage
  */
+
+$theme_uri = get_template_directory_uri();
 ?>
 <!-- wp:group {"align":"full","className":"vhs-damaged-restored-section","style":{"color":{"background":"#f0f4f8"},"spacing":{"padding":{"top":"90px","bottom":"90px","left":"24px","right":"24px"}}},"layout":{"type":"constrained","contentSize":"1350px"}} -->
 <div class="wp-block-group alignfull vhs-damaged-restored-section has-background" style="background-color:#f0f4f8;padding-top:90px;padding-right:24px;padding-bottom:90px;padding-left:24px">
@@ -29,29 +31,51 @@
 			<!-- wp:column {"className":"vhs-ba-card-col"} -->
 			<div class="wp-block-column vhs-ba-card-col">
 
-				<!-- Comparison Visual Box -->
-				<!-- wp:html -->
-				<div class="vhs-ba-card-box">
+				<!-- Comparison Visual Box with Native Image Upload -->
+				<!-- wp:group {"className":"vhs-ba-card-box","layout":{"type":"constrained"}} -->
+				<div class="wp-block-group vhs-ba-card-box">
+					
 					<!-- Before Half -->
-					<div class="vhs-ba-half vhs-ba-before">
-						<div class="vhs-ba-badge vhs-badge-before">BEFORE</div>
-						<img class="vhs-get-img" src="" alt="Faded portrait, 1962" onerror="this.style.display=\'none\'" />
-						<div class="vhs-ba-placeholder-text">faded portrait, 1962</div>
+					<!-- wp:group {"className":"vhs-ba-half vhs-ba-before","layout":{"type":"constrained"}} -->
+					<div class="wp-block-group vhs-ba-half vhs-ba-before">
+						<!-- wp:paragraph {"className":"vhs-ba-badge vhs-badge-before"} -->
+						<p class="vhs-ba-badge vhs-badge-before">BEFORE</p>
+						<!-- /wp:paragraph -->
+						<!-- wp:image {"className":"vhs-get-img","sizeSlug":"full","linkDestination":"none"} -->
+						<figure class="wp-block-image size-full vhs-get-img"><img src="" alt="Faded portrait, 1962"/></figure>
+						<!-- /wp:image -->
+						<!-- wp:paragraph {"className":"vhs-ba-placeholder-text"} -->
+						<p class="vhs-ba-placeholder-text">faded portrait, 1962</p>
+						<!-- /wp:paragraph -->
 					</div>
+					<!-- /wp:group -->
+
 					<!-- After Half -->
-					<div class="vhs-ba-half vhs-ba-after">
-						<div class="vhs-ba-badge vhs-badge-after">AFTER</div>
-						<img class="vhs-get-img" src="" alt="Restored" onerror="this.style.display=\'none\'" />
-						<div class="vhs-ba-placeholder-text">restored</div>
+					<!-- wp:group {"className":"vhs-ba-half vhs-ba-after","layout":{"type":"constrained"}} -->
+					<div class="wp-block-group vhs-ba-half vhs-ba-after">
+						<!-- wp:paragraph {"className":"vhs-ba-badge vhs-badge-after"} -->
+						<p class="vhs-ba-badge vhs-badge-after">AFTER</p>
+						<!-- /wp:paragraph -->
+						<!-- wp:image {"className":"vhs-get-img","sizeSlug":"full","linkDestination":"none"} -->
+						<figure class="wp-block-image size-full vhs-get-img"><img src="" alt="Restored"/></figure>
+						<!-- /wp:image -->
+						<!-- wp:paragraph {"className":"vhs-ba-placeholder-text"} -->
+						<p class="vhs-ba-placeholder-text">restored</p>
+						<!-- /wp:paragraph -->
 					</div>
+					<!-- /wp:group -->
+
 					<!-- Divider & Handle -->
+					<!-- wp:html -->
 					<div class="vhs-ba-divider" style="left: 50%;">
 						<div class="vhs-ba-handle">
 							<span>&lt;&nbsp;&gt;</span>
 						</div>
 					</div>
+					<!-- /wp:html -->
+
 				</div>
-				<!-- /wp:html -->
+				<!-- /wp:group -->
 
 				<!-- Caption Paragraph -->
 				<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#16324f"},"typography":{"fontSize":"14px","fontWeight":"700"}},"spacing":{"margin":{"top":"16px","bottom":"0px"}}} -->
@@ -65,29 +89,51 @@
 			<!-- wp:column {"className":"vhs-ba-card-col"} -->
 			<div class="wp-block-column vhs-ba-card-col">
 
-				<!-- Comparison Visual Box -->
-				<!-- wp:html -->
-				<div class="vhs-ba-card-box">
+				<!-- Comparison Visual Box with Native Image Upload -->
+				<!-- wp:group {"className":"vhs-ba-card-box","layout":{"type":"constrained"}} -->
+				<div class="wp-block-group vhs-ba-card-box">
+					
 					<!-- Before Half -->
-					<div class="vhs-ba-half vhs-ba-before">
-						<div class="vhs-ba-badge vhs-badge-before">BEFORE</div>
-						<img class="vhs-get-img" src="" alt="Torn print, taped" onerror="this.style.display=\'none\'" />
-						<div class="vhs-ba-placeholder-text">torn print, taped</div>
+					<!-- wp:group {"className":"vhs-ba-half vhs-ba-before","layout":{"type":"constrained"}} -->
+					<div class="wp-block-group vhs-ba-half vhs-ba-before">
+						<!-- wp:paragraph {"className":"vhs-ba-badge vhs-badge-before"} -->
+						<p class="vhs-ba-badge vhs-badge-before">BEFORE</p>
+						<!-- /wp:paragraph -->
+						<!-- wp:image {"className":"vhs-get-img","sizeSlug":"full","linkDestination":"none"} -->
+						<figure class="wp-block-image size-full vhs-get-img"><img src="" alt="Torn print, taped"/></figure>
+						<!-- /wp:image -->
+						<!-- wp:paragraph {"className":"vhs-ba-placeholder-text"} -->
+						<p class="vhs-ba-placeholder-text">torn print, taped</p>
+						<!-- /wp:paragraph -->
 					</div>
+					<!-- /wp:group -->
+
 					<!-- After Half -->
-					<div class="vhs-ba-half vhs-ba-after">
-						<div class="vhs-ba-badge vhs-badge-after">AFTER</div>
-						<img class="vhs-get-img" src="" alt="Restored" onerror="this.style.display=\'none\'" />
-						<div class="vhs-ba-placeholder-text">restored</div>
+					<!-- wp:group {"className":"vhs-ba-half vhs-ba-after","layout":{"type":"constrained"}} -->
+					<div class="wp-block-group vhs-ba-half vhs-ba-after">
+						<!-- wp:paragraph {"className":"vhs-ba-badge vhs-badge-after"} -->
+						<p class="vhs-ba-badge vhs-badge-after">AFTER</p>
+						<!-- /wp:paragraph -->
+						<!-- wp:image {"className":"vhs-get-img","sizeSlug":"full","linkDestination":"none"} -->
+						<figure class="wp-block-image size-full vhs-get-img"><img src="" alt="Restored"/></figure>
+						<!-- /wp:image -->
+						<!-- wp:paragraph {"className":"vhs-ba-placeholder-text"} -->
+						<p class="vhs-ba-placeholder-text">restored</p>
+						<!-- /wp:paragraph -->
 					</div>
+					<!-- /wp:group -->
+
 					<!-- Divider & Handle -->
+					<!-- wp:html -->
 					<div class="vhs-ba-divider" style="left: 50%;">
 						<div class="vhs-ba-handle">
 							<span>&lt;&nbsp;&gt;</span>
 						</div>
 					</div>
+					<!-- /wp:html -->
+
 				</div>
-				<!-- /wp:html -->
+				<!-- /wp:group -->
 
 				<!-- Caption Paragraph -->
 				<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#16324f"},"typography":{"fontSize":"14px","fontWeight":"700"}},"spacing":{"margin":{"top":"16px","bottom":"0px"}}} -->
@@ -101,29 +147,51 @@
 			<!-- wp:column {"className":"vhs-ba-card-col"} -->
 			<div class="wp-block-column vhs-ba-card-col">
 
-				<!-- Comparison Visual Box -->
-				<!-- wp:html -->
-				<div class="vhs-ba-card-box">
+				<!-- Comparison Visual Box with Native Image Upload -->
+				<!-- wp:group {"className":"vhs-ba-card-box","layout":{"type":"constrained"}} -->
+				<div class="wp-block-group vhs-ba-card-box">
+					
 					<!-- Before Half -->
-					<div class="vhs-ba-half vhs-ba-before">
-						<div class="vhs-ba-badge vhs-badge-before">BEFORE</div>
-						<img class="vhs-get-img" src="" alt="Water-damaged, 1978" onerror="this.style.display=\'none\'" />
-						<div class="vhs-ba-placeholder-text">water-damaged, 1978</div>
+					<!-- wp:group {"className":"vhs-ba-half vhs-ba-before","layout":{"type":"constrained"}} -->
+					<div class="wp-block-group vhs-ba-half vhs-ba-before">
+						<!-- wp:paragraph {"className":"vhs-ba-badge vhs-badge-before"} -->
+						<p class="vhs-ba-badge vhs-badge-before">BEFORE</p>
+						<!-- /wp:paragraph -->
+						<!-- wp:image {"className":"vhs-get-img","sizeSlug":"full","linkDestination":"none"} -->
+						<figure class="wp-block-image size-full vhs-get-img"><img src="" alt="Water-damaged, 1978"/></figure>
+						<!-- /wp:image -->
+						<!-- wp:paragraph {"className":"vhs-ba-placeholder-text"} -->
+						<p class="vhs-ba-placeholder-text">water-damaged, 1978</p>
+						<!-- /wp:paragraph -->
 					</div>
+					<!-- /wp:group -->
+
 					<!-- After Half -->
-					<div class="vhs-ba-half vhs-ba-after">
-						<div class="vhs-ba-badge vhs-badge-after">AFTER</div>
-						<img class="vhs-get-img" src="" alt="Restored" onerror="this.style.display=\'none\'" />
-						<div class="vhs-ba-placeholder-text">restored</div>
+					<!-- wp:group {"className":"vhs-ba-half vhs-ba-after","layout":{"type":"constrained"}} -->
+					<div class="wp-block-group vhs-ba-half vhs-ba-after">
+						<!-- wp:paragraph {"className":"vhs-ba-badge vhs-badge-after"} -->
+						<p class="vhs-ba-badge vhs-badge-after">AFTER</p>
+						<!-- /wp:paragraph -->
+						<!-- wp:image {"className":"vhs-get-img","sizeSlug":"full","linkDestination":"none"} -->
+						<figure class="wp-block-image size-full vhs-get-img"><img src="" alt="Restored"/></figure>
+						<!-- /wp:image -->
+						<!-- wp:paragraph {"className":"vhs-ba-placeholder-text"} -->
+						<p class="vhs-ba-placeholder-text">restored</p>
+						<!-- /wp:paragraph -->
 					</div>
+					<!-- /wp:group -->
+
 					<!-- Divider & Handle -->
+					<!-- wp:html -->
 					<div class="vhs-ba-divider" style="left: 50%;">
 						<div class="vhs-ba-handle">
 							<span>&lt;&nbsp;&gt;</span>
 						</div>
 					</div>
+					<!-- /wp:html -->
+
 				</div>
-				<!-- /wp:html -->
+				<!-- /wp:group -->
 
 				<!-- Caption Paragraph -->
 				<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#16324f"},"typography":{"fontSize":"14px","fontWeight":"700"}},"spacing":{"margin":{"top":"16px","bottom":"0px"}}} -->

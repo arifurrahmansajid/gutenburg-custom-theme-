@@ -3867,8 +3867,13 @@ body .wp-site-blocks> :last-child {
 			rgba(255, 255, 255, 0.45) 32px) !important;
 }
 
-/* Before/After Images (when src is provided by user) */
-.vhs-ba-img {
+/* Before/After Images (when src is provided by user in Gutenberg) */
+.vhs-ba-img,
+.vhs-get-img,
+.vhs-ba-img img,
+.vhs-get-img img,
+figure.vhs-ba-img img,
+figure.vhs-get-img img {
 	position: absolute !important;
 	top: 0 !important;
 	left: 0 !important;
@@ -3876,10 +3881,21 @@ body .wp-site-blocks> :last-child {
 	height: 100% !important;
 	object-fit: cover !important;
 	display: block !important;
+	margin: 0 !important;
+}
+
+figure.vhs-ba-img,
+figure.vhs-get-img {
+	position: absolute !important;
+	inset: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
 }
 
 .vhs-ba-img[src=""],
-.vhs-ba-img:not([src]) {
+.vhs-ba-img:not([src]),
+.vhs-get-img[src=""],
+.vhs-get-img:not([src]) {
 	display: none !important;
 }
 
@@ -12163,5 +12179,29 @@ p.vhs-reel-eyebrow {
 @media (max-width: 600px) {
 	.vhs-hollywood-services-grid {
 		grid-template-columns: 1fr !important;
+	}
+}
+
+/* ============================================================
+   Hollywood FL How It Works Section Pattern Styles
+   ============================================================ */
+.vhs-hollywood-how-it-works-section {
+	background-color: #ffffff !important;
+}
+
+.vhs-hollywood-map-card {
+	position: relative !important;
+	height: 340px !important;
+	border-radius: 16px !important;
+	overflow: hidden !important;
+	border: 1px solid #E3EBF4 !important;
+	background-image: linear-gradient(rgba(67, 109, 165, 0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(67, 109, 165, 0.07) 1px, transparent 1px) !important;
+	background-size: 40px 40px !important;
+	background-color: #E8EFF6 !important;
+}
+
+@media (max-width: 991px) {
+	.vhs-hollywood-works-grid {
+		flex-direction: column !important;
 	}
 }
