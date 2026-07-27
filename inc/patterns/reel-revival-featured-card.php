@@ -6,6 +6,8 @@
  * @since Realome 1.0
  */
 
+$theme_uri = get_template_directory_uri();
+
 return array(
 	'title'      => __( 'Reel Revival Featured Latest Blog Card', 'realome' ),
 	'categories' => array( 'vhs-sections', 'featured', 'realome', 'pages' ),
@@ -59,12 +61,8 @@ return array(
 						</div>
 						<!-- /wp:group -->
 
-						<!-- Right Read Article Link -->
-						<!-- wp:html -->
-						<div class="vhs-featured-read-link">
-							<a href="#">Read article &rarr;</a>
-						</div>
-						<!-- /wp:html -->
+						<!-- Right Read Article Link (Dynamic Post Permalink) -->
+						<!-- wp:read-more {"content":"Read article &rarr;","className":"vhs-featured-read-link"} /-->
 
 					</div>
 					<!-- /wp:group -->
@@ -80,5 +78,5 @@ return array(
 
 </div>
 <!-- /wp:group -->
-',
+	',
 );

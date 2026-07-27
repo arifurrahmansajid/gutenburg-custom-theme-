@@ -5,6 +5,8 @@
  * Categories: vhs-sections, featured, realome, pages
  * Keywords: reel revival featured card, latest blog hero, featured article
  */
+
+$theme_uri = get_template_directory_uri();
 ?>
 <!-- wp:group {"align":"full","className":"vhs-featured-post-section","style":{"color":{"background":"#f3f7fc"},"spacing":{"padding":{"top":"64px","bottom":"64px","left":"24px","right":"24px"}}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
 <div class="wp-block-group alignfull vhs-featured-post-section has-background" style="background-color:#f3f7fc;padding-top:64px;padding-right:24px;padding-bottom:64px;padding-left:24px">
@@ -55,12 +57,8 @@
 						</div>
 						<!-- /wp:group -->
 
-						<!-- Right Read Article Link -->
-						<!-- wp:html -->
-						<div class="vhs-featured-read-link">
-							<a href="#">Read article &rarr;</a>
-						</div>
-						<!-- /wp:html -->
+						<!-- Right Read Article Link (Dynamic Post Permalink) -->
+						<!-- wp:read-more {"content":"Read article &rarr;","className":"vhs-featured-read-link"} /-->
 
 					</div>
 					<!-- /wp:group -->
