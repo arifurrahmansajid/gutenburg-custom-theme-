@@ -135,7 +135,16 @@ if ( ! function_exists( 'realome_scripts' ) ) :
 			get_template_directory_uri() . '/assets/js/responsive-embeds.js',
 			array(),
 			wp_get_theme()->get( 'Version' ),
-			$version_string
+			true
+		);
+
+		// Before-After comparison slider script.
+		wp_enqueue_script(
+			'realome-before-after-script',
+			get_template_directory_uri() . '/assets/js/before-after.js',
+			array(),
+			wp_get_theme()->get( 'Version' ),
+			true
 		);
 	}
 

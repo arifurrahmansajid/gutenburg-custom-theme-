@@ -81,7 +81,7 @@ return array(
 						<!-- /wp:paragraph -->
 
 						<!-- wp:image {"className":"vhs-ba-img vhs-ba-img-before","sizeSlug":"full","linkDestination":"none"} -->
-						<figure class="wp-block-image size-full vhs-ba-img vhs-ba-img-before"><img src="" alt="Before - 8mm frame beach day 1967"/></figure>
+						<figure class="wp-block-image size-full vhs-ba-img vhs-ba-img-before"><img src="' . esc_url( $theme_uri . '/assets/images/film-before.png' ) . '" alt="Before - 8mm frame beach day 1967"/></figure>
 						<!-- /wp:image -->
 
 						<!-- wp:paragraph {"className":"vhs-ba-caption vhs-ba-caption-before"} -->
@@ -98,7 +98,7 @@ return array(
 						<!-- /wp:paragraph -->
 
 						<!-- wp:image {"className":"vhs-ba-img vhs-ba-img-after","sizeSlug":"full","linkDestination":"none"} -->
-						<figure class="wp-block-image size-full vhs-ba-img vhs-ba-img-after"><img src="" alt="After - Same frame 5K scan"/></figure>
+						<figure class="wp-block-image size-full vhs-ba-img vhs-ba-img-after"><img src="' . esc_url( $theme_uri . '/assets/images/film-after.png' ) . '" alt="After - Same frame 5K scan"/></figure>
 						<!-- /wp:image -->
 
 						<!-- wp:paragraph {"className":"vhs-ba-caption vhs-ba-caption-after"} -->
@@ -107,8 +107,9 @@ return array(
 					</div>
 					<!-- /wp:group -->
 
-					<!-- Center Slider Divider Line & Handle -->
+					<!-- Center Slider Divider Line & Interactive Handle -->
 					<!-- wp:html -->
+					<input type="range" class="vhs-ba-range-slider" min="0" max="100" value="50" oninput="this.closest(\'.vhs-ba-container\').style.setProperty(\'--slider-pos\', this.value + \'%\')" aria-label="Before and After comparison slider" />
 					<div class="vhs-ba-divider">
 						<div class="vhs-ba-handle-btn">
 							<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16324F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>

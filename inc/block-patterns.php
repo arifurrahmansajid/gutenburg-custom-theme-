@@ -160,6 +160,9 @@ if ( ! function_exists( 'realome_register_block_patterns' ) ) :
 			'hollywood-fl-how-it-works-section',
 			'hollywood-fl-faq-accordion',
 			'hollywood-fl-nearby-areas-bar',
+			'film-before-after-hero-banner',
+			'before-after-card-v2',
+			'vhs-to-digital-hero-banner',
 		);
 
 		foreach ( $block_patterns as $block_pattern ) {

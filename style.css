@@ -3844,18 +3844,22 @@ body .wp-site-blocks> :last-child {
 	box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35) !important;
 	background: #0c1a29 !important;
 	box-sizing: border-box !important;
+	--slider-pos: 50%;
+	user-select: none !important;
 }
 
-/* Before Layer (Left 50%) */
+/* Before Layer (Left Half via clip-path) */
 .vhs-ba-before-layer {
 	position: absolute !important;
 	top: 0 !important;
 	left: 0 !important;
+	right: 0 !important;
 	bottom: 0 !important;
-	width: 50% !important;
+	width: 100% !important;
+	height: 100% !important;
 	overflow: hidden !important;
 	z-index: 2 !important;
-	border-right: 2px solid #39B7EC !important;
+	clip-path: inset(0 calc(100% - var(--slider-pos, 50%)) 0 0) !important;
 	background-color: #2e2b23 !important;
 	background-image: repeating-linear-gradient(45deg,
 			rgba(0, 0, 0, 0.18),
@@ -3864,13 +3868,15 @@ body .wp-site-blocks> :last-child {
 			transparent 24px) !important;
 }
 
-/* After Layer (Right 50%) */
+/* After Layer (Right Half / Underneath) */
 .vhs-ba-after-layer {
 	position: absolute !important;
 	top: 0 !important;
 	right: 0 !important;
 	bottom: 0 !important;
 	left: 0 !important;
+	width: 100% !important;
+	height: 100% !important;
 	z-index: 1 !important;
 	background-color: #cce7f8 !important;
 	background-image: repeating-linear-gradient(135deg,
@@ -3912,6 +3918,22 @@ figure.vhs-get-img {
 	display: none !important;
 }
 
+/* Range Slider Overlay */
+.vhs-ba-range-slider {
+	position: absolute !important;
+	top: 0 !important;
+	left: 0 !important;
+	width: 100% !important;
+	height: 100% !important;
+	opacity: 0 !important;
+	cursor: ew-resize !important;
+	z-index: 25 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	appearance: none !important;
+	-webkit-appearance: none !important;
+}
+
 /* Badges */
 .vhs-ba-badge {
 	position: absolute !important;
@@ -3948,23 +3970,28 @@ figure.vhs-get-img {
 
 .vhs-ba-caption-before {
 	left: 20px !important;
-	color: #a89f91 !important;
+	color: #ffffff !important;
+	text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8) !important;
 }
 
 .vhs-ba-caption-after {
 	right: 20px !important;
-	color: #507d9c !important;
+	color: #ffffff !important;
+	text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8) !important;
 }
 
-/* Center Handle Button */
+/* Center Handle Divider Line & Button */
 .vhs-ba-divider {
 	position: absolute !important;
 	top: 0 !important;
 	bottom: 0 !important;
-	left: 50% !important;
+	left: var(--slider-pos, 50%) !important;
+	width: 2px !important;
+	background: #39B7EC !important;
 	transform: translateX(-50%) !important;
 	z-index: 10 !important;
 	pointer-events: none !important;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.4) !important;
 }
 
 .vhs-ba-handle-btn {
@@ -4004,6 +4031,191 @@ figure.vhs-get-img {
 	.vhs-ba-caption {
 		font-size: 10px !important;
 		bottom: 12px !important;
+	}
+}
+
+/* ============================================================
+   Before/After Comparison Card v2  (Portrait, Centered Captions)
+   ============================================================ */
+
+.vhs-ba2-container {
+	position: relative !important;
+	width: 100% !important;
+	aspect-ratio: 4 / 5 !important;
+	border-radius: 20px !important;
+	overflow: hidden !important;
+	border: 1px solid rgba(255, 255, 255, 0.12) !important;
+	box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45) !important;
+	background: #0c1a29 !important;
+	box-sizing: border-box !important;
+	--slider-pos: 50%;
+	user-select: none !important;
+	cursor: ew-resize !important;
+}
+
+/* Before Layer - full size, clipped on the right */
+.vhs-ba2-before-layer {
+	position: absolute !important;
+	inset: 0 !important;
+	width: 100% !important;
+	height: 100% !important;
+	overflow: hidden !important;
+	z-index: 2 !important;
+	clip-path: inset(0 calc(100% - var(--slider-pos, 50%)) 0 0) !important;
+	background-color: #2a2a1e !important;
+	background-image: repeating-linear-gradient(
+		45deg,
+		rgba(0, 0, 0, 0.22),
+		rgba(0, 0, 0, 0.22) 14px,
+		transparent 14px,
+		transparent 28px
+	) !important;
+}
+
+/* After Layer - full size, sits underneath */
+.vhs-ba2-after-layer {
+	position: absolute !important;
+	inset: 0 !important;
+	width: 100% !important;
+	height: 100% !important;
+	z-index: 1 !important;
+	background-color: #c8e4f5 !important;
+	background-image: repeating-linear-gradient(
+		135deg,
+		transparent,
+		transparent 18px,
+		rgba(255, 255, 255, 0.42) 18px,
+		rgba(255, 255, 255, 0.42) 36px
+	) !important;
+}
+
+/* Images inside layers */
+.vhs-ba2-before-layer figure.wp-block-image,
+.vhs-ba2-after-layer figure.wp-block-image,
+.vhs-ba2-before-layer figure.wp-block-image img,
+.vhs-ba2-after-layer figure.wp-block-image img {
+	position: absolute !important;
+	inset: 0 !important;
+	width: 100% !important;
+	height: 100% !important;
+	object-fit: cover !important;
+	display: block !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+/* BEFORE / AFTER badge pills */
+.vhs-ba2-badge {
+	position: absolute !important;
+	top: 18px !important;
+	padding: 6px 16px !important;
+	border-radius: 999px !important;
+	font-size: 11px !important;
+	font-weight: 800 !important;
+	letter-spacing: 0.10em !important;
+	text-transform: uppercase !important;
+	z-index: 8 !important;
+	line-height: 1 !important;
+}
+
+.vhs-ba2-badge-before {
+	left: 18px !important;
+	background: rgba(0, 0, 0, 0.70) !important;
+	color: #ffffff !important;
+}
+
+.vhs-ba2-badge-after {
+	right: 18px !important;
+	background: #39B7EC !important;
+	color: #0b1a2a !important;
+}
+
+/* Captions — centered vertically */
+.vhs-ba2-caption {
+	position: absolute !important;
+	top: 50% !important;
+	transform: translateY(-50%) !important;
+	font-size: 12px !important;
+	font-family: monospace !important;
+	letter-spacing: 0.03em !important;
+	z-index: 8 !important;
+	white-space: nowrap !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.vhs-ba2-caption-before {
+	left: 20px !important;
+	color: rgba(210, 190, 130, 0.85) !important;
+}
+
+.vhs-ba2-caption-after {
+	right: 20px !important;
+	color: rgba(70, 140, 190, 0.9) !important;
+}
+
+/* Vertical divider line */
+.vhs-ba2-divider {
+	position: absolute !important;
+	top: 0 !important;
+	bottom: 0 !important;
+	left: var(--slider-pos, 50%) !important;
+	width: 2px !important;
+	background: #39B7EC !important;
+	transform: translateX(-50%) !important;
+	z-index: 10 !important;
+	pointer-events: none !important;
+	box-shadow: 0 0 10px rgba(57, 183, 236, 0.5) !important;
+}
+
+/* Circular < > handle button */
+.vhs-ba2-handle-btn {
+	position: absolute !important;
+	top: 50% !important;
+	left: 50% !important;
+	transform: translate(-50%, -50%) !important;
+	width: 42px !important;
+	height: 42px !important;
+	border-radius: 50% !important;
+	background: #39B7EC !important;
+	box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45) !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	gap: 3px !important;
+}
+
+.vhs-ba2-handle-btn svg {
+	display: block !important;
+}
+
+/* Invisible range input overlay */
+.vhs-ba2-range-slider {
+	position: absolute !important;
+	inset: 0 !important;
+	width: 100% !important;
+	height: 100% !important;
+	opacity: 0 !important;
+	cursor: ew-resize !important;
+	z-index: 25 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	appearance: none !important;
+	-webkit-appearance: none !important;
+}
+
+@media (max-width: 768px) {
+	.vhs-ba2-container {
+		aspect-ratio: 3 / 4 !important;
+	}
+
+	.vhs-ba2-caption {
+		font-size: 10px !important;
+	}
+
+	.vhs-ba2-badge {
+		font-size: 10px !important;
+		padding: 5px 12px !important;
 	}
 }
 
