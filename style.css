@@ -4220,6 +4220,178 @@ figure.vhs-get-img {
 }
 
 /* ============================================================
+   Home Hero — Memories Forever Banner
+   ============================================================ */
+
+.vhs-home-hero-section {
+	background-color: #16324F !important;
+	background-image: repeating-linear-gradient(
+		135deg,
+		transparent,
+		transparent 32px,
+		rgba(255, 255, 255, 0.025) 32px,
+		rgba(255, 255, 255, 0.025) 33px
+	) !important;
+}
+
+/* Right-column card wrapper — positions badge, provides relative anchor */
+.vhs-home-hero-card-wrap {
+	position: relative !important;
+	padding-bottom: 22px !important;
+	padding-right: 22px !important;
+}
+
+/* Cover block styled as the image card */
+.vhs-home-hero-cover.wp-block-cover {
+	border-radius: 20px !important;
+	overflow: hidden !important;
+	aspect-ratio: 4 / 3 !important;
+	min-height: unset !important;
+	box-shadow: 0 24px 64px rgba(0, 0, 0, 0.50) !important;
+	border: 1px solid rgba(255, 255, 255, 0.10) !important;
+}
+
+.vhs-home-hero-cover .wp-block-cover__image-background {
+	border-radius: 20px !important;
+	object-fit: cover !important;
+	width: 100% !important;
+	height: 100% !important;
+}
+
+.vhs-home-hero-cover .wp-block-cover__inner-container {
+	display: none !important;
+}
+
+/* Floating trust badge — bottom-right corner of card-wrap */
+.vhs-home-hero-badge {
+	position: absolute !important;
+	bottom: 0 !important;
+	right: 0 !important;
+	background: #ffffff !important;
+	border-radius: 14px !important;
+	padding: 14px 18px !important;
+	box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25) !important;
+	display: flex !important;
+	align-items: flex-start !important;
+	gap: 12px !important;
+	z-index: 10 !important;
+	min-width: 210px !important;
+}
+
+.vhs-home-hero-badge-icon {
+	flex-shrink: 0 !important;
+	width: 26px !important;
+	height: 26px !important;
+	border-radius: 50% !important;
+	background: #39B7EC !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	margin-top: 2px !important;
+}
+
+.vhs-home-hero-badge-icon svg {
+	display: block !important;
+}
+
+.vhs-home-hero-badge-text strong {
+	display: block !important;
+	font-size: 14px !important;
+	font-weight: 800 !important;
+	color: #0f172a !important;
+	line-height: 1.2 !important;
+	margin-bottom: 3px !important;
+}
+
+.vhs-home-hero-badge-text span {
+	font-size: 12px !important;
+	color: #64748b !important;
+	font-weight: 500 !important;
+}
+
+/* Three trust columns below CTAs */
+.vhs-home-hero-trust-cols {
+	display: flex !important;
+	gap: 0 !important;
+	flex-wrap: wrap !important;
+	border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+	padding-top: 20px !important;
+	margin-top: 28px !important;
+}
+
+.vhs-home-hero-trust-col {
+	flex: 1 !important;
+	min-width: 120px !important;
+	padding-right: 16px !important;
+}
+
+.vhs-home-hero-trust-col p {
+	font-size: 13px !important;
+	color: rgba(255, 255, 255, 0.55) !important;
+	line-height: 1.5 !important;
+	margin: 0 !important;
+}
+
+/* Format pills strip below the hero */
+.vhs-home-hero-pills-strip {
+	display: flex !important;
+	align-items: center !important;
+	gap: 8px !important;
+	flex-wrap: wrap !important;
+	border-top: 1px solid rgba(255, 255, 255, 0.10) !important;
+	padding-top: 24px !important;
+	margin-top: 0 !important;
+}
+
+.vhs-home-hero-pill {
+	display: inline-flex !important;
+	align-items: center !important;
+	gap: 8px !important;
+	background: rgba(255, 255, 255, 0.07) !important;
+	border: 1px solid rgba(255, 255, 255, 0.10) !important;
+	border-radius: 999px !important;
+	padding: 8px 16px !important;
+	font-size: 13px !important;
+	font-weight: 600 !important;
+	color: rgba(255, 255, 255, 0.80) !important;
+	text-decoration: none !important;
+	transition: background 0.2s ease, border-color 0.2s ease !important;
+	white-space: nowrap !important;
+}
+
+.vhs-home-hero-pill:hover {
+	background: rgba(57, 183, 236, 0.15) !important;
+	border-color: rgba(57, 183, 236, 0.4) !important;
+	color: #39B7EC !important;
+}
+
+.vhs-home-hero-pill svg {
+	flex-shrink: 0 !important;
+}
+
+@media (max-width: 768px) {
+	.vhs-home-hero-img-card {
+		aspect-ratio: 16 / 10 !important;
+		margin-right: 0 !important;
+	}
+
+	.vhs-home-hero-badge {
+		bottom: -14px !important;
+		right: 12px !important;
+		min-width: 180px !important;
+	}
+
+	.vhs-home-hero-trust-cols {
+		flex-direction: column !important;
+		gap: 8px !important;
+	}
+
+	.vhs-home-hero-pills-strip {
+		gap: 6px !important;
+	}
+}
+
+/* ============================================================
    Every VHS-C Format We Convert Section
    ============================================================ */
 .vhs-formats-convert-section {

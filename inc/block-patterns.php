@@ -163,6 +163,7 @@ if ( ! function_exists( 'realome_register_block_patterns' ) ) :
 			'film-before-after-hero-banner',
 			'before-after-card-v2',
 			'vhs-to-digital-hero-banner',
+			'home-hero-memories-forever',
 		);
 
 		foreach ( $block_patterns as $block_pattern ) {
