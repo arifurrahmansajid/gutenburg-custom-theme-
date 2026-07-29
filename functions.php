@@ -503,3 +503,304 @@ add_filter( 'allowed_http_origins', function( $origins ) {
 	return $origins;
 } );
 
+/**
+ * Automatically handle 'How It Works' & 'Reviews' navigation clicks:
+ * Smooth scroll if on Homepage, or redirect to Homepage /#anchor if on any subpage.
+ */
+add_action( 'wp_footer', function() {
+	$home_url = esc_url( home_url( '/' ) );
+	?>
+	<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		var homeUrl     = <?php echo wp_json_encode( $home_url ); ?>;
+		var currentPath = window.location.pathname.replace(/\/$/, '') || '/';
+		var homePath    = (new URL(homeUrl)).pathname.replace(/\/$/, '') || '/';
+		var isHome      = (currentPath === homePath);
+
+		function getHeaderOffset() {
+			var header = document.querySelector('header') || document.querySelector('.vhs-header-container') || document.querySelector('.wp-block-template-part');
+			if (header) {
+				return header.offsetHeight + 16;
+			}
+			return 90;
+		}
+
+		function scrollToTarget(target, activeLink) {
+			if (!target) return;
+			var headerOffset = getHeaderOffset();
+			var elementPosition = target.getBoundingClientRect().top;
+			var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+			window.scrollTo({
+				top: Math.max(0, offsetPosition),
+				behavior: 'smooth'
+			});
+
+			if (activeLink) {
+				setActiveNav(activeLink);
+			}
+
+			// Close mobile menu if open
+			var mobileNavClose = document.querySelector('.wp-block-navigation__responsive-container-close-button, .vhs-mobile-menu-close');
+			if (mobileNavClose && window.getComputedStyle(mobileNavClose).display !== 'none') {
+				mobileNavClose.click();
+			}
+		}
+
+		function setActiveNav(activeLink) {
+			document.querySelectorAll('header nav a, .wp-block-navigation a').forEach(function(a) {
+				a.classList.remove('vhs-nav-active');
+			});
+			if (activeLink) {
+				activeLink.classList.add('vhs-nav-active');
+			}
+		}
+
+		document.querySelectorAll('a').forEach(function(link) {
+			var text = (link.textContent || '').trim().toLowerCase();
+			var href = (link.getAttribute('href') || '').trim().toLowerCase();
+
+			// 1. How It Works
+			if (text === 'how it works' || text === 'see how it works' || href === '#how-it-works' || href === '/#how-it-works' || href === homeUrl.toLowerCase() + '#how-it-works') {
+				link.addEventListener('click', function(e) {
+					var target = document.getElementById('how-it-works') || document.querySelector('.vhs-how-section') || document.querySelector('.vhs-hollywood-how-it-works-section');
+					if (isHome && target) {
+						e.preventDefault();
+						scrollToTarget(target, link);
+						if (history.pushState) {
+							history.pushState(null, null, '#how-it-works');
+						}
+					} else if (!isHome) {
+						e.preventDefault();
+						window.location.href = homeUrl + '#how-it-works';
+					}
+				});
+			}
+
+			// 2. Reviews
+			if (text === 'reviews' || href === '#reviews' || href === '/#reviews' || href === '#wall-of-stories' || href === homeUrl.toLowerCase() + '#reviews') {
+				link.addEventListener('click', function(e) {
+					var target = document.getElementById('reviews') || document.querySelector('.vhs-stories-section') || document.querySelector('.vhs-trustindex-section') || document.getElementById('wall-of-stories');
+					if (isHome && target) {
+						e.preventDefault();
+						scrollToTarget(target, link);
+						if (history.pushState) {
+							history.pushState(null, null, '#reviews');
+						}
+					} else if (!isHome) {
+						e.preventDefault();
+						window.location.href = homeUrl + '#reviews';
+					}
+				});
+			}
+
+			// 3. Start a mail-in order
+			if (text.indexOf('start a mail-in order') !== -1) {
+				link.setAttribute('href', homeUrl + 'contact/');
+			}
+		});
+
+		// Hash listener on page load for cross-page navigation to Home section
+		var hash = window.location.hash;
+		if (hash === '#how-it-works' || hash === '#reviews' || hash === '#wall-of-stories') {
+			var checkAndScroll = function() {
+				var targetId = hash.substring(1);
+				var target = document.getElementById(targetId) || document.querySelector('.' + (targetId === 'reviews' || targetId === 'wall-of-stories' ? 'vhs-stories-section' : 'vhs-how-section'));
+				if (target) {
+					var matchingLink = null;
+					document.querySelectorAll('header nav a, .wp-block-navigation a').forEach(function(a) {
+						var txt = (a.textContent || '').trim().toLowerCase();
+						if ((targetId === 'how-it-works' && (txt === 'how it works' || txt === 'see how it works')) || 
+							((targetId === 'reviews' || targetId === 'wall-of-stories') && txt === 'reviews')) {
+							matchingLink = a;
+						}
+					});
+					scrollToTarget(target, matchingLink);
+				}
+			};
+
+			setTimeout(checkAndScroll, 200);
+			setTimeout(checkAndScroll, 600);
+		}
+
+		// Automatically ensure all embedded Google Map iframes use tight 6630 Meade St z=16 street zoom
+		document.querySelectorAll('iframe[src*="maps.google.com"], iframe.vhs-live-map-iframe').forEach(function(iframe) {
+			iframe.setAttribute('src', 'https://maps.google.com/maps?q=6630+Meade+St,+Hollywood,+FL+33024&t=&z=16&ie=UTF8&iwloc=&output=embed');
+		});
+		// Auto fix heading for Slide and Negative Scanning page if Betamax text was mistakenly rendered
+		document.querySelectorAll('h1, h2, h3, p, div').forEach(function(el) {
+			var txt = (el.textContent || '').trim();
+			if (txt.indexOf('The Beta Formats We Convert') !== -1 && (document.body.innerText.indexOf('35mm') !== -1 || window.location.href.indexOf('slide') !== -1)) {
+				el.innerHTML = 'Every Slide &amp; Negative We <span style="color:#39B7EC">Scan</span>.';
+			}
+			if ((txt.indexOf('Sony’s Betamax') !== -1 || txt.indexOf("Sony's Betamax") !== -1 || txt.indexOf('higher-band') !== -1) && (document.body.innerText.indexOf('35mm') !== -1 || window.location.href.indexOf('slide') !== -1)) {
+				el.textContent = 'From a single carousel to boxes of loose negatives — cleaned, scanned at high resolution, and organized.';
+			}
+		});
+
+		// Auto fix title for MiniDV page if 8mm Tapes text was mistakenly rendered
+		document.querySelectorAll('h1, h2, h3').forEach(function(el) {
+			var txt = (el.textContent || '').trim();
+			if (txt.indexOf('Why Trust Us With Your 8mm Tapes') !== -1 && (document.body.innerText.indexOf('MiniDV') !== -1 || window.location.href.indexOf('minidv') !== -1)) {
+				el.innerHTML = 'Why Trust Us With Your <span style="color:#39B7EC">MiniDV<br>Tapes?</span>';
+			}
+			if (txt.indexOf('Why Trust Us With Your 8mm Tapes') !== -1 && (document.body.innerText.indexOf('Betamax') !== -1 || window.location.href.indexOf('beta') !== -1)) {
+				el.innerHTML = 'Why Bring Betamax <span style="color:#39B7EC">to Us</span>?';
+			}
+			if (txt.indexOf('Why Trust Us With Your 8mm Tapes') !== -1 && (document.body.innerText.indexOf('Broadcast') !== -1 || document.body.innerText.indexOf('Institutions') !== -1 || window.location.href.indexOf('professional') !== -1 || window.location.href.indexOf('broadcast') !== -1)) {
+				el.innerHTML = 'Why Institutions Choose <span style="color:#39B7EC">Us</span>.';
+			}
+			if (txt.indexOf('Why Trust Us With Your 8mm Tapes') !== -1 && (document.body.innerText.indexOf('Negatives') !== -1 || document.body.innerText.indexOf('Dust & scratch') !== -1 || window.location.href.indexOf('slide') !== -1)) {
+				el.innerHTML = 'Why Scan Your Slides &amp;<br>Negatives With <span style="color:#39B7EC">Us</span>?';
+			}
+		});
+	});
+	</script>
+	<?php
+} );
+
+// Filter post content dynamically
+add_filter( 'the_content', function( $content ) {
+	if ( ! is_admin() ) {
+		$content = str_replace(
+			array(
+				'The Beta Formats We <span style="color:#39B7EC">Convert</span>.',
+				'The Beta Formats We Convert.',
+				'Sony’s Betamax and its higher-band variants — all handled on maintained period-correct equipment.',
+				"Sony's Betamax and its higher-band variants — all handled on maintained period-correct equipment.",
+				'Sony&#8217;s Betamax and its higher-band variants — all handled on maintained period-correct equipment.',
+			),
+			array(
+				'Every Slide &amp; Negative We <span style="color:#39B7EC">Scan</span>.',
+				'Every Slide &amp; Negative We Scan.',
+				'From a single carousel to boxes of loose negatives — cleaned, scanned at high resolution, and organized.',
+				'From a single carousel to boxes of loose negatives — cleaned, scanned at high resolution, and organized.',
+				'From a single carousel to boxes of loose negatives — cleaned, scanned at high resolution, and organized.',
+			),
+			$content
+		);
+
+		if ( is_page( 'minidv-to-digital' ) || ( strpos( $content, 'MiniDV' ) !== false && strpos( $content, 'Why Trust Us With Your' ) !== false ) ) {
+			$content = str_replace(
+				array(
+					'Why Trust Us With Your <span style="color:#39B7EC">8mm Tapes?</span>',
+					'Why Trust Us With Your <span style="color:#39B7EC">8mm<br>Tapes?</span>',
+					'Why Trust Us With Your 8mm Tapes?',
+				),
+				array(
+					'Why Trust Us With Your <span style="color:#39B7EC">MiniDV<br>Tapes?</span>',
+					'Why Trust Us With Your <span style="color:#39B7EC">MiniDV<br>Tapes?</span>',
+					'Why Trust Us With Your <span style="color:#39B7EC">MiniDV<br>Tapes?</span>',
+				),
+				$content
+			);
+		}
+
+		if ( is_page( 'betamax-to-digital' ) || ( strpos( $content, 'Betamax' ) !== false && strpos( $content, 'Why Trust Us With Your' ) !== false ) ) {
+			$content = str_replace(
+				array(
+					'Why Trust Us With Your <span style="color:#39B7EC">8mm Tapes?</span>',
+					'Why Trust Us With Your <span style="color:#39B7EC">8mm<br>Tapes?</span>',
+					'Why Trust Us With Your 8mm Tapes?',
+				),
+				array(
+					'Why Bring Betamax <span style="color:#39B7EC">to Us</span>?',
+					'Why Bring Betamax <span style="color:#39B7EC">to Us</span>?',
+					'Why Bring Betamax <span style="color:#39B7EC">to Us</span>?',
+				),
+				$content
+			);
+		}
+
+		if ( is_page( 'professional-broadcast' ) || is_page( 'professional-and-broadcast-video-transfer' ) || ( ( strpos( $content, 'Broadcast-grade' ) !== false || strpos( $content, 'archives' ) !== false ) && strpos( $content, 'Why Trust Us With Your' ) !== false ) ) {
+			$content = str_replace(
+				array(
+					'Why Trust Us With Your <span style="color:#39B7EC">8mm Tapes?</span>',
+					'Why Trust Us With Your <span style="color:#39B7EC">8mm<br>Tapes?</span>',
+					'Why Trust Us With Your 8mm Tapes?',
+				),
+				array(
+					'Why Institutions Choose <span style="color:#39B7EC">Us</span>.',
+					'Why Institutions Choose <span style="color:#39B7EC">Us</span>.',
+					'Why Institutions Choose <span style="color:#39B7EC">Us</span>.',
+				),
+				$content
+			);
+		}
+
+		if ( is_page( 'slide-negative-scanning' ) || ( ( strpos( $content, 'Negatives' ) !== false || strpos( $content, 'Dust & scratch' ) !== false ) && strpos( $content, 'Why Trust Us With Your' ) !== false ) ) {
+			$content = str_replace(
+				array(
+					'Why Trust Us With Your <span style="color:#39B7EC">8mm Tapes?</span>',
+					'Why Trust Us With Your <span style="color:#39B7EC">8mm<br>Tapes?</span>',
+					'Why Trust Us With Your 8mm Tapes?',
+				),
+				array(
+					'Why Scan Your Slides &amp;<br>Negatives With <span style="color:#39B7EC">Us</span>?',
+					'Why Scan Your Slides &amp;<br>Negatives With <span style="color:#39B7EC">Us</span>?',
+					'Why Scan Your Slides &amp;<br>Negatives With <span style="color:#39B7EC">Us</span>?',
+				),
+				$content
+			);
+		}
+	}
+	return $content;
+}, 999 );
+
+add_action('wp_footer', function() {
+    if ( is_front_page() || is_home() ) {
+        ?>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var isMobile = window.matchMedia("(max-width: 768px)").matches;
+            if (isMobile) {
+                var heroEls = document.querySelectorAll('.vhs-hero-grid p, .vhs-home-hero-section p, .vhs-hero-grid li, .vhs-home-hero-section li, .vhs-hero-grid div.wp-block-group > div');
+                heroEls.forEach(function(el) {
+                    var text = el.innerText || '';
+                    if (text.includes('Handled 100%')) {
+                        el.innerHTML = '<span style="color:#39B7EC; font-weight:bold; margin-right:4px;">✓</span> Handled 100% in-house in Hollywood, FL';
+                        el.classList.add('vhs-fixed-trust-item');
+                        if (el.parentElement) el.parentElement.classList.add('vhs-fixed-trust-container');
+                    }
+                    else if (text.includes('Insured, tracked')) {
+                        el.innerHTML = '<span style="color:#39B7EC; font-weight:bold; margin-right:4px;">✓</span> Insured, tracked shipping — both ways';
+                        el.classList.add('vhs-fixed-trust-item');
+                        if (el.parentElement) el.parentElement.classList.add('vhs-fixed-trust-container');
+                    }
+                    else if (text.includes('Free return of')) {
+                        el.innerHTML = '<span style="color:#39B7EC; font-weight:bold; margin-right:4px;">✓</span> Free return of your originals';
+                        el.classList.add('vhs-fixed-trust-item');
+                        if (el.parentElement) el.parentElement.classList.add('vhs-fixed-trust-container');
+                    }
+                });
+            }
+        });
+        </script>
+        <style>
+        @media (max-width: 768px) {
+            .vhs-fixed-trust-item {
+                margin-top: 0 !important;
+                margin-bottom: 6px !important;
+                padding-top: 0 !important;
+                padding-bottom: 0 !important;
+                line-height: 1.4 !important;
+                font-size: 14px !important;
+                display: block !important;
+            }
+            .vhs-fixed-trust-item:last-child {
+                margin-bottom: 0 !important;
+            }
+            .vhs-fixed-trust-container {
+                gap: 6px !important;
+                display: flex !important;
+                flex-direction: column !important;
+                margin-bottom: 16px !important;
+            }
+            .vhs-fixed-trust-container > * {
+                margin: 0 !important;
+            }
+        }
+        </style>
+        <?php
+    }
+}, 999);

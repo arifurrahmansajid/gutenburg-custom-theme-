@@ -24,8 +24,8 @@ return array(
 		<div class="wp-block-columns are-vertically-aligned-center">
 
 			<!-- ===== LEFT: Text & CTAs ===== -->
-			<!-- wp:column {"verticalAlignment":"center","width":"48%"} -->
-			<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:48%">
+			<!-- wp:column {"verticalAlignment":"center","width":"48%","className":"vhs-home-hero-col"} -->
+			<div class="wp-block-column is-vertically-aligned-center vhs-home-hero-col" style="flex-basis:48%">
 
 				<!-- Eyebrow -->
 				<!-- wp:paragraph {"style":{"color":{"text":"#39B7EC"},"typography":{"fontSize":"13px","fontWeight":"800","letterSpacing":"0.16em","textTransform":"uppercase"}},"spacing":{"margin":{"top":"0px","bottom":"20px"}}} -->
@@ -33,8 +33,8 @@ return array(
 				<!-- /wp:paragraph -->
 
 				<!-- H1 -->
-				<!-- wp:heading {"level":1,"style":{"color":{"text":"#ffffff"},"typography":{"fontWeight":"800","lineHeight":"1.08"},"spacing":{"margin":{"top":"0px","bottom":"24px"}}}} -->
-				<h1 class="wp-block-heading has-text-color" style="color:#ffffff;font-weight:800;line-height:1.08;margin-top:0;margin-bottom:24px;font-size:56px">Your Memories,<br />Preserved <span style="color:#39B7EC">Forever.</span></h1>
+				<!-- wp:heading {"level":1,"className":"vhs-home-hero-h1","style":{"color":{"text":"#ffffff"},"typography":{"fontWeight":"800","lineHeight":"1.08"},"spacing":{"margin":{"top":"0px","bottom":"24px"}}}} -->
+				<h1 class="wp-block-heading has-text-color vhs-home-hero-h1" style="color:#ffffff;font-weight:800;line-height:1.08;margin-top:0;margin-bottom:24px">Your Memories,<br />Preserved <span style="color:#39B7EC">Forever.</span></h1>
 				<!-- /wp:heading -->
 
 				<!-- Description -->
