@@ -743,6 +743,18 @@ add_filter( 'the_content', function( $content ) {
 				$content
 			);
 		}
+
+		if ( strpos( $content, 'Your Memories' ) !== false ) {
+			$content = preg_replace_callback(
+				'/(?:<p[^>]*>.*?PREMIUM MEMORY DIGITIZATION.*?<\/p>\s*)?<h1[^>]*>.*?Your Memories.*?<\/h1>(?:\s*<p[^>]*>.*?Memory Converter is the white-glove.*?<\/p>)?/is',
+				function($matches) {
+					return '<p class="has-accent-color has-text-color has-extra-small-font-size has-heading-font-family" style="color:#39B7EC;font-style:normal;font-weight:800;letter-spacing:0.16em;margin-top:0;margin-bottom:16px">PREMIUM MEMORY DIGITIZATION &middot; HOLLYWOOD, FL</p>' .
+					       '<h1 class="wp-block-heading has-heading-font-family" style="color:#ffffff;font-weight:800;line-height:1.06;margin-top:16px;margin-bottom:22px">Your Memories,<br />Preserved <span style="color:#39B7EC">Forever.</span></h1>' .
+					       '<p class="has-text-color has-medium-font-size has-body-font-family" style="color:rgba(255,255,255,0.82);margin-bottom:32px">Memory Converter is the white-glove digital media converter that turns your old VHS tapes, film reels, photos, and audio into crisp digital you can watch, share, and keep for good.</p>';
+				},
+				$content
+			);
+		}
 	}
 	return $content;
 }, 999 );
@@ -778,6 +790,16 @@ add_action('wp_footer', function() {
         </script>
         <style>
         @media (max-width: 768px) {
+            .vhs-home-hero-trust-col::before,
+            .vhs-fixed-trust-item::before {
+                content: none !important;
+                display: none !important;
+            }
+            .vhs-home-hero-badge,
+            .vhs-hero-badge,
+            .vhs-badge {
+                display: none !important;
+            }
             .vhs-fixed-trust-item {
                 margin-top: 0 !important;
                 margin-bottom: 6px !important;
@@ -790,14 +812,103 @@ add_action('wp_footer', function() {
             .vhs-fixed-trust-item:last-child {
                 margin-bottom: 0 !important;
             }
-            .vhs-fixed-trust-container {
+            .vhs-fixed-trust-container,
+            .vhs-home-hero-trust-cols {
                 gap: 6px !important;
                 display: flex !important;
                 flex-direction: column !important;
+                padding-top: 0px !important;
+                padding-bottom: 0px !important;
+                padding-left: 0px !important;
+                margin-left: 0px !important;
                 margin-bottom: 16px !important;
+                align-items: flex-start !important;
+                text-align: left !important;
+                width: 100% !important;
             }
-            .vhs-fixed-trust-container > * {
+            .vhs-fixed-trust-item,
+            .vhs-home-hero-trust-col {
+                padding-left: 0px !important;
+                margin-left: 0px !important;
+                text-align: left !important;
+                justify-content: flex-start !important;
+                align-items: flex-start !important;
+                width: 100% !important;
+            }
+            .vhs-home-hero-pills-strip,
+            div.vhs-home-hero-pills-strip {
+                display: flex !important;
+                flex-wrap: wrap !important;
+                justify-content: flex-start !important;
+                align-items: center !important;
+                gap: 6px 6px !important;
+                width: 100% !important;
+                padding-top: 8px !important;
+                padding-bottom: 4px !important;
+                padding-left: 16px !important;
+                padding-right: 16px !important;
+                margin-top: 8px !important;
+                margin-bottom: 4px !important;
+                margin-left: 0px !important;
+                margin-right: 0px !important;
+                box-sizing: border-box !important;
+                border-top: 1px solid rgba(255, 255, 255, 0.10) !important;
+            }
+            .vhs-home-hero-section > div:last-child,
+            .vhs-home-hero-section .wp-block-group:last-child {
+                padding-top: 0px !important;
+                padding-bottom: 12px !important;
+                padding-left: 16px !important;
+                padding-right: 16px !important;
+                margin-top: 0px !important;
+                margin-bottom: 0px !important;
+                margin-left: 0px !important;
+                margin-right: 0px !important;
+                box-sizing: border-box !important;
+                width: 100% !important;
+            }
+            .vhs-home-hero-pill,
+            a.vhs-home-hero-pill {
+                display: inline-flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                width: auto !important;
+                max-width: max-content !important;
+                flex: 0 1 auto !important;
+                padding: 5px 10px !important;
+                font-size: 11.5px !important;
+                font-weight: 600 !important;
+                border-radius: 999px !important;
+                background: rgba(255, 255, 255, 0.08) !important;
+                border: 1px solid rgba(255, 255, 255, 0.12) !important;
+                color: rgba(255, 255, 255, 0.90) !important;
+                white-space: nowrap !important;
                 margin: 0 !important;
+            }
+            .vhs-hero-media-box,
+            .vhs-home-hero-card-wrap,
+            .vhs-home-hero-cover,
+            .vhs-home-hero-section .wp-block-column:last-child,
+            .vhs-hero-grid .wp-block-column:last-child {
+                padding-top: 0px !important;
+                padding-bottom: 0px !important;
+                padding-left: 0px !important;
+                padding-right: 0px !important;
+                margin-top: 0px !important;
+                margin-bottom: 0px !important;
+                margin-left: 0px !important;
+                margin-right: 0px !important;
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+            .vhs-hero-media-box img,
+            .vhs-home-hero-card-wrap img,
+            .vhs-home-hero-cover img,
+            .wp-block-cover img {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
             }
         }
         </style>
